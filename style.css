@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
+}
+:root {
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;    
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/*=======================Left Navigation==================*/
+.navContainer {
+    position: relative;
+    width: 100%;
+}
+.menuNavigation {
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.menuNavigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 0;
+}
+.menuNavigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font-size: 24px;
+}
+.menuNavigation ul li:hover,
+.menuNavigation ul li.hovered  {
+    background: var(--white);
+}
+.menuNavigation ul li:nth-child(1) {
+    margin-bottom: 60px;
+    pointer-events: none;
+    font-size: 33px;
+}
+.menuNavigation ul li a {
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.menuNavigation ul li a:hover,
+.menuNavigation ul li.hovered a {
+    color: var(--blue);
+}
+.menuNavigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 55px;
+    text-align: center;
+}
+.menuNavigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+/*=====================curve outside----------------------*/
+.menuNavigation ul li:hover a::before,
+.menuNavigation ul li.hovered a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 35px 35px 0 10px var(--white);
+}
+.menuNavigation ul li:hover a::after,
+.menuNavigation ul li.hovered a::after  {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 35px -35px 0 10px var(--white);
+}
