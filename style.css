@@ -163,12 +163,12 @@ body {
     position: relative;   
 }
 #hero h1 {
-    margin: 0;
+    
     font-size: 56px;
     font-weight: 700;
     line-height: 64px;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
 }
 #hero h2 {
     color: #fff;
@@ -200,6 +200,9 @@ body {
 }
 .about ul li {
     list-style-type: none;
+}
+.row {
+    margin-bottom: 6rem !important;
 }
 
 /*--------------------Get in touch----------------*/
@@ -328,20 +331,20 @@ form {
 .reviews {
     background: #f6f5f7;
     padding: 30px;
-    border-bottom: 0.5px solid #999;
+    border-bottom: 0.5px solid #c9c8c8;
     margin: 20px 0;
 }
 .profileReview {  
     margin: 40px 0;
-    padding: 50px 25%;
+    padding: 0 30%;
     display: block;
-    height: 400px;
+    height: 200px;
     
           
 }
 
 .profileReview blockquote {    
-    margin: 50px auto;
+   
     background: white;
     padding: 30px;
     border-radius: 10px;
