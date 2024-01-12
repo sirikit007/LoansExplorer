@@ -27,3 +27,23 @@ function activeLink() {
     this.classList.add('hovered');
 }
 list.forEach(item => item.addEventListener('mouseover', activeLink));
+
+
+
+
+//Scroll Animation
+
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.classList.remove('show');
+        }
+    })
+})
+
+let hiddenElem = document.querySelectorAll('.hidden');
+hiddenElem.forEach((el) => observer.observe(el));
+

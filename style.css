@@ -17,6 +17,31 @@ body {
     overflow-x: hidden;
 }
 
+[hide] {
+    display: none;
+}
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+}
+.show {
+    opacity: 1;
+}
+/*
+.main {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    align-items: stretch;
+    min-width: 320px;
+    flex-wrap: nowrap;
+    max-width: 1464px;
+    margin: 0 auto;
+}
+*/
 /*=======================Left Navigation==================*/
 .navContainer {
     
@@ -189,23 +214,54 @@ body {
     color: #ffc451;
     cursor: pointer;
 }
-.icon-box  {
+
+
+
+#hero .icon-box  {
     padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     height: 100%;
     text-align: center;
+    transition: all ease-in-out 0.3s;
 }
-.icon-box:hover {
+
+
+
+#hero .icon-box:hover {
     border-color: #ffc451;
+    
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
 }
-.about ul li {
+
+/*-------------------------------------------------------------About-----------------------------------------*/
+
+.aboutMain {
+    display:grid;   
+    place-items: center;
+    align-content: center;
+    min-height: 100vh; 
+}
+/*
+.firstCol {
+    position: sticky;
+    width: 400px;    
+    padding-right: 10px;    
+}
+*/
+.containerAbout {
+   
+}
+#about ul li {
     list-style-type: none;
 }
+
 .row {
     margin-bottom: 6rem !important;
 }
 
-/*--------------------Get in touch----------------*/
+
+/*-------------------------------------------------------------Get in touch-----------------------------------------*/
 .cta {
     background: linear-gradient(rgba(2,2,2,0.5), rgba(2,2,2,0.8)), url(https://images.pexels.com/photos/19215458/pexels-photo-19215458/free-photo-of-back-lit-photograph-of-birch-trees.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) fixed center center;
     background-size: cover;
@@ -253,13 +309,26 @@ body {
     padding-left: 60px;
     font-size: 14px;
 }
+/*-----------------------------------------------------------------------partners-----------------------------------------------------------*/
+.iconbox img {
+    width: 10rem;
+}
 
-/*footer*/
+/*-----------------------------------------------------------------------footer-----------------------------------------------------------*/
 .footer-top {
     background: #151515;
     color: #fff;
     border-bottom: 1px solid #222222;
     padding: 60px 0 30px 0;
+}
+
+.footerFacebookIcon {
+    transition: all ease-in-out 1s;   
+}
+.footerFacebookIcon a:hover {
+    border-color: #ffc451;    
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px); 
 }
 .footer-top .footer-info {
     margin-bottom: 30px;    
@@ -323,9 +392,34 @@ form {
     padding: 6px 10px;
     border-radius: 4px;
 }
+
+
 .facebook:hover {
     cursor: pointer;
 }
+
+
+
+
+/*
+transition: all ease-in-out 0.3s;
+
+
+
+
+#hero .icon-box:hover {
+    border-color: #ffc451;
+    
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+
+*/
+
+
+
+
+
+
 
 /*------------------------------------Reviews---------------*/
 .reviews {
@@ -359,4 +453,11 @@ form {
 .buttonForMoreReviews {
     text-align: center;
     margin: 20px auto;
+}
+
+/*for animation on scroll - don't duble*/
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
 }
