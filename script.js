@@ -31,7 +31,7 @@ list.forEach(item => item.addEventListener('mouseover', activeLink));
 
 
 
-//Scroll Animation
+//Scroll Animation - intersection observer
 
 let observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -47,3 +47,14 @@ let observer = new IntersectionObserver((entries) => {
 let hiddenElem = document.querySelectorAll('.hidden');
 hiddenElem.forEach((el) => observer.observe(el));
 
+//Scroll Animation - scroll reveal
+
+ScrollReveal({
+    reset:true,
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+});
+ScrollReveal().reveal('.scrollLeft',  {delay: 500, origin: 'left'});
+ScrollReveal().reveal('.iconbox img',  {delay: 400, origin: 'bottom', interval: 200});
+ScrollReveal().reveal('.scrollUp',  {delay: 500, origin: 'up'});
