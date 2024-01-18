@@ -30,26 +30,17 @@ body {
 .show {
     opacity: 1;
 }
-*/
-
-.main {
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   
-    align-items: stretch;
-    min-width: 320px;
-    flex-wrap: nowrap;
-    max-width: 1464px;
-    margin: 0 auto;
+.marginLeft {
+    margin-left: 400px;
+    
 }
-*/
-/*=======================Left Navigation==================*/
+/*=======================Left Navigation - Sidebar==================*/
 .navContainer {
     
     width: 100%;    
+}
+.navbar {   
+    --bs-navbar-padding-y: 0;
 }
 .menuNavigation {
     position: fixed;
@@ -57,12 +48,9 @@ body {
     height: 100%;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -10px 0 0 rgba(0, 0, 0, 0.1);
     transition: 0.5s;
-    overflow: hidden;
-    
-    
-    
+    overflow: hidden;   
 }
 .menuNavigation ul {
     position: absolute;
@@ -70,15 +58,29 @@ body {
     left: 0;
     width: 100%;
     padding-left: 0;
-    padding-left: 10px;
+    
+}
+.menuNavigation .navbar-brand {    
+    display: block;
+    margin: 30px 0;    
+    pointer-events: none;
+    font-size: 33px;
+}
+#pages .sidebar-link {
+    padding-left: 80px;
+}
+#pages .sidebar-item {
+    font-size: 20px !important;
 }
 .menuNavigation ul li {
-    width: 100%;
+    
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     font-size: 24px;
+    margin-left: 16px;
 }
+
 .menuNavigation ul li:hover,
 .menuNavigation ul li.hovered  {
     background: var(--white);
@@ -100,7 +102,6 @@ body {
 .menuNavigation ul li.hovered a {
     color: var(--black1);
 }
-
 
 
 .menuNavigation ul li a .icon {
@@ -130,9 +131,13 @@ body {
     padding: 2px;
     position: absolute;
     right: 1.5rem;
+    
+    
+    transition: all .2s easy-out;
+    /*
     top: 1.4rem;
     transform: rotate(-135deg);
-    transition: all .2s easy-out;    
+    */    
 }
 
 #pages {
@@ -144,7 +149,7 @@ body {
 .rotateAngle {
     position: absolute;
     right: 0px;
-    top: 0;
+    top: 14px;
     margin: 20px;
     transition: 0.3s ease;
 }
@@ -182,6 +187,7 @@ body {
     background: url(background3.jpg);
     background-size: cover;  
     position: relative; 
+    padding-top: 300px;
 }
 #hero::before {
     content: '';
@@ -195,8 +201,7 @@ body {
 #hero .container {
     position: relative;   
 }
-#hero h1 {
-    
+#hero h1 {    
     font-size: 56px;
     font-weight: 700;
     line-height: 64px;
@@ -231,6 +236,7 @@ body {
     height: 100%;
     text-align: center;
     transition: all ease-in-out 0.3s;
+    width: 250px;
 }
 
 
@@ -244,32 +250,21 @@ body {
 
 /*-------------------------------------------------------------About-----------------------------------------*/
 
-.aboutMain {
-    display:grid;   
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;    
-}
-
-.shiftRight {
-    width: 80%;
-    margin-left: 410px;
-}
 
 #about ul li {
-    list-style-type: none;
+    list-style-type: none;    
 }
-
 .row {
     margin-bottom: 6rem !important;
 }
+
 
 
 /*-------------------------------------------------------------Get in touch-----------------------------------------*/
 .cta {
     background: linear-gradient(rgba(2,2,2,0.5), rgba(2,2,2,0.8)), url(https://images.pexels.com/photos/19215458/pexels-photo-19215458/free-photo-of-back-lit-photograph-of-birch-trees.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) fixed center center;
     background-size: cover;
-    padding: 100px 0;
+    padding: 50px 0;
     color: #fff;
 }
 .cta h3 {
@@ -278,7 +273,7 @@ body {
 }
 .cta-btn {
     font-weight: 600;
-    font-style: 16px;
+    font-size: 16px;
     letter-spacing: 1px;
     display: inline-block;
     padding: 8px 28px;
@@ -405,54 +400,41 @@ form {
 
 
 
-/*
-transition: all ease-in-out 0.3s;
-
-
-
-
-#hero .icon-box:hover {
-    border-color: #ffc451;
-    
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
-    transform: translateY(-10px);
-
-*/
-
-
-
-
-
-
-
 /*------------------------------------Reviews---------------*/
 .reviews {
     background: #f6f5f7;
     padding: 30px;
     border-bottom: 0.5px solid #c9c8c8;
-    margin: 20px 0;
+    
 }
 .profileReview {  
-    margin: 40px 0;
-    padding: 0 30%;
+    margin: 40px auto;
+    padding: 0 13%;
     display: block;
-    height: 200px;
-    
-          
+    height: 200px;         
 }
 
+.carousel-inner {
+    overflow: visible;   
+}
+.carousel {
+    height: 550px;
+}
+.carousel-item {
+    width: inherit;
+}
 .profileReview blockquote {    
-   
+    
     background: white;
     padding: 30px;
     border-radius: 10px;
     text-align: center;    
     display: inline-block;
-    vertical-align: middle;   
+    vertical-align: middle;       
 }
 
 .stars {    
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 .buttonForMoreReviews {
     text-align: center;
@@ -468,6 +450,33 @@ transition: all ease-in-out 0.3s;
 
 
 /*--------------------------Media---------------------*/
-@media only screen and (max-width: ) {
+@media only screen and (max-width: 1400px) {
+    .menuNavigation {
+        width: 300px;
+    }
+    .menuNavigation ul li {
+        font-size: 20px;
+    }
+    .marginLeft{
+        margin-left: 300px;
+    }
+    .menuNavigation ul li a .icon svg{
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .menuNavigation ul li a {        
+        padding: 10px 0;
+    }
+  
     
+}
+@media only screen and (max-width: 1200px) {
+    .containerAbout .row {
+        justify-content: space-around !important;
+    }
+}
+@media only screen and (max-width: 992px) {
+    #about {
+        margin-left: 0;
+    }
 }

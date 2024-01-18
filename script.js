@@ -1,10 +1,10 @@
-//add hover effect yo side-menu list
+//add hover effect to side-menu list
 let navbar = document.querySelector('#navContent');
 window.addEventListener('scroll', function() {
     if (window.pageYOffset > 600) {
-        navbar.classList.add('bg-dark', 'shadow');
+        navbar.classList.add('bg-dark');
     } else {
-        navbar.classList.remove('bg-dark', 'shadow');
+        navbar.classList.remove('bg-dark');
     }
 });
 
