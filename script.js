@@ -29,7 +29,7 @@ function activeLink() {
 list.forEach(item => item.addEventListener('mouseover', activeLink));
 
 
-
+/*
 
 //Scroll Animation - intersection observer
 
@@ -58,3 +58,5 @@ ScrollReveal({
 ScrollReveal().reveal('.scrollLeft',  {delay: 500, origin: 'left'});
 ScrollReveal().reveal('.iconbox img',  {delay: 400, origin: 'bottom', interval: 200});
 ScrollReveal().reveal('.scrollUp',  {delay: 500, origin: 'up'});
+
+*/

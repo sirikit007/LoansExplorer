@@ -16,17 +16,19 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
+/*
 
 [hide] {
     display: none;
 }
 
 /*animation on scroll*/
-
+/*
 .hidden {
     opacity: 0;
     transition: all 2s;
 }
+*/
 .show {
     opacity: 1;
 }
@@ -254,7 +256,7 @@ body {
 #about ul li {
     list-style-type: none;    
 }
-.row {
+#about .row {
     margin-bottom: 6rem !important;
 }
 
@@ -308,18 +310,114 @@ body {
     padding-left: 60px;
     font-size: 14px;
 }
+
+
+
+
+
+.buttonForContactForm .cta-btn {    
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border: 2px solid #151515;
+    border-radius: 4px;
+    color: #151515;
+    margin-top: 10px;
+}
+
+/*------------------------------------Reviews---------------*/
+.reviews {
+    background: #f6f5f7;
+    padding: 30px;
+    border-bottom: 0.5px solid #c9c8c8;
+    
+}
+.profileReview {  
+    margin: 40px auto;
+    padding: 0 13%;
+    display: block;
+          
+}
+
+.carousel-inner {
+    overflow: visible;  
+    height: 350px; 
+}
+.carousel {
+    height: auto;
+}
+.carousel-item {
+    width: inherit;
+}
+.carousel-indicators {
+    position: unset;
+   
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+   
+}
+
+.profileReview blockquote {    
+    margin: 20px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;    
+    display: inline-block;
+    vertical-align: middle;       
+}
+
+.stars {    
+    padding-bottom: 20px;
+}
+.buttonForMoreReviews {
+    text-align: center;
+    margin: 1px auto;
+}
+.buttonForMoreReviews .cta-btn {    
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border: 2px solid #151515;
+    border-radius: 4px;
+    color: #151515;
+    margin-top: 10px;
+}
+   
+
 /*-----------------------------------------------------------------------partners-----------------------------------------------------------*/
 .iconbox img {
-    width: 10rem;
+    width: 10rem;  
+}
+.iconbox {
+    
+    height: 5rem;
+}
+.partnersColumn {
+    height: 300px;
+    width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 /*-----------------------------------------------------------------------footer-----------------------------------------------------------*/
-.footer-top {
-    background: #151515;
+
+footer {
+    background: linear-gradient(to right, #00093c, #2D0b00);
     color: #fff;
     border-bottom: 1px solid #222222;
     padding: 60px 0 30px 0;
+    border-top-right-radius: 125px;
 }
+footer .col:nth-child(3), footer .col:nth-child(4) {
+    flex-basis: 15%;
+}
+
 
 .footerFacebookIcon {
     transition: all ease-in-out 1s;   
@@ -332,30 +430,40 @@ body {
 .footer-top .footer-info {
     margin-bottom: 30px;    
 }
-.footer-top .footer-info h3 {
-    font-size: 28px;
-    margin-right: 20px;
+.footer-top h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+    font-size: 18px;   
     padding: 2px 0;
-    line-height: 1;
-    font-weight: 700;
-    text-transform: uppercase;
+    line-height: 20px;
+    font-weight: 700;   
+}
+.underlineFooter {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    
 }
 .footer-top .footer-info p {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 28px;
     margin-bottom: 0;
 }
 .footer-top .social-links a{
-    width: 36px;
-    height: 36px;
-    background: #292929;
-    display: inline-block;
-    margin-right: 4px;
-    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    background: #ffc451;
+    border-radius: 50%;
     text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    margin-right: 15px;
+    display: inline-block;   
 }
 .footer-top .social-links a:hover {
     background: #ffc451;
+    cursor: pointer;
 }
 .footer-top h4 {
     font-size: 16px;
@@ -391,55 +499,49 @@ form {
     padding: 6px 10px;
     border-radius: 4px;
 }
-
-
-.facebook:hover {
-    cursor: pointer;
-}
-
-
-
-
-/*------------------------------------Reviews---------------*/
-.reviews {
-    background: #f6f5f7;
-    padding: 30px;
-    border-bottom: 0.5px solid #c9c8c8;
-    
-}
-.profileReview {  
-    margin: 40px auto;
-    padding: 0 13%;
-    display: block;
-    height: 200px;         
-}
-
-.carousel-inner {
-    overflow: visible;   
-}
-.carousel {
-    height: 550px;
-}
-.carousel-item {
-    width: inherit;
-}
-.profileReview blockquote {    
-    
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;    
-    display: inline-block;
-    vertical-align: middle;       
-}
-
-.stars {    
-    padding-bottom: 20px;
-}
-.buttonForMoreReviews {
-    text-align: center;
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
     margin: 20px auto;
 }
+.copyright {
+    font-size: 13px;
+}
+.underlineH3 {
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+.underlineH3 span {
+    width: 15%;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+
+
+
+
 
 /*for animation on scroll - don't duble*/
 @media (prefers-reduced-motion) {
@@ -478,5 +580,14 @@ form {
 @media only screen and (max-width: 992px) {
     #about {
         margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    footer {
+        bottom: unset;
+    }
+    footer .col:nth-child(3), footer .col:nth-child(4) {
+        flex-basis: 15%;
     }
 }
