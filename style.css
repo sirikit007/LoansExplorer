@@ -36,6 +36,9 @@ body {
     margin-left: 400px;
     
 }
+.hide {
+    display: none;
+}
 /*=======================Left Navigation - Sidebar==================*/
 .navContainer {
     
@@ -281,8 +284,8 @@ body {
     padding: 8px 28px;
     border: 2px solid #fff;
     border-radius: 4px;
-    color: #fff;
-    margin-top: 10px;
+    color: #fff; 
+    text-decoration: none;  
 }
 .cta-btn:hover {
     background: #ffc451;
@@ -310,35 +313,21 @@ body {
     padding-left: 60px;
     font-size: 14px;
 }
-
-
-
-
-
-.buttonForContactForm .cta-btn {    
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 28px;
+.buttonForContactForm .cta-btn {  
     border: 2px solid #151515;
-    border-radius: 4px;
-    color: #151515;
-    margin-top: 10px;
+    color: #151515;   
 }
 
 /*------------------------------------Reviews---------------*/
 .reviews {
     background: #f6f5f7;
     padding: 30px;
-    border-bottom: 0.5px solid #c9c8c8;
-    
+    border-bottom: 0.5px solid #c9c8c8;    
 }
 .profileReview {  
     margin: 40px auto;
     padding: 0 13%;
-    display: block;
-          
+    display: block;          
 }
 
 .carousel-inner {
@@ -357,8 +346,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px;
-    margin: 20px;
-   
+    margin: 20px;   
 }
 
 .profileReview blockquote {    
@@ -378,16 +366,9 @@ body {
     text-align: center;
     margin: 1px auto;
 }
-.buttonForMoreReviews .cta-btn {    
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 28px;
+.buttonForMoreReviews .cta-btn { 
     border: 2px solid #151515;
-    border-radius: 4px;
-    color: #151515;
-    margin-top: 10px;
+    color: #151515;   
 }
    
 
@@ -590,4 +571,429 @@ hr {
     footer .col:nth-child(3), footer .col:nth-child(4) {
         flex-basis: 15%;
     }
+}
+
+
+/* -------------------------About - LinkPage--------------------------------------*/
+.line-1 {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: #ffc451;
+    border: 0.1px solid #767676;
+}
+.line-2 {
+    width: 80px;
+    height: 1px;
+    display: inline-block;
+    background: #ffc451;
+}
+.line-3 {
+    width: 60px;
+    height: 1px;
+    display: inline-block;
+    background: #ffc451;
+}
+.line {
+    line-height: 8px;
+    top: 0;
+    left: 0;  
+}
+#aboutLinkPage {      
+    height: 100%;
+    background: url(background1.jpg);
+    background-size: cover;
+    position: relative;
+    padding-top: 100px;   
+}
+#aboutLinkPage::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#aboutLinkPage .container {
+    position: relative;
+}
+.aboutBlank {
+    border: 1px solid #fff;
+    box-shadow: 0 0 25px 0 rgba(231, 231, 231, 0.5);
+    background: #fff;
+    border-radius: 2%;
+}
+.contentHome h3 {
+    font-size: 15px;
+}
+
+
+
+/*-------------------------------------------Loan amount calculator-------------------------------*/
+
+.backgroundCalculators {
+    background: #f6f5f7;
+}
+
+.profileReviewCalculator {
+    margin: 85px auto;
+    padding: 70px 50px;
+    background-color: #fff;    
+    width: 55%;    
+    position: relative;   
+    border-radius: 10px;
+    color: #05060c;  
+    border: 1px solid transparent; 
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+.inputGroup {
+    margin-bottom: 60px;
+    position: relative;  
+
+   
+}
+.fas, .far  {
+    margin-right: 5px;
+}
+.inputGroup label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    padding: 10px;
+    color: #05060c;
+    cursor: text;
+    transition: 0.2s;
+    font-size: 20px;
+}
+.inputGroup input:focus~label,
+.inputGroup input:valid~label {
+    top: -45px;
+    font-size: 18px;
+}
+
+.inputGroup input {
+    width: 100%;
+    height: 65px;
+    background: #f5f6fa;
+    color: #05060c;   
+    border-radius: 10px; 
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    border: 0px;  
+}
+.inputGroup input::-webkit-outer-spin-button,
+.inputGroup input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.allInputGroups {
+    display: block;
+    text-align: center;
+}
+
+.buttonCalculate {
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    border: 0px solid #05060c;
+    font-size: 25px;
+    font-weight: 600;
+    color: #05060c;
+    cursor: pointer;
+    background: #ffc451;
+     
+}
+.groupAnswersLoanRepayments {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.answerSquareLoanRepayments {
+    width: 350px;
+    height: 170px;
+    background: #f5f6fa;    
+    margin: 30px auto;
+    border-radius: 10px;
+    color: #05060c;
+    padding: 20px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);  
+}
+.answerSquareLoanRepayments:nth-child(2) {
+    margin: 0 10px;
+}
+
+.answerSquareLoanRepayments div {
+    display: flex;
+    align-items: center; 
+    font-size: 45px;
+    margin: 20px auto;  
+}
+.answerSquareLoanRepayments>h4 {
+    font-size: 20px;
+}
+.inputGroup input[type=text] {
+    font-size: 28px;
+    padding-left: 18px;
+    font-weight: 800;
+}
+
+/*-------------------------------------------- stamp duty --------------------*/
+/*
+.stampDutyCalculator {
+    margin: 150px auto;
+    padding: 50px 60px;
+    background-color: rgb(40, 41,123);    
+    width: 55%;    
+    position: relative;   
+    border-radius: 10px;
+    color: #f5f6fa;  
+    border: 2px solid transparent;    
+}
+*/
+.radioContainer p {
+    font-size: 22px;   
+    text-align: left;
+}
+
+
+.radioToggle, .radioToggleForTypeProperty {  
+    display: flex; 
+}
+.radioToggle input[type='radio'],
+.radioToggleForTypeProperty input[type='radio'] {
+    display: none;
+}
+
+.radioToggle label {   
+    border: 1px solid #e2e3e8;    
+    padding: 15px 20px;   
+    font-size: 20px;
+    font-weight: 400; 
+    cursor: pointer;
+    text-align: center; 
+    width: 100%; 
+}
+.radioToggleForTypeProperty label {
+    border: 1px solid #e2e3e8;    
+    padding: 15px;   
+    font-size: 20px;
+    font-weight: 400; 
+    cursor: pointer;
+    text-align: center; 
+    width: 100%; 
+}
+.yesLabel {
+    border-radius: 10px 0 0 10px;
+}
+.noLabel {
+    border-radius: 0 10px 10px 0;
+}
+.radioToggle input[type='radio']:checked + label,
+.radioToggleForTypeProperty input[type='radio']:checked + label  {
+    background-color: #f5f6fa;
+    
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+}
+.propertyLocationDropListContainer ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    background: #f5f6fa;
+    color: #05060c;
+    width: 100%;    
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.propertyLocationDropListContainer ul li:hover {
+    background: #ffc451;
+    color: #060c21;
+}
+.propertyLocationDropListContainer ul li:hover > ul {
+    display: block;
+}
+
+
+#selectFieldStates {
+    width: 100%;    
+    height: 65px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    background: #f5f6fa;
+    color: #05060c;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    align-items: center; 
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);   
+}
+/*
+.selectFieldStates {
+    border-radius: 10px;
+    cursor: pointer;
+}
+*/
+.borderRadiusBottom {
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);     
+}
+
+#selectFieldStates i {
+    display: flex;
+    align-items: center;
+    color: rgb(40, 41,123);
+    font-size: 17px;
+}
+
+#selectFieldStates p {
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #05060c;
+    margin: 0;
+}
+
+.propertyLocationDropListContainer {
+    margin-bottom: 60px;
+    position: relative;    
+}
+
+#listFieldState {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+   
+    
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+
+.margBot {
+    margin-bottom: 40px;
+}
+
+.buttonCalculateStampDuty:hover {
+    background: #e7e5e5;
+}
+.groupAnswersStampDuty {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.answerSquareStampDuty {
+    width: 100%;
+    height: 170px;
+    background: #f5f6fa;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
+    border-radius: 10px;
+    color: #05060c;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;   
+    align-items: center;
+    position: relative;
+}
+.answerSquareStampDuty p {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.answerSquareStampDuty h4 {
+    font-size: 54px;   
+}
+.answerSquareStampDuty div {    
+    position: absolute;
+    top: 25%;
+    left: 32%;
+}
+#listStates #listFieldState {
+    padding: 0;
+}
+
+.describeStatesConcessionals {
+    color: #060c21;
+    border: 1px solid #060c21;
+}
+
+.state h3 {
+    margin: 0 0 10px;
+}
+.state {
+    padding: 0 0 10px 10px;
+}
+.statesList, .stampDutyRate {
+    border-collapse: collapse;
+}
+.statesList table, .stampDutyRate table {
+    margin: 0 auto;
+}
+.statesList td {    
+    height: 40px;
+    border: 1px solid black; 
+    text-align: center; 
+    display: contents;   
+}
+.stampDutyRate {
+    margin-bottom: 50px;
+    
+}
+.stampDutyRate td {
+    width: 50%;
+    height: 50px;
+    border: 1px solid black; 
+    text-align: center;
+} 
+.containerTable {
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    margin: 1px auto;
+}
+#contentTable {
+    display: flex;
+    flex-direction: column;
+       
+}
+.expandBTN {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+#textTable {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.stampDutyRate tr:nth-child(even) {
+    background: #b0b3c4;
+}
+.statesList tbody:nth-child(odd) {
+    background: #b0b3c4;
+}
+.describeStatesConcessionals .state:nth-child(odd) {
+    background: #b0b3c4;
+}
+.stateColor {
+    background: rgb(40, 41,123);
+    color: #f5f6fa;
 }

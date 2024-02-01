@@ -1,3 +1,5 @@
+
+
 //add hover effect to side-menu list
 let navbar = document.querySelector('#navContent');
 window.addEventListener('scroll', function() {
@@ -60,3 +62,49 @@ ScrollReveal().reveal('.iconbox img',  {delay: 400, origin: 'bottom', interval: 
 ScrollReveal().reveal('.scrollUp',  {delay: 500, origin: 'up'});
 
 */
+
+
+//--------------------------------------------------------------------Stamp Duty Calculator-------*/
+//dropDown Menu for Stamp Duty
+let selectedState = document.getElementById('selectedState');
+let selectFieldStates = document.getElementById('selectFieldStates');
+let listFieldState = document.getElementById('listFieldState');
+let optionsStates = document.getElementsByClassName('optionsStates');
+let faStates = document.querySelector('.faStates');
+
+
+selectFieldStates.addEventListener('click', function() {
+    listFieldState.classList.toggle('hide');
+    faStates.classList.toggle('rotate');
+    selectFieldStates.classList.toggle('borderRadiusBottom');
+});
+
+for (let option of optionsStates) {
+    option.addEventListener('click', function() {
+        selectedState.innerHTML= this.textContent;
+        listFieldState.classList.toggle('hide');
+        faStates.classList.toggle('rotate');
+        selectFieldStates.classList.toggle('borderRadiusBottom');
+    })
+}
+document.addEventListener('click', function(event) {
+    let listStates = document.getElementById('listStates');
+    let isClickInsideMenuProperty = listStates.contains(event.target);
+
+    if (!isClickInsideMenuProperty) {
+        listFieldState.classList.add('hide');
+    }
+});
+
+//Expand Table Button
+let expandButton = document.getElementById('expandButton');
+let textTable = document.getElementById('textTable');
+
+expandButton.addEventListener('click', function(e) {
+    e.preventDefault(); 
+    if (textTable.style.maxHeight) {
+        textTable.style.maxHeight = null;
+    } else {
+        textTable.style.maxHeight = textTable.scrollHeight + 'px';
+    }    
+});
