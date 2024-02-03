@@ -318,7 +318,7 @@ body {
     color: #151515;   
 }
 
-/*------------------------------------Reviews---------------*/
+/*------------------------------------Reviews-------------------------------------*/
 .reviews {
     background: #f6f5f7;
     padding: 30px;
@@ -703,8 +703,10 @@ hr {
     font-weight: 600;
     color: #05060c;
     cursor: pointer;
-    background: #ffc451;
-     
+    background: #ffc451;     
+}
+.buttonCalculate:hover {
+    background: #e7e5e5;
 }
 .groupAnswersLoanRepayments {
     display: flex;
@@ -886,9 +888,7 @@ hr {
     margin-bottom: 40px;
 }
 
-.buttonCalculateStampDuty:hover {
-    background: #e7e5e5;
-}
+
 .groupAnswersStampDuty {
     display: flex;
     justify-content: space-around;
@@ -994,6 +994,65 @@ hr {
     background: #b0b3c4;
 }
 .stateColor {
-    background: rgb(40, 41,123);
-    color: #f5f6fa;
+    background: #ffc451;
+    color: #05060c;
+}
+
+/*-------------------------------------------- Borrowing Calculator--------------------*/
+
+#borrowingCalculator{
+   height: 700px;   
+}
+
+#borrowingCalculatorLink {   
+    padding: 18px 26px;   
+    text-align: center;  
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------reviews------------------------------------------------------------------------*/
+#testimonials .col-md-4 {
+    margin: 40px auto;
+}
+
+.profileReviewPage {
+    padding: 70px 10px 10px;
+    background: #efefef;
+}
+.profileReviewPage:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.profileReviewPage h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #ffc451;
+}
+.profileReviewPage span {
+    font-size: 12px;
+    color: #333;
+}
+
+
+.profileReviewPage blockquote {
+    font-size: 16px;
+    line-height: 30px;    
+}
+
+.fa-quote-left { 
+    font-size: 30px;
+    color: #ffc451;
+    position: relative;
+    line-height: 20px; 
+    top: -10px;
+    right: 10px;         
+}
+.fa-quote-right {
+    font-size: 30px;
+    color: #ffc451;
+    position: relative;
+    line-height: 20px; 
+   
+    left: 10px;
 }
