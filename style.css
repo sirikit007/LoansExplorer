@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-/*
+
 
 [hide] {
     display: none;
@@ -28,20 +28,21 @@ body {
     opacity: 0;
     transition: all 2s;
 }
-*/
+
 .show {
     opacity: 1;
 }
+*/
 .marginLeft {
     margin-left: 400px;
     
 }
+
 .hide {
     display: none;
 }
 /*=======================Left Navigation - Sidebar==================*/
-.navContainer {
-    
+.navContainer {    
     width: 100%;    
 }
 .navbar {   
@@ -62,8 +63,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding-left: 0;
-    
+    padding-left: 0;    
 }
 .menuNavigation .navbar-brand {    
     display: block;
@@ -77,8 +77,7 @@ body {
 #pages .sidebar-item {
     font-size: 20px !important;
 }
-.menuNavigation ul li {
-    
+.menuNavigation ul li [menu]{    
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -86,13 +85,16 @@ body {
     margin-left: 16px;
 }
 
-.menuNavigation ul li:hover,
-.menuNavigation ul li.hovered  {
+.menuNavigation ul li [menu]:hover,
+.menuNavigation ul li [menu].hovered  {
     background: var(--white);
+    color: var(--black1);
+    border: 1px solid #767676;
+   
 }
 .menuNavigation + ul li:nth-child(1) {
-    margin-bottom: 60px;
     pointer-events: none;
+    margin-bottom: 60px;    
     font-size: 33px;
 }
 .menuNavigation ul li a {
@@ -103,12 +105,6 @@ body {
     text-decoration: none;
     color: var(--white);
 }
-.menuNavigation ul li a:hover,
-.menuNavigation ul li.hovered a {
-    color: var(--black1);
-}
-
-
 .menuNavigation ul li a .icon {
     position: relative;
     display: block;
@@ -148,10 +144,8 @@ body {
 #pages {
     position: relative;
 }
-.rotate {
-    transform: rotate(90deg);
-}
-.rotateAngle {
+
+.angleForSidebar {
     position: absolute;
     right: 0px;
     top: 14px;
@@ -159,8 +153,8 @@ body {
     transition: 0.3s ease;
 }
 /*=====================curve outside----------------------*/
-.menuNavigation ul li:hover a::before,
-.menuNavigation ul li.hovered a::before {
+.menuNavigation ul li [menu]:hover a::before,
+.menuNavigation ul li [menu].hovered a::before {
     content: '';
     position: absolute;
     right: 0;
@@ -172,8 +166,8 @@ body {
     pointer-events: none;
     box-shadow: 35px 35px 0 10px var(--white);
 }
-.menuNavigation ul li:hover a::after,
-.menuNavigation ul li.hovered a::after  {
+.menuNavigation ul li [menu]:hover a::after,
+.menuNavigation ul li [menu].hovered a::after  {
     content: '';
     position: absolute;
     right: 0;
@@ -879,7 +873,7 @@ hr {
 }
 
 .rotate {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
 }
 
 
@@ -1016,8 +1010,9 @@ hr {
 }
 
 .profileReviewPage {
-    padding: 70px 10px 10px;
+    padding: 40px 30px 30px;
     background: #efefef;
+    border-radius: 8px;
 }
 .profileReviewPage:hover {
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
@@ -1055,4 +1050,45 @@ hr {
     line-height: 20px; 
    
     left: 10px;
+}
+
+
+/* ------------------------------------------------------------------partners--------------------------------------------------------------------*/
+#contentPartners {
+   background: #f6f5f7; 
+}
+
+
+.sectionContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;       
+}
+.logos {    
+    margin: 70px auto;
+}
+.singleService {
+    flex-basis: calc(100% / 5);    
+    margin-bottom: 40px;
+    display: inline-block;    
+}
+.singleServiceWrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px rgb(102 0 255 / 7%);
+    transition: 0.2s;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 10px;
+}
+.singleServiceWrapper:hover {
+    box-shadow: none;
+    transform: scale(0.985);   
+}
+.textMiddle p {    
+    text-align: start;  
+    margin: 55px 0;
 }
