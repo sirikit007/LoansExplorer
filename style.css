@@ -17,7 +17,7 @@ body {
     overflow-x: hidden;
 }
 
-
+/*
 [hide] {
     display: none;
 }
@@ -37,7 +37,7 @@ body {
     margin-left: 400px;
     
 }
-
+/*
 .hide {
     display: none;
 }
@@ -77,20 +77,28 @@ body {
 #pages .sidebar-item {
     font-size: 20px !important;
 }
-.menuNavigation ul li [menu]{    
+.menuNavigation #pages [submenu]:hover li a,
+.menuNavigation #pages [submenu].hovered li a{
+    background: var(--white);
+    color: var(--black1);
+    border: 0.3px solid #767676; 
+}
+
+.menuNavigation ul li [menu],
+.menuNavigation #pages [submenu] li a{    
     list-style: none;
     border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    font-size: 24px;
+    border-bottom-left-radius: 30px;    
     margin-left: 16px;
+    border: 0.3px solid transparent; 
 }
+
 
 .menuNavigation ul li [menu]:hover,
 .menuNavigation ul li [menu].hovered  {
     background: var(--white);
     color: var(--black1);
-    border: 1px solid #767676;
-   
+    border: 0.3px solid #767676;   
 }
 .menuNavigation + ul li:nth-child(1) {
     pointer-events: none;
@@ -99,7 +107,6 @@ body {
 }
 .menuNavigation ul li a {
     position: relative;
-    width: 100%;
     padding: 15px 0;
     display: flex;
     text-decoration: none;
@@ -121,6 +128,7 @@ body {
     line-height: 60px;
     text-align: start;
     white-space: nowrap;
+    font-size: 24px;
 }
 .dropdown-menu.show {
     transition: 1s easy !important;
@@ -132,13 +140,7 @@ body {
     padding: 2px;
     position: absolute;
     right: 1.5rem;
-    
-    
     transition: all .2s easy-out;
-    /*
-    top: 1.4rem;
-    transform: rotate(-135deg);
-    */    
 }
 
 #pages {
@@ -154,7 +156,9 @@ body {
 }
 /*=====================curve outside----------------------*/
 .menuNavigation ul li [menu]:hover a::before,
-.menuNavigation ul li [menu].hovered a::before {
+.menuNavigation ul li [menu].hovered a::before,
+.menuNavigation #pages [submenu]:hover li a::before,
+.menuNavigation #pages [submenu].hovered li a::before {
     content: '';
     position: absolute;
     right: 0;
@@ -167,7 +171,9 @@ body {
     box-shadow: 35px 35px 0 10px var(--white);
 }
 .menuNavigation ul li [menu]:hover a::after,
-.menuNavigation ul li [menu].hovered a::after  {
+.menuNavigation ul li [menu].hovered a::after,
+.menuNavigation #pages [submenu]:hover li a::after,
+.menuNavigation #pages [submenu].hovered li a::after  {
     content: '';
     position: absolute;
     right: 0;
@@ -179,6 +185,7 @@ body {
     pointer-events: none;
     box-shadow: 35px -35px 0 10px var(--white);
 }
+ 
 /*---------------------main Picture----------------------*/
 #hero {
     width: 100%;
@@ -593,14 +600,14 @@ hr {
     top: 0;
     left: 0;  
 }
-#aboutLinkPage {      
+#homePage {      
     height: 100%;
     background: url(background1.jpg);
     background-size: cover;
     position: relative;
     padding-top: 100px;   
 }
-#aboutLinkPage::before {
+#homePage::before {
     content: '';
     background: rgba(0, 0, 0, 0.6);
     position: absolute;
@@ -609,7 +616,7 @@ hr {
     left: 0;
     width: 100%;
 }
-#aboutLinkPage .container {
+#homePage .container {
     position: relative;
 }
 .aboutBlank {

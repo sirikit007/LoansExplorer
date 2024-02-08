@@ -34,12 +34,30 @@ let switchCalculators = document.getElementById('switchCalculators');
 let switchReviews = document.getElementById('switchReviews');
 let switchPartners = document.getElementById('switchPartners');
 let switchContactUs = document.getElementById('switchContactUs');
+let switchLoanCalculator = document.getElementById('switchLoanCalculator');
+let switchStampdutyCalculator = document.getElementById('switchStampdutyCalculator');
+let switchBorrowingCalculator = document.getElementById('switchBorrowingCalculator');
+
+let homePage = document.getElementById('homePage');
+let contentLoanRepayments = document.getElementById('contentLoanRepayments');
+let contentStampDuty= document.getElementById('contentStampDuty');
+let borrowingCalculator= document.getElementById('borrowingCalculator');
+let testimonials= document.getElementById('testimonials');
+let contentPartners= document.getElementById('contentPartners');
+
+
+ 
 
 switchHome.addEventListener('click', switchContent);
 switchCalculators.addEventListener('click', switchContent);
 switchReviews.addEventListener('click', switchContent);
 switchPartners.addEventListener('click', switchContent);
 switchContactUs.addEventListener('click', switchContent);
+switchLoanCalculator.addEventListener('click', switchContent);
+switchStampdutyCalculator.addEventListener('click', switchContent);
+switchBorrowingCalculator.addEventListener('click', switchContent);
+
+
 
 
 
@@ -53,30 +71,80 @@ function switchContent(event) {
         switchReviews.classList.remove('hovered');
         switchPartners.classList.remove('hovered');
         switchContactUs.classList.remove('hovered');
+        switchLoanCalculator.classList.remove('hovered');
+        switchStampdutyCalculator.classList.remove('hovered');
+        switchBorrowingCalculator.classList.remove('hovered');
+
+        homePage.removeAttribute('hide');
+
     } else if (menuitem.id == 'switchCalculators') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
         switchReviews.classList.remove('hovered');
         switchPartners.classList.remove('hovered');
         switchContactUs.classList.remove('hovered');
+        switchLoanCalculator.classList.remove('hovered');
+        switchStampdutyCalculator.classList.remove('hovered');
+        switchBorrowingCalculator.classList.remove('hovered');
     } else if (menuitem.id == 'switchReviews') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
         switchCalculators.classList.remove('hovered');
         switchPartners.classList.remove('hovered');
         switchContactUs.classList.remove('hovered');
+        switchLoanCalculator.classList.remove('hovered');
+        switchStampdutyCalculator.classList.remove('hovered');
+        switchBorrowingCalculator.classList.remove('hovered');
     } else if (menuitem.id == 'switchPartners') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
         switchCalculators.classList.remove('hovered');
         switchReviews.classList.remove('hovered');
         switchContactUs.classList.remove('hovered');
+        switchLoanCalculator.classList.remove('hovered');
+        switchStampdutyCalculator.classList.remove('hovered');
+        switchBorrowingCalculator.classList.remove('hovered');
     } else if (menuitem.id == 'switchContactUs') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
         switchCalculators.classList.remove('hovered');
         switchReviews.classList.remove('hovered');
         switchPartners.classList.remove('hovered');
+        switchLoanCalculator.classList.remove('hovered');
+        switchStampdutyCalculator.classList.remove('hovered');
+        switchBorrowingCalculator.classList.remove('hovered');
+    }
+    else if (menuitem.id == 'switchLoanCalculator') {
+        menuitem.classList.add('hovered');
+        switchHome.classList.remove('hovered');
+        switchCalculators.classList.remove('hovered');
+        switchReviews.classList.remove('hovered');
+        switchPartners.classList.remove('hovered');
+        switchContactUs.classList.remove('hovered');
+        switchStampdutyCalculator.classList.remove('hovered');
+        switchBorrowingCalculator.classList.remove('hovered');
+
+        homePage.removeAttribute('hide');
+    }
+    else if (menuitem.id == 'switchStampdutyCalculator') {
+        menuitem.classList.add('hovered');
+        switchHome.classList.remove('hovered');
+        switchCalculators.classList.remove('hovered');
+        switchReviews.classList.remove('hovered');
+        switchPartners.classList.remove('hovered');
+        switchContactUs.classList.remove('hovered');  
+        switchLoanCalculator.classList.remove('hovered');
+        switchBorrowingCalculator.classList.remove('hovered');      
+    }
+    else if (menuitem.id == 'switchBorrowingCalculator') {
+        menuitem.classList.add('hovered');
+        switchHome.classList.remove('hovered');
+        switchCalculators.classList.remove('hovered');
+        switchReviews.classList.remove('hovered');
+        switchPartners.classList.remove('hovered');
+        switchContactUs.classList.remove('hovered');  
+        switchLoanCalculator.classList.remove('hovered');       
+        switchStampdutyCalculator.classList.remove('hovered');       
     }
 }
 /*

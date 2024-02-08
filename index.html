@@ -69,10 +69,19 @@
                             </div>
                         </li>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse"  data-bs-parent="#sidebar">
-                            <li class="sidebar-item ">
-                                <a class="sidebar-link" href="#"><span>Loan Calculatop</span></a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="#"><span>Stamp Duty Calculator</span></a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="#"> <span>Borrowing Calculator</span></a></li>                            
+                            <div id="switchLoanCalculator" submenu menuitem>
+                                <li class="sidebar-item ">
+                                    <a class="sidebar-link" href="#"><span>Loan Calculatop</span></a>
+                                </li>
+                            </div>
+                            <div id="switchStampdutyCalculator" submenu menuitem>
+                                <li class="sidebar-item"><a class="sidebar-link" href="#"><span>Stamp Duty Calculator</span></a></li>
+                            </div>
+                            <div id="switchBorrowingCalculator" submenu menuitem>
+                                <li class="sidebar-item"><a class="sidebar-link" href="#"> <span>Borrowing Calculator</span></a></li>                            
+                            </div>
+                            
+                            
                         </ul>
                         
                         <li class="sidebar-item" >
@@ -120,7 +129,7 @@
         </nav>
     </header>
 
-    <section id="hero">
+    <section id="hero" hide>
         <div class="justify-content-center marginLeft d-flex row">
             <div class="container">
                 <div class="row justify-content-center text-center">
@@ -169,163 +178,158 @@
     </section>
     <!-------------------------AboutMain--------------------------->
    
-        <section class="hidden d-flex align-items-center justify-content-center marginLeft" id="about">
-            
-            <div class="container containerAbout ">
-                <div class="row  justify-content-center mt-5 pt-5">
-                    <div class="col-xxl-4 col-xl-6 col-lg-6  order-lg-2" >
-                        <img  src="https://images.pexels.com/photos/19342827/pexels-photo-19342827/free-photo-of-ice-on-sea-water.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-xxl-8 col-xl-6 col-lg-6 pt-5 pt-lg-0 order-lg-1 content">
-                        <h3 class="mb-5 fw-bold scrollUp">Welcome to Loans Explorer</h3>
-                        <p class="fst-italic mt-5 fw-bold">Who we are?</p>
-                        
-                        <ul>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill=#ffc451 class="bi bi-check" viewBox="0 0 16 16">
-                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                                </svg> 
-                                <span class="lh-base">
-                                    We are mortgage brokers located in Sydney, NSW Australia (Australian Credit Licence Number 387346). Our brokers are fully accredited by the Finance Brokers Association of Australia Limited (FBAA) and have a wealth of experience in helping clients.
-                                </span>                               
-                                    
-                            </li>
-                        </ul>
-                        <p class="fst-italic fw-bold">What do we do?</p>
-                        <ul>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill=#ffc451 class="bi bi-check" viewBox="0 0 16 16">
-                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                                </svg> 
-                                <span class="lh-lg">
-                                    Choosing the best home loan deal on your own can be a very difficult task considering the large number of products on the current market . We aim to save you time and money, allowing you to source the best mortgage for your circumstances without having to contact dozens of mortgage lenders and search endless lists of products and rates. We use BrokerFirst loan comparison software which compares hundreds of home loan rates and deals from Australia’s leading lenders including the big four banks. Our Mortgage Brokers look at the whole package, and not just the interest rate to provide a better indication of the true cost of a loan, which could save you a load of hassle, hours of research as well as thousands of dollars.
-                                </span>                              
-                                    
-                            </li>
-                        </ul>
-                                            
-                        <p class="fst-italic fw-bold">Have problems obtaning a loan?</p>
-                        <ul>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill=#ffc451 class="bi bi-check" viewBox="0 0 16 16">
-                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                                </svg>
-                                <span class="lh-base">
-                                    Contact us and we'll help you. Keep coming to our website and you'll find details of the borrowing process explained in layman's terms as well as a lot of useful references and resources.
-                                </span>                             
-                                    
-                            </li>
-                        </ul>                    
-                        
-                    </div>
-
+    <section class="hidden d-flex align-items-center justify-content-center marginLeft" id="about" hide>        
+        <div class="container containerAbout ">
+            <div class="row  justify-content-center mt-5 pt-5">
+                <div class="col-xxl-4 col-xl-6 col-lg-6  order-lg-2" >
+                    <img  src="https://images.pexels.com/photos/19342827/pexels-photo-19342827/free-photo-of-ice-on-sea-water.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="img-fluid">
+                </div>
+                <div class="col-xxl-8 col-xl-6 col-lg-6 pt-5 pt-lg-0 order-lg-1 content">
+                    <h3 class="mb-5 fw-bold scrollUp">Welcome to Loans Explorer</h3>
+                    <p class="fst-italic mt-5 fw-bold">Who we are?</p>
+                    
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill=#ffc451 class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg> 
+                            <span class="lh-base">
+                                We are mortgage brokers located in Sydney, NSW Australia (Australian Credit Licence Number 387346). Our brokers are fully accredited by the Finance Brokers Association of Australia Limited (FBAA) and have a wealth of experience in helping clients.
+                            </span>                               
+                                
+                        </li>
+                    </ul>
+                    <p class="fst-italic fw-bold">What do we do?</p>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill=#ffc451 class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg> 
+                            <span class="lh-lg">
+                                Choosing the best home loan deal on your own can be a very difficult task considering the large number of products on the current market . We aim to save you time and money, allowing you to source the best mortgage for your circumstances without having to contact dozens of mortgage lenders and search endless lists of products and rates. We use BrokerFirst loan comparison software which compares hundreds of home loan rates and deals from Australia’s leading lenders including the big four banks. Our Mortgage Brokers look at the whole package, and not just the interest rate to provide a better indication of the true cost of a loan, which could save you a load of hassle, hours of research as well as thousands of dollars.
+                            </span>                              
+                                
+                        </li>
+                    </ul>
+                                        
+                    <p class="fst-italic fw-bold">Have problems obtaning a loan?</p>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill=#ffc451 class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            <span class="lh-base">
+                                Contact us and we'll help you. Keep coming to our website and you'll find details of the borrowing process explained in layman's terms as well as a lot of useful references and resources.
+                            </span>                             
+                                
+                        </li>
+                    </ul>                    
                 </div>
             </div>
-
-
-        </section>
+        </div>
+    </section>
    
         <!----------------------------ContactUs--------------------->
         
-    <section class="cta mb-5 hidden marginLeft">
+    <section class="cta mb-5 hidden marginLeft" id="contactUsStrip" hide>
         <div class="container text-center">
             <h3 class="mb-5 scrollLeft">Get in touch</h3>
             <p class="lh-lg">We are mortgage brokers located in Sydney, NSW Australia. Our brokers are fully accredited by the Mortgage and Finance Association of Australia (MFAA) and have a wealth of experience in helping clients. If you have any queries regarding home loans or purchasing property advertised on this web site please email or call us with your questions and contact information and our consultants will contact you.</p>
             <a href="" class="cta-btn mt-4">Connect with us</a>
         </div>
     </section>
-    <!----------------------------ContactUs   PAGE--------------------->
+    <!----------------------------ContactUs   Main--------------------->
     
-        <section class="contact hidden marginLeft">
-            <div class="container container-xl">
-                <h3 class="scrollUp fw-bold mb-3">Contacts</h3>
-                <p class="lh-lg">We are mortgage brokers located in Sydney, NSW Australia. Our brokers are fully accredited by the Mortgage and Finance Association of Australia 
-                    (MFAA) and have a wealth of experience in helping clients.
-                    If you have any queries regarding home loans or purchasing property advertised on this web site please email or call us with your questions and 
-                    contact information and our consultants will contact you. </p>
-                <h4 class="d-flex justify-content-center mb-5">Contact Us</h4>
-                <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=365%20Kent%20street%20Sydney%202000%20NSW%20%20Australia+(My%20Logo)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-                <div class="row my-5">
-                    <div class="col-lg-4">
-                        <div class="info mt-5">
-                            <div class="address mb-5">
-                                <div class="info-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-globe-asia-australia" viewBox="0 0 16 16">
-                                        <path d="m10.495 6.92 1.278-.619a.483.483 0 0 0 .126-.782c-.252-.244-.682-.139-.932.107-.23.226-.513.373-.816.53l-.102.054c-.338.178-.264.626.1.736a.476.476 0 0 0 .346-.027ZM7.741 9.808V9.78a.413.413 0 1 1 .783.183l-.22.443a.602.602 0 0 1-.12.167l-.193.185a.36.36 0 1 1-.5-.516l.112-.108a.453.453 0 0 0 .138-.326ZM5.672 12.5l.482.233A.386.386 0 1 0 6.32 12h-.416a.702.702 0 0 1-.419-.139l-.277-.206a.302.302 0 1 0-.298.52l.761.325Z"/>
-                                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1.612 10.867l.756-1.288a1 1 0 0 1 1.545-.225l1.074 1.005a.986.986 0 0 0 1.36-.011l.038-.037a.882.882 0 0 0 .26-.755c-.075-.548.37-1.033.92-1.099.728-.086 1.587-.324 1.728-.957.086-.386-.114-.83-.361-1.2-.207-.312 0-.8.374-.8.123 0 .24-.055.318-.15l.393-.474c.196-.237.491-.368.797-.403.554-.064 1.407-.277 1.583-.973.098-.391-.192-.634-.484-.88-.254-.212-.51-.426-.515-.741a6.998 6.998 0 0 1 3.425 7.692 1.015 1.015 0 0 0-.087-.063l-.316-.204a1 1 0 0 0-.977-.06l-.169.082a1 1 0 0 1-.741.051l-1.021-.329A1 1 0 0 0 11.205 9h-.165a1 1 0 0 0-.945.674l-.172.499a1 1 0 0 1-.404.514l-.802.518a1 1 0 0 0-.458.84v.455a1 1 0 0 0 1 1h.257a1 1 0 0 1 .542.16l.762.49a.998.998 0 0 0 .283.126 7.001 7.001 0 0 1-9.49-3.409Z"/>
-                                    </svg>
-                                </div>                        
-                                <h4>Location</h4>
-                                <p>365 Kent street Sydney 2000 NSW Australia</p>
+    <section class="contact hidden marginLeft" id="contactUsMain" hide>
+        <div class="container container-xl">
+            <h3 class="scrollUp fw-bold mb-3">Contacts</h3>
+            <p class="lh-lg">We are mortgage brokers located in Sydney, NSW Australia. Our brokers are fully accredited by the Mortgage and Finance Association of Australia 
+                (MFAA) and have a wealth of experience in helping clients.
+                If you have any queries regarding home loans or purchasing property advertised on this web site please email or call us with your questions and 
+                contact information and our consultants will contact you. </p>
+            <h4 class="d-flex justify-content-center mb-5">Contact Us</h4>
+            <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=365%20Kent%20street%20Sydney%202000%20NSW%20%20Australia+(My%20Logo)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+            <div class="row my-5">
+                <div class="col-lg-4">
+                    <div class="info mt-5">
+                        <div class="address mb-5">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-globe-asia-australia" viewBox="0 0 16 16">
+                                    <path d="m10.495 6.92 1.278-.619a.483.483 0 0 0 .126-.782c-.252-.244-.682-.139-.932.107-.23.226-.513.373-.816.53l-.102.054c-.338.178-.264.626.1.736a.476.476 0 0 0 .346-.027ZM7.741 9.808V9.78a.413.413 0 1 1 .783.183l-.22.443a.602.602 0 0 1-.12.167l-.193.185a.36.36 0 1 1-.5-.516l.112-.108a.453.453 0 0 0 .138-.326ZM5.672 12.5l.482.233A.386.386 0 1 0 6.32 12h-.416a.702.702 0 0 1-.419-.139l-.277-.206a.302.302 0 1 0-.298.52l.761.325Z"/>
+                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1.612 10.867l.756-1.288a1 1 0 0 1 1.545-.225l1.074 1.005a.986.986 0 0 0 1.36-.011l.038-.037a.882.882 0 0 0 .26-.755c-.075-.548.37-1.033.92-1.099.728-.086 1.587-.324 1.728-.957.086-.386-.114-.83-.361-1.2-.207-.312 0-.8.374-.8.123 0 .24-.055.318-.15l.393-.474c.196-.237.491-.368.797-.403.554-.064 1.407-.277 1.583-.973.098-.391-.192-.634-.484-.88-.254-.212-.51-.426-.515-.741a6.998 6.998 0 0 1 3.425 7.692 1.015 1.015 0 0 0-.087-.063l-.316-.204a1 1 0 0 0-.977-.06l-.169.082a1 1 0 0 1-.741.051l-1.021-.329A1 1 0 0 0 11.205 9h-.165a1 1 0 0 0-.945.674l-.172.499a1 1 0 0 1-.404.514l-.802.518a1 1 0 0 0-.458.84v.455a1 1 0 0 0 1 1h.257a1 1 0 0 1 .542.16l.762.49a.998.998 0 0 0 .283.126 7.001 7.001 0 0 1-9.49-3.409Z"/>
+                                </svg>
+                            </div>                        
+                            <h4>Location</h4>
+                            <p>365 Kent street Sydney 2000 NSW Australia</p>
+                        </div>
+                        <div class="email mb-5">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                                </svg>
                             </div>
-                            <div class="email mb-5">
-                                <div class="info-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                            
+                            <h4>Email:</h4>
+                            <p>info@loansexplorer.com</p>
+                        </div>
+                        <div class="phone mb-5">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                </svg>
+                            </div>                        
+                            <h4>Phone:</h4>
+                            <p>+612 8005-6142</p>
+                        </div>
+                        <div class="facebook ">
+                            <div class="info-icon">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
                                     </svg>
-                                </div>
-                                
-                                <h4>Email:</h4>
-                                <p>info@loansexplorer.com</p>
-                            </div>
-                            <div class="phone mb-5">
-                                <div class="info-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                                    </svg>
-                                </div>                        
-                                <h4>Phone:</h4>
-                                <p>+612 8005-6142</p>
-                            </div>
-                            <div class="facebook ">
-                                <div class="info-icon">
-                                    <a href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                                        </svg>
-                                        
-                                    </a>
                                     
-                                </div>                        
-                                <h4>Facebook</h4>                            
-                            </div>
+                                </a>
+                                
+                            </div>                        
+                            <h4>Facebook</h4>                            
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Name" class="form-control" required>
-                                    </div>                               
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Surname" class="form-control" required>
-                                    </div>                               
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input type="email" placeholder="Email" class="form-control mt-3" required>
-                                    </div>                               
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input type="number" placeholder="Phone" class="form-control mt-3" required>
-                                    </div>                               
-                                </div>
-                                <div class="col-12 justify-content-center buttonForContactForm">
-                                    <textarea placeholder="Text us" class="form-control mt-3" id="" cols="30" rows="10"></textarea>
-                                    <button class="cta-btn btn-primary mt-3">Send</button>
-                                </div>                                
+                </div>
+                <div class="col-lg-8">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Name" class="form-control" required>
+                                </div>                               
                             </div>
-                        </form>
-                    </div>                
-                </div>                  
-            </div>
-        </section>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Surname" class="form-control" required>
+                                </div>                               
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input type="email" placeholder="Email" class="form-control mt-3" required>
+                                </div>                               
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input type="number" placeholder="Phone" class="form-control mt-3" required>
+                                </div>                               
+                            </div>
+                            <div class="col-12 justify-content-center buttonForContactForm">
+                                <textarea placeholder="Text us" class="form-control mt-3" id="" cols="30" rows="10"></textarea>
+                                <button class="cta-btn btn-primary mt-3">Send</button>
+                            </div>                                
+                        </div>
+                    </form>
+                </div>                
+            </div>                  
+        </div>
+    </section>
     
-    <section class="reviews hidden marginLeft">
+    <section class="reviews hidden marginLeft" id="reviewMain" hide>
         <div class="carousel slide .carousel-fade" id="carouselControls" data-bs-ride="carousel">
             <h2 class="justify-content-center text-center scrollLeft scrollLeft">Client reviews</h2>
             <div class="carousel-inner">
@@ -502,7 +506,7 @@
         </div>
     </section>
 
-    <section class="partners d-flex hidden marginLeft">
+    <section class="partners d-flex hidden marginLeft" id="partnersMain" hide>
         <div class="container text-center">
             <div class="row mb-3 justify-content-center">
                 <h1 class="head welcome scrollUp my-5">Our Partners</h1>
@@ -553,7 +557,7 @@
 
 
         <!--Footer-->
-    <footer class="marginLeft">
+    <footer class="marginLeft" id="footerMain" hide>
         <div class="footer-top hidden d-flex justify-content-center">
             <div class="container mx-5 justify-content-center d-flex">
                 <div class="row flex-wrap justify-content-between">
@@ -612,7 +616,7 @@
     </footer>   
 
     <!---------------------------------------------Home Link Page----------------------------------------------->
-    <section id="aboutLinkPage" class="marginLeft img-fluid d-flex justify-content-center">      
+    <section id="homePage" class="marginLeft img-fluid d-flex justify-content-center" hide>      
        
         <div class="container justify-content-center">
             <div class="row m-5 d-flex justify-content-center">
@@ -667,468 +671,462 @@
 
 
     <!------------------------------------------------------------------Loan Repayments------------------------------------------------------------>
-    <section class="marginLeft d-flex justify-content-center backgroundCalculators" id="contentCalculators">
-      
-        <div id="contentLoanRepayments">
-            <div class="container d-flex justify-content-center m-5 p-5">
-                <div class="row justify-content-center">
-                    <div class="topHead">
-                        <div class="line head">
-                            <span class="line-1"></span><br>
-                            <span class="line-2"></span><br>
-                            <span class="line-3"></span>
-                        </div>
-                            
-                        <h1 class="head welcome text-center fw-bold">Loan Repayments Calculator</h1>                         
+    <section class="marginLeft d-flex justify-content-center backgroundCalculators" id="contentLoanRepayments" hide>
+        <div class="container d-flex justify-content-center m-5 p-5">
+            <div class="row justify-content-center">
+                <div class="topHead">
+                    <div class="line head">
+                        <span class="line-1"></span><br>
+                        <span class="line-2"></span><br>
+                        <span class="line-3"></span>
                     </div>
-                    <div class="profileReviewCalculator col-xl-3">  
-                        <div class="allInputGroups">
-                            <div class="inputGroup">
-                                <input type="text" id="loanAmount" required> 
-                                <label for="loanAmount"><i class="far fa-dollar-sign"></i>Loan Amount</label>
-                            </div>
-                            <div class="inputGroup">
-                                <input type="text" id="term" required> 
-                                <label for="term"><i class="fas fa-vote-yea"></i>Term (Years)</label>
-                            </div>
-                            <div class="inputGroup">
-                                <input type="text" id="interestRate" required> 
-                                <label for="interestRate"><i class="fas fa-percentage"></i>Interest Rate</label>
-                            </div>
-                            <button id="buttonCalculate" class="buttonCalculate">Calculate Repayments</button>  
-                        </div>  
-                        <div class="groupAnswersLoanRepayments">
-                            <div  class="answerSquareLoanRepayments">
-                                <div class="inputGroupMonthlyPayments">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-currency-dollar" viewBox="3 0 16 16">
-                                        <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
-                                    </svg>
-                                    <h4 id="monthlyPayments"></h4>
-                                </div>                                        
-                                <h4>Monthly</h4>
-                            </div>
-                            <div  class="answerSquareLoanRepayments">
-                                <div class="inputGroupFortnightlyPayments">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-currency-dollar" viewBox="3 0 16 16">
-                                        <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
-                                    </svg>
-                                    <h4 id="fortnightlyPayments"></h4>
-                                </div>   
-                                <h4>Fortnightly</h4>                                        
-                            </div>
-
-                            <div class="answerSquareLoanRepayments">
-                                <div class="inputGroupWeeklyPayments">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-currency-dollar" viewBox="3 0 16 16">
-                                        <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
-                                    </svg>
-                                    <h4 id="weeklyPayments"></h4>
-                                </div>   
-                                <h4>Weekly</h4>  
-
-                            </div>
-                        </div>                            
+                        
+                    <h1 class="head welcome text-center fw-bold">Loan Repayments Calculator</h1>                         
+                </div>
+                <div class="profileReviewCalculator col-xl-3">  
+                    <div class="allInputGroups">
+                        <div class="inputGroup">
+                            <input type="text" id="loanAmount" required> 
+                            <label for="loanAmount"><i class="far fa-dollar-sign"></i>Loan Amount</label>
+                        </div>
+                        <div class="inputGroup">
+                            <input type="text" id="term" required> 
+                            <label for="term"><i class="fas fa-vote-yea"></i>Term (Years)</label>
+                        </div>
+                        <div class="inputGroup">
+                            <input type="text" id="interestRate" required> 
+                            <label for="interestRate"><i class="fas fa-percentage"></i>Interest Rate</label>
+                        </div>
+                        <button id="buttonCalculate" class="buttonCalculate">Calculate Repayments</button>  
                     </div>  
+                    <div class="groupAnswersLoanRepayments">
+                        <div  class="answerSquareLoanRepayments">
+                            <div class="inputGroupMonthlyPayments">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-currency-dollar" viewBox="3 0 16 16">
+                                    <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
+                                </svg>
+                                <h4 id="monthlyPayments"></h4>
+                            </div>                                        
+                            <h4>Monthly</h4>
+                        </div>
+                        <div  class="answerSquareLoanRepayments">
+                            <div class="inputGroupFortnightlyPayments">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-currency-dollar" viewBox="3 0 16 16">
+                                    <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
+                                </svg>
+                                <h4 id="fortnightlyPayments"></h4>
+                            </div>   
+                            <h4>Fortnightly</h4>                                        
+                        </div>
+
+                        <div class="answerSquareLoanRepayments">
+                            <div class="inputGroupWeeklyPayments">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-currency-dollar" viewBox="3 0 16 16">
+                                    <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
+                                </svg>
+                                <h4 id="weeklyPayments"></h4>
+                            </div>   
+                            <h4>Weekly</h4>  
+
+                        </div>
+                    </div>                            
+                </div>  
+            </div>
+        </div>
+    </section>
+    <section class="marginLeft d-flex justify-content-center backgroundCalculators" id="contentStampDuty" hide>
+        <div class="container d-flex justify-content-center m-5 p-5">
+            <div class="row">
+                <div class="topHead">
+                    <div class="line head">
+                        <span class="line-1"></span><br>
+                        <span class="line-2"></span><br>
+                        <span class="line-3"></span>
+                    </div>                         
+                    <h1 class="head welcome text-center fw-bold">Stamp Duty Calculator</h1>                         
+                </div>
+                
+                <div class="profileReviewCalculator">
+                    <form action="" class="allInputGroups">
+                        <div class="inputGroup inputGroupStamDuty margBot">
+                            <input type="text" id="propertyValue" required> 
+                            <label for="propertyValue"><i class="far fa-dollar-sign"></i>Property Value</label>
+                        </div>
+                        <div class="radioContainer margBot">
+                            <p class="mb-2 fw-semibold">Are you a first home buyer?</p>
+                            <div class="radioToggle">                                     
+                                <input id="firstHomeBuyerYes" name="radioToggle_1" type="radio" checked="checked"> 
+                                <label class="yesLabel" for="firstHomeBuyerYes">Yes</label>
+                                <input id="firstHomeBuyerNo" name="radioToggle_1" type="radio"> 
+                                <label class="noLabel" for="firstHomeBuyerNo">No</label>                                                                                                                 
+                            </div>
+                        </div>
+                        
+                        <div class="radioContainer margBot">
+                            <p class="mb-2 fw-semibold">I'm buying</p>
+                            <div class="radioToggleForTypeProperty"> 
+                                <input id="existingProperty" name="radioToggle_3" type="radio" checked='checked'>
+                                <label class="yesLabel middleLabel" for="existingProperty">Existing home</label>
+                                <input id="newProperty" name="radioToggle_3" type="radio">
+                                <label class="middleLabel" for="newProperty">New home</label>
+                                <input id="vacantLand"  name="radioToggle_3" type="radio">
+                                <label class="noLabel middleLabel" for="vacantLand">Vacant land</label>
+                                
+                            </div>                                        
+                        </div>
+                        
+                        <div class="propertyLocationDropListContainer radioContainer">
+                            <p class="mb-2 fw-semibold">The property is located in</p>
+                            <div id="listStates">
+                                <div id="selectFieldStates" class="selectFieldStates">
+                                    <p id="selectedState">New South Wales</p><i class="fas fa-chevron-down faStates"></i>
+                                </div>
+                                
+                                <ul id="listFieldState" class="hide">
+                                    <li class="optionsStates">New South Wales</li>
+                                    <li class="optionsStates">Victoria</li>
+                                    <li class="optionsStates">Australian Capital Territory</li>
+                                    <li class="optionsStates">Northern Territory</li>
+                                    <li class="optionsStates">Queensland</li>
+                                    <li class="optionsStates">South Australia</li>
+                                    <li class="optionsStates">Tasmania</li>
+                                    <li class="optionsStates">Western Australia</li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        
+                        <button id="buttonCalculateStampDuty" class="buttonCalculateStampDuty buttonCalculate">Calculate Stamp Duty</button> 
+                        
+    
+                        <div class="groupAnswersStampDuty">
+                            <div  class="answerSquareStampDuty">
+                                <p>Stamp Duty: <span> &#36;</span></p>
+                                <div>                                                
+                                    <h4>                                           
+                                        <span id="resultStampDuty"></span>
+                                    </h4>                                               
+                                </div>
+                            </div>
+                        </div>
+                    </form>                                           
+                </div> 
+                <div class="containerTable">
+                    <div id="contentTable">
+                        <button class="expandBTN" id="expandButton">Learn More about Stamp Duty Rates</button>
+                        <div id="textTable">
+                            <table class="stampDutyRate">
+                                <tr>                                             
+                                    <td class="stateColor">NSW: Property Value (on or after 1 July 2023)</td>
+                                    <td class="stateColor">NSW: Stamp Duty Rate (on or after 1 July 2023)</td>                                                                
+                                </tr>
+                                <tr>                                    
+                                    <td>$0 to $16,000</td>
+                                    <td>$1.25 for every $100, with $10 as a minimum</td>                       
+                                </tr>
+                                <tr>
+                                    <td>$16,000 to $35,000</td>
+                                    <td>$200 plus $1.50 for every $100 over $16,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$35,000 to $93,000</td>
+                                    <td>$485 plus $1.75 for every $100 over $35,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$93,000 to $351,000</td>
+                                    <td>$1,500 plus $3.50 for every $100 over $93,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$351,000 to $1,168,000</td>
+                                    <td>$10,530 plus $4.50 for every $100 over $351,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Over $1,168,000</td>
+                                    <td>$47,295 plus $5.50 for every $100 over $1,168,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="stateColor">Victoria: Property Value (on or after 6 May 2008)</td>
+                                    <td class="stateColor">Victoria: Stamp Duty Rate (on or after 6 May 2008)</td>                                    
+                                </tr>
+                                <tr>
+                                    <td>$0 to $25,000</td>
+                                    <td>1.4% of the dutiable value of the property</td>                                    
+                                </tr>
+                                <tr>
+                                    <td> $25,000 - $130,000</td>
+                                    <td>$350 plus 2.4% of the dutiable value in excess of $25,000</td>                                    
+                                </tr>
+                                <tr>
+                                    <td> $130,000 - $440,000</td>
+                                    <td>$2870 plus 5% of the dutiable value in excess of $130,000</td>                                    
+                                </tr>
+                                <tr>
+                                    <td>$440,000 - $550,000</td>
+                                    <td>$18,370 plus 6% of the dutiable value in excess of $440,000</td>                                    
+                                </tr>
+                                <tr>
+                                    <td>Over $550,000</td>
+                                    <td>The principal place of residence concessional rate does not apply. Please refer to the general land transfer duty rates</td>                                    
+                                </tr>                                            
+                                    <td class="stateColor">ACT: Property Value (on or after 1 July 2023)</td>
+                                    <td class="stateColor">ACT: Stamp Duty Rate (on or after 1 July 2023)</td> 
+                                </tr>
+                                <tr>
+                                    <td>$0 to $260 000</td>
+                                    <td>$0.49 per $100 or part of thereof up to $260,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$260 001 to $300 000</td>
+                                    <td>$1 274 plus $2.20 per $100 or part thereof by which the value exceeds $260,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$300 001 to $500 000</td>
+                                    <td>$2 154 plus $3.40 per $100, or part thereof by which the value exceeds $300,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$500 001 to $750 000</td>
+                                    <td>$8 954 plus $4.32 per $100, or part thereof by which the value exceeds $500,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$750 001 to $1 000 000</td>
+                                    <td>$19 754 plus $5.90 per $100, or part thereof by which the value exceeds $750,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$1 000 001 to $1 455 000</td>
+                                    <td>$34 504 plus $6.40 per $100, or part thereof by which the value exceeds $1,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Over $1 455 000</td>
+                                    <td>A flat rate of $4.54 per $100 applied to the total transaction value</td>
+                                </tr>
+                                <tr>
+                                    <td class="stateColor">Northern Territory: Property Value (on or after 9 May 2023) </td>
+                                    <td class="stateColor">Northern Territory: Stamp Duty Rate (on or after 9 May 2023)</td> 
+                                </tr>
+                                <tr>
+                                    <td>$0 to $525,000</td>
+                                    <td>(0.06571441 x (V x V)) + 15V (V is 1/1,000 of the property’s dutiable value)</td>
+                                </tr>
+                                <tr>
+                                    <td>$525,001 - $3,000,000</td>
+                                    <td>4.95% of the property value</td>
+                                </tr>
+                                <tr>
+                                    <td>$3,000,001 - $5,000,000</td>
+                                    <td>5.75% of the property value</td>
+                                </tr>
+                                <tr>
+                                    <td>Over $5,000,000</td>
+                                    <td>5.95% of the property value</td>
+                                </tr>
+                                <tr>
+                                    <td class="stateColor">Queensland: Property Value (on or after  1 July 2020) </td>
+                                    <td class="stateColor">Queensland: Stamp Duty Rate (on or after 1 July 2020)</td> 
+                                </tr>
+                                <tr>
+                                    <td>$0 to $5,000</td>
+                                    <td>Nil</td>
+                                </tr>
+                                <tr>
+                                    <td>More than $5,000 up to $75,000</td>
+                                    <td>$1.50 for each $100, or part of $100, over $5,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$75,000 to $540,000</td>
+                                    <td>$1,050 plus $3.50 for each $100, or part of $100, over $75,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$540,000 to $1,000,000</td>
+                                    <td>$17,325 plus $4.50 for each $100, or part of $100, over $540,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Over $1,000,000</td>
+                                    <td>$38,025 plus $5.75 for each $100, or part of $100, over $1,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Queensland: Home Concession Rate (If you move into the property within 12 months of purchasing it and intend to make it your principal place of residence, you could qualify for the home concession.)</td>                                    
+                                </tr>
+                                <tr>
+                                    <td>Up to $350,000</td>
+                                    <td>$1.00 for each $100 or part of $100</td>                                    
+                                </tr>
+                                <tr>
+                                    <td>$350,001 to $540,000</td>
+                                    <td>$3,500 + $3.50 for every $100 or part of $100 over $350,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$540,001 to $1,000,000</td>
+                                    <td>$10,150 + $4.50 for every $100 or part of $100 over $540,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Over $1,000,000</td>
+                                    <td>$30,850 + $5.75 for every $100 or part of $100 over $1,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="stateColor">South Australia: Property Value (on or after 15 June 2023) </td>
+                                    <td class="stateColor">South Australia: Stamp Duty Rate (on or after 15 June 2023)</td> 
+                                </tr>
+                                <tr>
+                                    <td>$0 to $12,000</td>
+                                    <td>$1.00 for every $100 or part of $100</td>
+                                </tr>
+                                <tr>
+                                    <td>Exceeds $12,000 but not $30,000</td>
+                                    <td>$120 plus $2.00 for every $100 or part of $100 over $12,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Exceeds $30,000 but not $50,000</td>
+                                    <td>$480 plus $3.00 for every $100 or part of $100 over $30,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Exceeds $50,000 but not $100,000</td>
+                                    <td>$1,080 plus $3.50 for every $100 or part of $100 over $50,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Exceeds $100,000 but not $200,000</td>
+                                    <td>$2,830 plus $4.00 for every $100 or part of $100 over $100,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Exceeds $200,000 but not $250,000</td>
+                                    <td>$6,830 plus $4.25 for every $100 or part of $100 over $200,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Exceeds $250,000 but not $300,000</td>
+                                    <td>$8,955 plus $4.75 for every $100 or part of $100 over $250,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Exceeds $300,000 but not $500,000</td>
+                                    <td>$11,330 plus $5.00 for every $100 or part of $100 over $300,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Over $500,000</td>
+                                    <td>$21,330 plus $5.50 for every $100 or part of $100 over $500,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="stateColor">Tasmania: Property Value (on or after 21 October 2013) </td>
+                                    <td class="stateColor">Tasmania: Stamp Duty Rate (on or after 21 October 2013)</td> 
+                                </tr>
+                                <tr>
+                                    <td>$0 to $3 000</td>
+                                    <td>$50</td>
+                                </tr>
+                                <tr>
+                                    <td>More than $3 000 but not more than $25 000</td>
+                                    <td>$50 plus $1.75 for every $100, or part, by which the dutiable value exceeds $3 000</td>
+                                </tr>
+                                <tr>
+                                    <td>More than $25 000 but not more than $75 000</td>
+                                    <td>$435 plus $2.25 for every $100, or part, by which the dutiable value exceeds $25 000</td>
+                                </tr>
+                                <tr>
+                                    <td>More than $75 000 but not more than $200 000</td>
+                                    <td>$1,560 plus $3.50 for every $100, or part, by which the dutiable value exceeds $75 000</td>
+                                </tr>
+                                <tr>
+                                    <td>More than $200 000 but not more than $375 000</td>
+                                    <td>$5,935 plus $4.00 for every $100, or part, by which the dutiable value exceeds $200 000</td>
+                                </tr>
+                                <tr>
+                                    <td>More than $375 000 but not more than $725 000</td>
+                                    <td>$12,935 plus $4.25 for every $100, or part, by which the dutiable value exceeds $375 000</td>
+                                </tr>
+                                <tr>
+                                    <td>Over $725 000</td>
+                                    <td>$27,810 plus $4.50 for every $100, or part, by which the dutiable value exceeds $725 000</td>
+                                </tr>
+                                <tr>
+                                    <td class="stateColor">Western Australia: Property Value (on or after 31 August 2023) </td>
+                                    <td class="stateColor">Western Australia: Stamp Duty Rate (on or after 31 August 2023)</td> 
+                                </tr>
+                                <tr>
+                                    <td>$0 - $120,000</td>
+                                    <td>$1.90 per $100 or part thereof</td>
+                                </tr>
+                                <tr>
+                                    <td>$120,001 - $150,000</td>
+                                    <td>$2,280 + $2.85 per $100 or part thereof above $120,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$150,001 - $360,000</td>
+                                    <td>$3,135 + $3.80 per $100 or part thereof above $150,000</td>
+                                </tr>
+                                <tr>
+                                    <td>$360,001 - $725,000</td>
+                                    <td>$11,115 + $4.75 per $100 or part thereof above $360,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Over $725,000</td>
+                                    <td>$28,453 + $5.15 per $100 or part thereof above $725,000</td>
+                                </tr>                                            
+                            </table>
+    
+                            <div class="describeStatesConcessionals">
+                                <div class="state">
+                                    <h3>New South Wales</h3>
+                                    <span><b>Release from Stamp Duty:</b>&nbsp;First Buyer Property for New and Existing homes release from Stamp Duty  if property equal or less $AUD 800,000; First Land Buyer release from Stamp Duty if equal or less $AUD 350,000;</span>
+                                    <br><span><b>Consessions:</b>&nbsp; New and existing homes ($AUD 800000 - $AUD 1000000): you can apply for a concessional transfer duty rate. Vacant land ($AUD 350000 - $AUD 450000): you can apply for a concessional transfer duty rate;</span>    
+                                    <br><span><b>Grants:</b>&nbsp;First Home Buyer New Home ( equal or less $AUD 600,000) offered $AUD 10,000; New Land Buyer (equal or less $AUD 450,000) offered $AUD 5000;</span>
+                                    <br><span><b>Link:</b>&nbsp;<a href="https://www.revenue.nsw.gov.au/taxes-duties-levies-royalties/transfer-duty"> https://www.revenue.nsw.gov.au/</a></span>
+                                </div>
+                                <div class="state">
+                                    <h3>Victoria</h3>
+                                    <span><b>Release from Stamp Duty:</b>&nbsp;First Buyer Property for New and Existing homes release from Stamp Duty  if property equal or less $AUD 600,000; First Land Buyer release from Stamp Duty if equal or less $AUD 600,000;</span>
+                                    <br><span><b>Consessions:</b>&nbsp; The first home buyer duty exemption or concession may apply if you have bought vacant land (on or after 16 December 2020) to build your first home; If you entered into a contract to buy your first home before 1 July 2017, you may be eligible for the first home buyer duty reduction;</span>    
+                                    <br><span><b>Grants:</b>&nbsp;First Home Buyer New Home if home equal or less $AUD 750,000 offered $AUD 10,000;</span>
+                                    <br><span><b>Link:</b>&nbsp;<a href="https://www.sro.vic.gov.au/">https://www.sro.vic.gov.au/</a></span>
+                                </div>
+                                <div class="state">
+                                    <h3>Australian Capital Territory</h3>
+                                    <span><b>Release from Stamp Duty:</b>&nbsp;for First Buyer Any Property (New, Existing homes or Land) release from Stamp Duty  if property equal or less $AUD 1000,000;</span>
+                                    <br><span><b>Consessions:</b>&nbsp; New, existing homes or Land ($AUD 1000000 - $AUD 1455000): you can apply for a concessional transfer duty rate;</span>    
+                                    <br><span><b>Grants:</b>&nbsp;</span>
+                                    <br><span><b>Link:</b>&nbsp;<a href="https://www.revenue.act.gov.au/home-buyer-assistance/home-buyer-concession-scheme/home-buyer-concessions-from-1-July-2019">https://www.revenue.act.gov.au/</a></span>
+                                </div>
+                                <div class="state">
+                                    <h3>Northern Territory</h3>
+                                    <span><b>Release from Stamp Duty:</b>&nbsp;Buying a house and land package from a building contractor AND sign the contract between 1 July 2022 and 30 June 2027 you may be eligible for an exemption on stamp duty;</span>
+                                    <br><span><b>Consessions:</b>&nbsp; </span>    
+                                    <br><span><b>Grants:</b>&nbsp;From 7 May 2019, The grant allows you to get a $10,000 grant to buy or build a new home in the Northern Territory;</span>
+                                    <br><span><b>Link:</b>&nbsp;<a href="https://treasury.nt.gov.au/dtf/territory-revenue-office/stamp-duty/frequently-asked-questions-stamp-duty">https://treasury.nt.gov.au/</a></span>
+                                </div>
+                                <div class="state">
+                                    <h3>Queensland</h3>
+                                    <span><b>Release from Stamp Duty:</b>&nbsp;No duty payable the value of the residence is under $500,000. No duty payable the value of the Vacant Land is under $250,000;</span>
+                                    <br><span><b>Consessions:</b>&nbsp; If the residence between $500,000 and $550,000, or the Land between $250,000 and $400,000 you will have a reduced stamp duty rate;</span>    
+                                    <br><span><b>Grants:</b>&nbsp;For a new home, the grant is $15,000 for the property less than $750,000;</span>
+                                    <br><span><b>Link:</b>&nbsp;<a href="https://qro.qld.gov.au/duties/transfer-duty/calculate/concession-rates/">https://qro.qld.gov.au/</a></span>
+                                </div>
+                                <div class="state">
+                                    <h3>South Australia</h3>
+                                    <span><b>Release from Stamp Duty:</b>&nbsp;No duty payable the value of the New Home is under $650,000.  No duty payable the value of the Vacant Land is under $400,000;</span>
+                                    <br><span><b>Consessions:</b>&nbsp;Partially reduce your stamp duty if the value of your New Home is between $650,000 and $700,000 (or between $400,000 and $450,000 for vacant land);</span>    
+                                    <br><span><b>Grants:</b>&nbsp;If you are a first home buyer you may be eligible for a first home owner grant of up to $15,000, if you are: buying a new home or buying vacant land;</span>
+                                    <br><span><b>Link:</b>&nbsp;<a href="https://www.revenuesa.sa.gov.au/stampduty">https://www.revenuesa.sa.gov.au/</a></span>
+                                </div>
+                                <div class="state">
+                                    <h3>Tasmania</h3>
+                                    <span><b>Release from Stamp Duty:</b>&nbsp;</span>
+                                    <br><span><b>Consessions:</b>&nbsp;The concession provides a 50% discount on property transfer duty for first home buyers of an established home, which has a dutiable value of $600 000 or less for property purchases between 1 January 2022 and 30 June 2024;</span>    
+                                    <br><span><b>Grants:</b>&nbsp;First home buyers who are building a new residence or purchasing a newly built residence may be eligible for a grant of up to $30 000;</span>
+                                    <br><span><b>Link:</b>&nbsp;<a href="https://www.sro.tas.gov.au/property-transfer-duties/rates-of-duty">https://www.sro.tas.gov.au/</a></span>
+                                </div>
+                                <div class="state">
+                                    <h3>Western Australia</h3>
+                                    <span><b>Release from Stamp Duty:</b>&nbsp;No duty payable the value of the residence is under $430,000. No duty payable the value of the land is under $300,000;</span>
+                                    <br><span><b>Consessions:</b>&nbsp;If the value of the residence is between $430,000 and $530,000, (or between $300,000 and $400,000 for vacant land) you will have a reduced stamp duty rate;</span>    
+                                    <br><span><b>Grants:</b>&nbsp;$10,000 grant for South of the 26th parallel – value of land and building is up to $750,000. All Perth metropolitan areas are south of the 26th parallel. North of the 26th parallel – value of land and building is up to $1,000,000;</span>
+                                    <br><span><b>Link:</b>&nbsp;<a href="https://www.wa.gov.au/organisation/department-of-finance/transfer-duty-assessment">https://www.wa.gov.au/</a></span>
+                                </div>                                            
+                            </div>                            
+                        </div>                                    
+                    </div>                            
                 </div>
             </div>
         </div>
-    
-    </section>
-    <section class="marginLeft d-flex justify-content-center backgroundCalculators">
-        <div id="contentStampDuty" hide>
-            <div class="container d-flex justify-content-center m-5 p-5">
-                <div class="row">
-                    <div class="topHead">
-                        <div class="line head">
-                            <span class="line-1"></span><br>
-                            <span class="line-2"></span><br>
-                            <span class="line-3"></span>
-                        </div>                         
-                        <h1 class="head welcome text-center fw-bold">Stamp Duty Calculator</h1>                         
-                    </div>
-                   
-                    <div class="profileReviewCalculator">
-                        <form action="" class="allInputGroups">
-                            <div class="inputGroup inputGroupStamDuty margBot">
-                                <input type="text" id="propertyValue" required> 
-                                <label for="propertyValue"><i class="far fa-dollar-sign"></i>Property Value</label>
-                            </div>
-                            <div class="radioContainer margBot">
-                                <p class="mb-2 fw-semibold">Are you a first home buyer?</p>
-                                <div class="radioToggle">                                     
-                                    <input id="firstHomeBuyerYes" name="radioToggle_1" type="radio" checked="checked"> 
-                                    <label class="yesLabel" for="firstHomeBuyerYes">Yes</label>
-                                    <input id="firstHomeBuyerNo" name="radioToggle_1" type="radio"> 
-                                    <label class="noLabel" for="firstHomeBuyerNo">No</label>                                                                                                                 
-                                </div>
-                            </div>
-                            
-                            <div class="radioContainer margBot">
-                                <p class="mb-2 fw-semibold">I'm buying</p>
-                                <div class="radioToggleForTypeProperty"> 
-                                    <input id="existingProperty" name="radioToggle_3" type="radio" checked='checked'>
-                                    <label class="yesLabel middleLabel" for="existingProperty">Existing home</label>
-                                    <input id="newProperty" name="radioToggle_3" type="radio">
-                                    <label class="middleLabel" for="newProperty">New home</label>
-                                    <input id="vacantLand"  name="radioToggle_3" type="radio">
-                                    <label class="noLabel middleLabel" for="vacantLand">Vacant land</label>
-                                  
-                                </div>                                        
-                            </div>
-                            
-                            <div class="propertyLocationDropListContainer radioContainer">
-                                <p class="mb-2 fw-semibold">The property is located in</p>
-                                <div id="listStates">
-                                    <div id="selectFieldStates" class="selectFieldStates">
-                                        <p id="selectedState">New South Wales</p><i class="fas fa-chevron-down faStates"></i>
-                                    </div>
-                                    
-                                    <ul id="listFieldState" class="hide">
-                                        <li class="optionsStates">New South Wales</li>
-                                        <li class="optionsStates">Victoria</li>
-                                        <li class="optionsStates">Australian Capital Territory</li>
-                                        <li class="optionsStates">Northern Territory</li>
-                                        <li class="optionsStates">Queensland</li>
-                                        <li class="optionsStates">South Australia</li>
-                                        <li class="optionsStates">Tasmania</li>
-                                        <li class="optionsStates">Western Australia</li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                           
-                            <button id="buttonCalculateStampDuty" class="buttonCalculateStampDuty buttonCalculate">Calculate Stamp Duty</button> 
-                            
-        
-                            <div class="groupAnswersStampDuty">
-                                <div  class="answerSquareStampDuty">
-                                    <p>Stamp Duty: <span> &#36;</span></p>
-                                    <div>                                                
-                                        <h4>                                           
-                                            <span id="resultStampDuty"></span>
-                                        </h4>                                               
-                                    </div>
-                                </div>
-                            </div>
-                        </form>                                           
-                    </div> 
-                    <div class="containerTable">
-                        <div id="contentTable">
-                            <button class="expandBTN" id="expandButton">Learn More about Stamp Duty Rates</button>
-                            <div id="textTable">
-                                <table class="stampDutyRate">
-                                    <tr>                                             
-                                        <td class="stateColor">NSW: Property Value (on or after 1 July 2023)</td>
-                                        <td class="stateColor">NSW: Stamp Duty Rate (on or after 1 July 2023)</td>                                                                
-                                    </tr>
-                                    <tr>                                    
-                                        <td>$0 to $16,000</td>
-                                        <td>$1.25 for every $100, with $10 as a minimum</td>                       
-                                    </tr>
-                                    <tr>
-                                        <td>$16,000 to $35,000</td>
-                                        <td>$200 plus $1.50 for every $100 over $16,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$35,000 to $93,000</td>
-                                        <td>$485 plus $1.75 for every $100 over $35,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$93,000 to $351,000</td>
-                                        <td>$1,500 plus $3.50 for every $100 over $93,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$351,000 to $1,168,000</td>
-                                        <td>$10,530 plus $4.50 for every $100 over $351,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Over $1,168,000</td>
-                                        <td>$47,295 plus $5.50 for every $100 over $1,168,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="stateColor">Victoria: Property Value (on or after 6 May 2008)</td>
-                                        <td class="stateColor">Victoria: Stamp Duty Rate (on or after 6 May 2008)</td>                                    
-                                    </tr>
-                                    <tr>
-                                        <td>$0 to $25,000</td>
-                                        <td>1.4% of the dutiable value of the property</td>                                    
-                                    </tr>
-                                    <tr>
-                                        <td> $25,000 - $130,000</td>
-                                        <td>$350 plus 2.4% of the dutiable value in excess of $25,000</td>                                    
-                                    </tr>
-                                    <tr>
-                                        <td> $130,000 - $440,000</td>
-                                        <td>$2870 plus 5% of the dutiable value in excess of $130,000</td>                                    
-                                    </tr>
-                                    <tr>
-                                        <td>$440,000 - $550,000</td>
-                                        <td>$18,370 plus 6% of the dutiable value in excess of $440,000</td>                                    
-                                    </tr>
-                                    <tr>
-                                        <td>Over $550,000</td>
-                                        <td>The principal place of residence concessional rate does not apply. Please refer to the general land transfer duty rates</td>                                    
-                                    </tr>                                            
-                                        <td class="stateColor">ACT: Property Value (on or after 1 July 2023)</td>
-                                        <td class="stateColor">ACT: Stamp Duty Rate (on or after 1 July 2023)</td> 
-                                    </tr>
-                                    <tr>
-                                        <td>$0 to $260 000</td>
-                                        <td>$0.49 per $100 or part of thereof up to $260,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$260 001 to $300 000</td>
-                                        <td>$1 274 plus $2.20 per $100 or part thereof by which the value exceeds $260,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$300 001 to $500 000</td>
-                                        <td>$2 154 plus $3.40 per $100, or part thereof by which the value exceeds $300,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$500 001 to $750 000</td>
-                                        <td>$8 954 plus $4.32 per $100, or part thereof by which the value exceeds $500,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$750 001 to $1 000 000</td>
-                                        <td>$19 754 plus $5.90 per $100, or part thereof by which the value exceeds $750,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$1 000 001 to $1 455 000</td>
-                                        <td>$34 504 plus $6.40 per $100, or part thereof by which the value exceeds $1,000,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Over $1 455 000</td>
-                                        <td>A flat rate of $4.54 per $100 applied to the total transaction value</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="stateColor">Northern Territory: Property Value (on or after 9 May 2023) </td>
-                                        <td class="stateColor">Northern Territory: Stamp Duty Rate (on or after 9 May 2023)</td> 
-                                    </tr>
-                                    <tr>
-                                        <td>$0 to $525,000</td>
-                                        <td>(0.06571441 x (V x V)) + 15V (V is 1/1,000 of the property’s dutiable value)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$525,001 - $3,000,000</td>
-                                        <td>4.95% of the property value</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$3,000,001 - $5,000,000</td>
-                                        <td>5.75% of the property value</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Over $5,000,000</td>
-                                        <td>5.95% of the property value</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="stateColor">Queensland: Property Value (on or after  1 July 2020) </td>
-                                        <td class="stateColor">Queensland: Stamp Duty Rate (on or after 1 July 2020)</td> 
-                                    </tr>
-                                    <tr>
-                                        <td>$0 to $5,000</td>
-                                        <td>Nil</td>
-                                    </tr>
-                                    <tr>
-                                        <td>More than $5,000 up to $75,000</td>
-                                        <td>$1.50 for each $100, or part of $100, over $5,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$75,000 to $540,000</td>
-                                        <td>$1,050 plus $3.50 for each $100, or part of $100, over $75,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$540,000 to $1,000,000</td>
-                                        <td>$17,325 plus $4.50 for each $100, or part of $100, over $540,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Over $1,000,000</td>
-                                        <td>$38,025 plus $5.75 for each $100, or part of $100, over $1,000,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">Queensland: Home Concession Rate (If you move into the property within 12 months of purchasing it and intend to make it your principal place of residence, you could qualify for the home concession.)</td>                                    
-                                    </tr>
-                                    <tr>
-                                        <td>Up to $350,000</td>
-                                        <td>$1.00 for each $100 or part of $100</td>                                    
-                                    </tr>
-                                    <tr>
-                                        <td>$350,001 to $540,000</td>
-                                        <td>$3,500 + $3.50 for every $100 or part of $100 over $350,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$540,001 to $1,000,000</td>
-                                        <td>$10,150 + $4.50 for every $100 or part of $100 over $540,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Over $1,000,000</td>
-                                        <td>$30,850 + $5.75 for every $100 or part of $100 over $1,000,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="stateColor">South Australia: Property Value (on or after 15 June 2023) </td>
-                                        <td class="stateColor">South Australia: Stamp Duty Rate (on or after 15 June 2023)</td> 
-                                    </tr>
-                                    <tr>
-                                        <td>$0 to $12,000</td>
-                                        <td>$1.00 for every $100 or part of $100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Exceeds $12,000 but not $30,000</td>
-                                        <td>$120 plus $2.00 for every $100 or part of $100 over $12,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Exceeds $30,000 but not $50,000</td>
-                                        <td>$480 plus $3.00 for every $100 or part of $100 over $30,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Exceeds $50,000 but not $100,000</td>
-                                        <td>$1,080 plus $3.50 for every $100 or part of $100 over $50,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Exceeds $100,000 but not $200,000</td>
-                                        <td>$2,830 plus $4.00 for every $100 or part of $100 over $100,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Exceeds $200,000 but not $250,000</td>
-                                        <td>$6,830 plus $4.25 for every $100 or part of $100 over $200,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Exceeds $250,000 but not $300,000</td>
-                                        <td>$8,955 plus $4.75 for every $100 or part of $100 over $250,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Exceeds $300,000 but not $500,000</td>
-                                        <td>$11,330 plus $5.00 for every $100 or part of $100 over $300,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Over $500,000</td>
-                                        <td>$21,330 plus $5.50 for every $100 or part of $100 over $500,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="stateColor">Tasmania: Property Value (on or after 21 October 2013) </td>
-                                        <td class="stateColor">Tasmania: Stamp Duty Rate (on or after 21 October 2013)</td> 
-                                    </tr>
-                                    <tr>
-                                        <td>$0 to $3 000</td>
-                                        <td>$50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>More than $3 000 but not more than $25 000</td>
-                                        <td>$50 plus $1.75 for every $100, or part, by which the dutiable value exceeds $3 000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>More than $25 000 but not more than $75 000</td>
-                                        <td>$435 plus $2.25 for every $100, or part, by which the dutiable value exceeds $25 000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>More than $75 000 but not more than $200 000</td>
-                                        <td>$1,560 plus $3.50 for every $100, or part, by which the dutiable value exceeds $75 000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>More than $200 000 but not more than $375 000</td>
-                                        <td>$5,935 plus $4.00 for every $100, or part, by which the dutiable value exceeds $200 000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>More than $375 000 but not more than $725 000</td>
-                                        <td>$12,935 plus $4.25 for every $100, or part, by which the dutiable value exceeds $375 000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Over $725 000</td>
-                                        <td>$27,810 plus $4.50 for every $100, or part, by which the dutiable value exceeds $725 000</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="stateColor">Western Australia: Property Value (on or after 31 August 2023) </td>
-                                        <td class="stateColor">Western Australia: Stamp Duty Rate (on or after 31 August 2023)</td> 
-                                    </tr>
-                                    <tr>
-                                        <td>$0 - $120,000</td>
-                                        <td>$1.90 per $100 or part thereof</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$120,001 - $150,000</td>
-                                        <td>$2,280 + $2.85 per $100 or part thereof above $120,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$150,001 - $360,000</td>
-                                        <td>$3,135 + $3.80 per $100 or part thereof above $150,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>$360,001 - $725,000</td>
-                                        <td>$11,115 + $4.75 per $100 or part thereof above $360,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Over $725,000</td>
-                                        <td>$28,453 + $5.15 per $100 or part thereof above $725,000</td>
-                                    </tr>                                            
-                                </table>
-        
-                                <div class="describeStatesConcessionals">
-                                    <div class="state">
-                                        <h3>New South Wales</h3>
-                                        <span><b>Release from Stamp Duty:</b>&nbsp;First Buyer Property for New and Existing homes release from Stamp Duty  if property equal or less $AUD 800,000; First Land Buyer release from Stamp Duty if equal or less $AUD 350,000;</span>
-                                        <br><span><b>Consessions:</b>&nbsp; New and existing homes ($AUD 800000 - $AUD 1000000): you can apply for a concessional transfer duty rate. Vacant land ($AUD 350000 - $AUD 450000): you can apply for a concessional transfer duty rate;</span>    
-                                        <br><span><b>Grants:</b>&nbsp;First Home Buyer New Home ( equal or less $AUD 600,000) offered $AUD 10,000; New Land Buyer (equal or less $AUD 450,000) offered $AUD 5000;</span>
-                                        <br><span><b>Link:</b>&nbsp;<a href="https://www.revenue.nsw.gov.au/taxes-duties-levies-royalties/transfer-duty"> https://www.revenue.nsw.gov.au/</a></span>
-                                    </div>
-                                    <div class="state">
-                                        <h3>Victoria</h3>
-                                        <span><b>Release from Stamp Duty:</b>&nbsp;First Buyer Property for New and Existing homes release from Stamp Duty  if property equal or less $AUD 600,000; First Land Buyer release from Stamp Duty if equal or less $AUD 600,000;</span>
-                                        <br><span><b>Consessions:</b>&nbsp; The first home buyer duty exemption or concession may apply if you have bought vacant land (on or after 16 December 2020) to build your first home; If you entered into a contract to buy your first home before 1 July 2017, you may be eligible for the first home buyer duty reduction;</span>    
-                                        <br><span><b>Grants:</b>&nbsp;First Home Buyer New Home if home equal or less $AUD 750,000 offered $AUD 10,000;</span>
-                                        <br><span><b>Link:</b>&nbsp;<a href="https://www.sro.vic.gov.au/">https://www.sro.vic.gov.au/</a></span>
-                                    </div>
-                                    <div class="state">
-                                        <h3>Australian Capital Territory</h3>
-                                        <span><b>Release from Stamp Duty:</b>&nbsp;for First Buyer Any Property (New, Existing homes or Land) release from Stamp Duty  if property equal or less $AUD 1000,000;</span>
-                                        <br><span><b>Consessions:</b>&nbsp; New, existing homes or Land ($AUD 1000000 - $AUD 1455000): you can apply for a concessional transfer duty rate;</span>    
-                                        <br><span><b>Grants:</b>&nbsp;</span>
-                                        <br><span><b>Link:</b>&nbsp;<a href="https://www.revenue.act.gov.au/home-buyer-assistance/home-buyer-concession-scheme/home-buyer-concessions-from-1-July-2019">https://www.revenue.act.gov.au/</a></span>
-                                    </div>
-                                    <div class="state">
-                                        <h3>Northern Territory</h3>
-                                        <span><b>Release from Stamp Duty:</b>&nbsp;Buying a house and land package from a building contractor AND sign the contract between 1 July 2022 and 30 June 2027 you may be eligible for an exemption on stamp duty;</span>
-                                        <br><span><b>Consessions:</b>&nbsp; </span>    
-                                        <br><span><b>Grants:</b>&nbsp;From 7 May 2019, The grant allows you to get a $10,000 grant to buy or build a new home in the Northern Territory;</span>
-                                        <br><span><b>Link:</b>&nbsp;<a href="https://treasury.nt.gov.au/dtf/territory-revenue-office/stamp-duty/frequently-asked-questions-stamp-duty">https://treasury.nt.gov.au/</a></span>
-                                    </div>
-                                    <div class="state">
-                                        <h3>Queensland</h3>
-                                        <span><b>Release from Stamp Duty:</b>&nbsp;No duty payable the value of the residence is under $500,000. No duty payable the value of the Vacant Land is under $250,000;</span>
-                                        <br><span><b>Consessions:</b>&nbsp; If the residence between $500,000 and $550,000, or the Land between $250,000 and $400,000 you will have a reduced stamp duty rate;</span>    
-                                        <br><span><b>Grants:</b>&nbsp;For a new home, the grant is $15,000 for the property less than $750,000;</span>
-                                        <br><span><b>Link:</b>&nbsp;<a href="https://qro.qld.gov.au/duties/transfer-duty/calculate/concession-rates/">https://qro.qld.gov.au/</a></span>
-                                    </div>
-                                    <div class="state">
-                                        <h3>South Australia</h3>
-                                        <span><b>Release from Stamp Duty:</b>&nbsp;No duty payable the value of the New Home is under $650,000.  No duty payable the value of the Vacant Land is under $400,000;</span>
-                                        <br><span><b>Consessions:</b>&nbsp;Partially reduce your stamp duty if the value of your New Home is between $650,000 and $700,000 (or between $400,000 and $450,000 for vacant land);</span>    
-                                        <br><span><b>Grants:</b>&nbsp;If you are a first home buyer you may be eligible for a first home owner grant of up to $15,000, if you are: buying a new home or buying vacant land;</span>
-                                        <br><span><b>Link:</b>&nbsp;<a href="https://www.revenuesa.sa.gov.au/stampduty">https://www.revenuesa.sa.gov.au/</a></span>
-                                    </div>
-                                    <div class="state">
-                                        <h3>Tasmania</h3>
-                                        <span><b>Release from Stamp Duty:</b>&nbsp;</span>
-                                        <br><span><b>Consessions:</b>&nbsp;The concession provides a 50% discount on property transfer duty for first home buyers of an established home, which has a dutiable value of $600 000 or less for property purchases between 1 January 2022 and 30 June 2024;</span>    
-                                        <br><span><b>Grants:</b>&nbsp;First home buyers who are building a new residence or purchasing a newly built residence may be eligible for a grant of up to $30 000;</span>
-                                        <br><span><b>Link:</b>&nbsp;<a href="https://www.sro.tas.gov.au/property-transfer-duties/rates-of-duty">https://www.sro.tas.gov.au/</a></span>
-                                    </div>
-                                    <div class="state">
-                                        <h3>Western Australia</h3>
-                                        <span><b>Release from Stamp Duty:</b>&nbsp;No duty payable the value of the residence is under $430,000. No duty payable the value of the land is under $300,000;</span>
-                                        <br><span><b>Consessions:</b>&nbsp;If the value of the residence is between $430,000 and $530,000, (or between $300,000 and $400,000 for vacant land) you will have a reduced stamp duty rate;</span>    
-                                        <br><span><b>Grants:</b>&nbsp;$10,000 grant for South of the 26th parallel – value of land and building is up to $750,000. All Perth metropolitan areas are south of the 26th parallel. North of the 26th parallel – value of land and building is up to $1,000,000;</span>
-                                        <br><span><b>Link:</b>&nbsp;<a href="https://www.wa.gov.au/organisation/department-of-finance/transfer-duty-assessment">https://www.wa.gov.au/</a></span>
-                                    </div>                                            
-                                </div>                            
-                            </div>                                    
-                        </div>                            
-                    </div>
-                </div>
-            </div>
-        </div> 
     </section>
 
 <!-------------------------------------------------------------Borrowing Calculator------------------------->
-    <section class="marginLeft d-flex justify-content-center backgroundCalculators">
+    <section class="marginLeft d-flex justify-content-center backgroundCalculators" id="borrowingCalculator" hide>
         <div id="contentBorrowingCalculator" class="container  mt-5 pt-5" hide>         
             <div class="row">
                 <div class="topHead">
@@ -1150,146 +1148,110 @@
 
     <!----------------------------------------------------------REVIEWS Page------------------------------------------------------------------------------------------------------->
 
-    <section class="marginLeft py-5" id="testimonials">
-        <div id="contentReviews" hide>
-            <div class="container">
-                
-                <div class="topHead">
-                    <div class="line">
-                        <span class="line-1"></span><br>
-                        <span class="line-2"></span><br>
-                        <span class="line-3"></span>
-                    </div>
-                        
-                    <h1 class="text-center fs-2 fw-bold">Testimonials</h1>                         
+    <section class="marginLeft py-5" id="testimonials" hide>
+        <div class="container">
+            <div class="topHead">
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
                 </div>
-                
-                <h4 class="text-center mt-5">What Our Clients Say</h4>
-                <div class="row mt-5">                    
-                    <div class="col-md-4 text-center">
-                        <div class="profileReviewPage">
-                            <div class="stars ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>                                
-                            </div>  
-                            <blockquote>  
-                                <i class="fa-solid fa-quote-left"></i>                                                          
-                                I recently had the pleasure of working with Tatiana as my mortgage broker, and I must say that I am extremely satisfied 
-                                with her services. After having dealt with several other mortgage brokers in the past, I can confidently recommend Tatiana 
-                                to anyone in need of professional and reliable assistance in securing a mortgage.
-                                <i class="fas fa-quote-right"></i>                             
-                            </blockquote>
-                            <h3>Linda <span>23 March 2023</span></h3>
-                        </div> 
-                                                
+                <h1 class="text-center fs-2 fw-bold">Testimonials</h1>                         
+            </div>
+            <h4 class="text-center mt-5">What Our Clients Say</h4>
+            <div class="row mt-5">                    
+                <div class="col-md-4 text-center">
+                    <div class="profileReviewPage">
+                        <div class="stars ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>                                
+                        </div>  
+                        <blockquote>  
+                            <i class="fa-solid fa-quote-left"></i>                                                          
+                            I recently had the pleasure of working with Tatiana as my mortgage broker, and I must say that I am extremely satisfied 
+                            with her services. After having dealt with several other mortgage brokers in the past, I can confidently recommend Tatiana 
+                            to anyone in need of professional and reliable assistance in securing a mortgage.
+                            <i class="fas fa-quote-right"></i>                             
+                        </blockquote>
+                        <h3>Linda <span>23 March 2023</span></h3>
                     </div>                
-                    <div class="col-md-4 text-center">
-                        <div class="profileReviewPage">
-                            <div class="stars ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>                                
-                            </div>  
-                            <blockquote>
-                                <i class="fa-solid fa-quote-left"></i>                             
-                                Tatiana's extensive experience in the Australian property market became evident from the very beginning. She provided us with
-                                invaluable advice that ultimately led us to secure excellent deals for both our first and second properties. What impressed me 
-                                the most was her ability to think outside the box and suggest a bank that I had not previously considered. This highlighted 
-                                Tatiana's understanding that going straight to the bank may not always be the best approach.
-                                <i class="fas fa-quote-right"></i>                                                    
-                            </blockquote> 
-                            <h3>Linda <span>23 March 2023</span></h3>       
-                        </div>
+                </div>                
+                <div class="col-md-4 text-center">
+                    <div class="profileReviewPage">
+                        <div class="stars ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>                                
+                        </div>  
+                        <blockquote>
+                            <i class="fa-solid fa-quote-left"></i>                             
+                            Tatiana's extensive experience in the Australian property market became evident from the very beginning. She provided us with
+                            invaluable advice that ultimately led us to secure excellent deals for both our first and second properties. What impressed me 
+                            the most was her ability to think outside the box and suggest a bank that I had not previously considered. This highlighted 
+                            Tatiana's understanding that going straight to the bank may not always be the best approach.
+                            <i class="fas fa-quote-right"></i>                                                    
+                        </blockquote> 
+                        <h3>Linda <span>23 March 2023</span></h3>       
                     </div>
-                    <div class="col-md-4 text-center">
-                        <div class="profileReviewPage">
-                            <div class="stars ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>                                
-                            </div>  
-                            <blockquote> 
-                                <i class="fa-solid fa-quote-left"></i>                            
-                                Our case was rather complicated, and previous brokers were unable to offer much assistance. However, Tatiana proved
-                                to be remarkably efficient and knowledgeable, navigating through our complexities with ease. Her dedication and expertise were 
-                                evident throughout the entire process, and she consistently went above and beyond to ensure our needs were met. 
-                                <i class="fas fa-quote-right"></i>                            
-                            </blockquote>
-                            <h3>Linda <span>23 March 2023</span></h3>                                                     
-                        </div>
-                    </div>                    
-                
-                    <div class="col-md-4 text-center">
-                        <div class="profileReviewPage">
-                            <blockquote>
-                                <div class="stars ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>                                
-                                </div>  
-                                <i class="fa-solid fa-quote-left"></i>                             
-                                One of the standout qualities of Tatiana is her reliability and responsibility. She is a true professional who takes her clients'
-                                interests to heart. I now wholeheartedly recommend her to everyone seeking mortgage services. In fact, Tatiana has also helped many
-                                of our friends, and they have all reported smooth and hassle-free experiences. The paperwork was prepared meticulously and on time, 
-                                demonstrating Tatiana's attention to detail. Moreover, the offer she suggested exceeded our expectations, surpassing what our 
-                                current bank could provide in terms of rates.
-                                <i class="fas fa-quote-right"></i>                             
-                            </blockquote> 
-                            <h3>Linda <span>23 March 2023</span></h3>                        
-                        </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="profileReviewPage">
+                        <div class="stars ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>                                
+                        </div>  
+                        <blockquote> 
+                            <i class="fa-solid fa-quote-left"></i>                            
+                            Our case was rather complicated, and previous brokers were unable to offer much assistance. However, Tatiana proved
+                            to be remarkably efficient and knowledgeable, navigating through our complexities with ease. Her dedication and expertise were 
+                            evident throughout the entire process, and she consistently went above and beyond to ensure our needs were met. 
+                            <i class="fas fa-quote-right"></i>                            
+                        </blockquote>
+                        <h3>Linda <span>23 March 2023</span></h3>                                                     
                     </div>
-                    
-                    <div class="col-md-4 text-center">
-                        <div class="profileReviewPage">
+                </div>                    
+            
+                <div class="col-md-4 text-center">
+                    <div class="profileReviewPage">
+                        <blockquote>
                             <div class="stars ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
                                     <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
@@ -1307,27 +1269,56 @@
                                     <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                                 </svg>                                
                             </div>  
-                            <blockquote> 
-                                <i class="fa-solid fa-quote-left"></i>                            
-                                Working with Tatiana was an absolute pleasure. Her extensive experience, reliability, and exceptional service set her 
-                                apart from other mortgage brokers I have encountered. If you're in search of a mortgage broker who will not only meet but exceed 
-                                your expectations, I highly recommend Tatiana. She is a true professional who will guide you through the process with expertise 
-                                and care. 
-                                <i class="fas fa-quote-right"></i>                            
-                            </blockquote>
-                            <h3>Linda <span>23 March 2023</span></h3>                                                      
-                        </div>
-                    </div>                           
+                            <i class="fa-solid fa-quote-left"></i>                             
+                            One of the standout qualities of Tatiana is her reliability and responsibility. She is a true professional who takes her clients'
+                            interests to heart. I now wholeheartedly recommend her to everyone seeking mortgage services. In fact, Tatiana has also helped many
+                            of our friends, and they have all reported smooth and hassle-free experiences. The paperwork was prepared meticulously and on time, 
+                            demonstrating Tatiana's attention to detail. Moreover, the offer she suggested exceeded our expectations, surpassing what our 
+                            current bank could provide in terms of rates.
+                            <i class="fas fa-quote-right"></i>                             
+                        </blockquote> 
+                        <h3>Linda <span>23 March 2023</span></h3>                        
+                    </div>
                 </div>
                 
+                <div class="col-md-4 text-center">
+                    <div class="profileReviewPage">
+                        <div class="stars ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>                                
+                        </div>  
+                        <blockquote> 
+                            <i class="fa-solid fa-quote-left"></i>                            
+                            Working with Tatiana was an absolute pleasure. Her extensive experience, reliability, and exceptional service set her 
+                            apart from other mortgage brokers I have encountered. If you're in search of a mortgage broker who will not only meet but exceed 
+                            your expectations, I highly recommend Tatiana. She is a true professional who will guide you through the process with expertise 
+                            and care. 
+                            <i class="fas fa-quote-right"></i>                            
+                        </blockquote>
+                        <h3>Linda <span>23 March 2023</span></h3>                                                      
+                    </div>
+                </div>                           
             </div>
         </div>
     </section>
 
     <!----------------------------------------------------------PARTNERS page------------------------------------------------------------------------------------------------------->
 
-    <section class="marginLeft">
-        <div id="contentPartners" class="pt-5">
+    <section class="marginLeft" id="contentPartners" hide>
+        <div class="pt-5 backgroundCalculators">
             <div class="container">
                 <div class="topHead pt-5">
                     <div class="line head">
