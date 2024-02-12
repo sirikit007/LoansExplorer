@@ -17,9 +17,9 @@ body {
     overflow-x: hidden;
 }
 
-/*
+
 [hide] {
-    display: none;
+    display: none !important;
 }
 
 /*animation on scroll*/
@@ -37,9 +37,9 @@ body {
     margin-left: 400px;
     
 }
-/*
+
 .hide {
-    display: none;
+    display: none !important;
 }
 /*=======================Left Navigation - Sidebar==================*/
 .navContainer {    
@@ -58,6 +58,7 @@ body {
     transition: 0.5s;
     overflow: hidden;   
 }
+
 .menuNavigation ul {
     position: absolute;
     top: 0;
@@ -520,11 +521,6 @@ hr {
 }
 
 
-
-
-
-
-
 /*for animation on scroll - don't duble*/
 @media (prefers-reduced-motion) {
     .hidden {
@@ -601,11 +597,11 @@ hr {
     left: 0;  
 }
 #homePage {      
-    height: 100%;
+  
     background: url(background1.jpg);
     background-size: cover;
     position: relative;
-    padding-top: 100px;   
+    padding: 50px 0;   
 }
 #homePage::before {
     content: '';
@@ -1098,4 +1094,88 @@ hr {
 .textMiddle p {    
     text-align: start;  
     margin: 55px 0;
+}
+/*---------------------------Contact Us-----------------------------------------*/
+.contactCell {    
+    padding: 40px 120px;
+    
+    background: rgb(40, 41,123);
+    color: #f5f6fa;
+    width: 100%;    
+}
+.contacts {
+    display: flex;  
+    width: 60%;  
+}
+
+.contactCell h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.infoContacts tr td:first-child {
+    padding-right: 20px;
+}
+.infoContacts tr td {
+    padding-top: 30px;
+}
+.iconContact {
+    margin-right: 10px;
+}
+.contactCell h3 {
+    text-align: start !important;
+}
+.textForContacts {
+    margin: 55px 0 130px;
+}
+
+.fa-envelope {
+    font-weight: 600 !important;
+}
+
+.infoContacts tr {
+    font-size: 24px;
+}
+/*---------------------------------------------------------------------------facebook---------------------------------------------*/
+.iconSocial a {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 40px;     
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    background-image: linear-gradient(rgb(40, 41,123) 50%, rgb(40, 41,123) 50%);
+    background-size: 100% 200%;    
+    background-position: 0% 5%;
+    transition: 0.5s;
+    color: #f5f6fa;
+    border-radius: 5px;
+    border: 2px solid #f5f6fa;
+}
+.iconSocial a:hover {
+    background-image: linear-gradient(rgb(40, 41,123), rgb(40, 41,123));
+    color: #f5f6fa;
+    background-position: 0% 100%; 
+    cursor: pointer;
+    border: 3px solid #f5f6fa;
+    border-radius: 5px;
+}
+.iconSocial {   
+    animation: moveleft 2s linear;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+    margin-top: 30px;
+}
+
+  @keyframes moveleft {
+    0% {
+        transform: translateX(calc(var(--window-width) * 0.37));
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(0);
+        visibility: visible;
+    }
 }

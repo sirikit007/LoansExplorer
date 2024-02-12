@@ -1,14 +1,17 @@
+document.addEventListener("DOMContentLoaded", onDocumentLoad); //страница полностью загружена
 
-
-//add hover effect to side-menu list when on white page
+//add dark sidebar to side-menu list when on white page
 let navbar = document.querySelector('#navContent');
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', darkSidebar);
+
+function darkSidebar() {
+    
     if (window.pageYOffset > 600) {
         navbar.classList.add('bg-dark');
     } else {
         navbar.classList.remove('bg-dark');
     }
-});
+};
 
 //rotate angle on side-bar menu
 let angleForSidebar = document.querySelector('.angleForSidebar');
@@ -38,6 +41,7 @@ let switchLoanCalculator = document.getElementById('switchLoanCalculator');
 let switchStampdutyCalculator = document.getElementById('switchStampdutyCalculator');
 let switchBorrowingCalculator = document.getElementById('switchBorrowingCalculator');
 
+let mainContent = document.getElementById('mainContent');
 let homePage = document.getElementById('homePage');
 let contentLoanRepayments = document.getElementById('contentLoanRepayments');
 let contentStampDuty= document.getElementById('contentStampDuty');
@@ -46,25 +50,27 @@ let testimonials= document.getElementById('testimonials');
 let contentPartners= document.getElementById('contentPartners');
 
 
- 
+ function onDocumentLoad() {
+    switchHome.addEventListener('click', switchContent);
+    switchCalculators.addEventListener('click', switchContent);
+    switchReviews.addEventListener('click', switchContent);
+    switchPartners.addEventListener('click', switchContent);
+    switchContactUs.addEventListener('click', switchContent);
+    switchLoanCalculator.addEventListener('click', switchContent);
+    switchStampdutyCalculator.addEventListener('click', switchContent);
+    switchBorrowingCalculator.addEventListener('click', switchContent);
+    
+ }
 
-switchHome.addEventListener('click', switchContent);
-switchCalculators.addEventListener('click', switchContent);
-switchReviews.addEventListener('click', switchContent);
-switchPartners.addEventListener('click', switchContent);
-switchContactUs.addEventListener('click', switchContent);
-switchLoanCalculator.addEventListener('click', switchContent);
-switchStampdutyCalculator.addEventListener('click', switchContent);
-switchBorrowingCalculator.addEventListener('click', switchContent);
 
 
 
-
+//sidebar
 
 function switchContent(event) {
     console.log(event.target);
     let menuitem = event.target.closest('[menuitem]');
-   
+    window.removeEventListener('scroll', darkSidebar);
     if (menuitem.id == 'switchHome') {        
         menuitem.classList.add('hovered');
         switchCalculators.classList.remove('hovered');
@@ -75,8 +81,18 @@ function switchContent(event) {
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
 
+        navbar.classList.add('bg-dark');
+        
+        
+        
         homePage.removeAttribute('hide');
-
+        contentLoanRepayments.setAttribute('hide', '');
+        contentStampDuty.setAttribute('hide', '');
+        borrowingCalculator.setAttribute('hide', '');
+        testimonials.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');
+        mainContent.setAttribute('hide', '');
+        
     } else if (menuitem.id == 'switchCalculators') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
@@ -86,6 +102,9 @@ function switchContent(event) {
         switchLoanCalculator.classList.remove('hovered');
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
+
+      
+       
     } else if (menuitem.id == 'switchReviews') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
@@ -95,6 +114,14 @@ function switchContent(event) {
         switchLoanCalculator.classList.remove('hovered');
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
+
+        testimonials.removeAttribute('hide');            
+        homePage.setAttribute('hide', '');
+        contentLoanRepayments.setAttribute('hide', '');
+        borrowingCalculator.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');
+        contentStampDuty.setAttribute('hide', '');
+        mainContent.setAttribute('hide', '');
     } else if (menuitem.id == 'switchPartners') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
@@ -104,6 +131,14 @@ function switchContent(event) {
         switchLoanCalculator.classList.remove('hovered');
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
+
+        contentPartners.removeAttribute('hide');      
+        homePage.setAttribute('hide', '');
+        contentLoanRepayments.setAttribute('hide', '');
+        borrowingCalculator.setAttribute('hide', '');
+        testimonials.setAttribute('hide', '');
+        contentStampDuty.setAttribute('hide', '');
+        mainContent.setAttribute('hide', '');
     } else if (menuitem.id == 'switchContactUs') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
@@ -113,6 +148,8 @@ function switchContent(event) {
         switchLoanCalculator.classList.remove('hovered');
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
+
+      
     }
     else if (menuitem.id == 'switchLoanCalculator') {
         menuitem.classList.add('hovered');
@@ -124,7 +161,13 @@ function switchContent(event) {
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
 
-        homePage.removeAttribute('hide');
+        contentLoanRepayments.removeAttribute('hide');
+        homePage.setAttribute('hide', '');
+        contentStampDuty.setAttribute('hide', '');
+        borrowingCalculator.setAttribute('hide', '');
+        testimonials.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');
+        mainContent.setAttribute('hide', '');
     }
     else if (menuitem.id == 'switchStampdutyCalculator') {
         menuitem.classList.add('hovered');
@@ -134,7 +177,15 @@ function switchContent(event) {
         switchPartners.classList.remove('hovered');
         switchContactUs.classList.remove('hovered');  
         switchLoanCalculator.classList.remove('hovered');
-        switchBorrowingCalculator.classList.remove('hovered');      
+        switchBorrowingCalculator.classList.remove('hovered'); 
+        
+        contentStampDuty.removeAttribute('hide');        
+        homePage.setAttribute('hide', '');
+        contentLoanRepayments.setAttribute('hide', '');
+        borrowingCalculator.setAttribute('hide', '');
+        testimonials.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');
+        mainContent.setAttribute('hide', '');
     }
     else if (menuitem.id == 'switchBorrowingCalculator') {
         menuitem.classList.add('hovered');
@@ -144,10 +195,19 @@ function switchContent(event) {
         switchPartners.classList.remove('hovered');
         switchContactUs.classList.remove('hovered');  
         switchLoanCalculator.classList.remove('hovered');       
-        switchStampdutyCalculator.classList.remove('hovered');       
+        switchStampdutyCalculator.classList.remove('hovered'); 
+        
+        borrowingCalculator.removeAttribute('hide');              
+        homePage.setAttribute('hide', '');
+        contentLoanRepayments.setAttribute('hide', '');
+        contentStampDuty.setAttribute('hide', '');
+        testimonials.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');
+        mainContent.setAttribute('hide', '');
     }
+    
 }
-/*
+
 
 //Scroll Animation - intersection observer
 
@@ -177,7 +237,7 @@ ScrollReveal().reveal('.scrollLeft',  {delay: 500, origin: 'left'});
 ScrollReveal().reveal('.iconbox img',  {delay: 400, origin: 'bottom', interval: 200});
 ScrollReveal().reveal('.scrollUp',  {delay: 500, origin: 'up'});
 
-*/
+
 
 
 //--------------------------------------------------------------------Stamp Duty Calculator-------*/
@@ -224,3 +284,10 @@ expandButton.addEventListener('click', function(e) {
         textTable.style.maxHeight = textTable.scrollHeight + 'px';
     }    
 });
+
+// Facebook's moving button
+function calculateWindowWidth() {     
+    const windowWidth = document.documentElement.clientWidth;
+    document.documentElement.style.setProperty("--window-width", windowWidth + "px");
+    console.log(windowWidth);   
+}
