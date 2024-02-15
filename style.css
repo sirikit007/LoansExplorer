@@ -317,7 +317,11 @@ body {
 }
 .buttonForContactForm .cta-btn {  
     border: 2px solid #151515;
-    color: #151515;   
+    color: #151515;
+    width: 224.34px;   
+}
+.contact-form form {
+    transition: all 4s ease-in-out;
 }
 
 /*------------------------------------Reviews-------------------------------------*/
