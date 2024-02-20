@@ -302,7 +302,7 @@
                                 </div><br>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="text" type="text" placeholder="Surname" class="form-control mt-3"  required>
+                                        <input type="text" type="text" placeholder="Surname" class="form-control mt-3"  >
                                     </div>                               
                                 </div><br>
                                 <div class="col-lg-12">
@@ -313,7 +313,13 @@
                                 
                                 <div class="col-12 justify-content-center buttonForContactForm">
                                     <textarea name="message" placeholder="Text us" class="form-control mt-3" id="" cols="30" rows="10"></textarea>
-                                    <button type="submit" class="form-control submit cta-btn btn-primary mt-3">Send Message</button>
+                                    <button id="openNewTab" type="submit" class="form-control submit cta-btn btn-primary mt-3">Send Message</button>
+                                </div>
+                                <div class="popup" id="popup">
+                                    <img src="checkMark.png">
+                                    <h2>Thank You!</h2>
+                                    <p>Your message was successfully submitted. Thank you!</p>
+                                    <button id="messageSentOk" type="button">OK</button>
                                 </div>                                
                             </div>
                         </form>
