@@ -293,18 +293,11 @@ function calculateWindowWidth() {
 }
 
 //----------------Message send----------------------
-let openNewTab = document.getElementById('openNewTab');
-openNewTab.addEventListener('click', function() {
-    var message = 'Your message was successfully submited. Thank you!'
-    var url = "newpage.html?message=" + encodeURIComponent(message);
-    window.open(url, '_self');
-   
-});
-let messageSentOk = document.getElementById('messageSentOk');
-popup.addEventListener('click', openPopup);
-messageSentOk.addEventListener('click', closePopup);
+/*
+let popup = document.getElementById('popup');
+let openNewTab = document.getElementById('openNewTab').addEventListener('click', function() {
+    popup.classList.add('openPopup');
+})
+*/
 
 
-function closePopup() {
-    popup.classList.remove('openPopup');
-}

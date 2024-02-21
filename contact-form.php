@@ -7,7 +7,7 @@
 	$headers = "From: alex.moroz.aus@gmail.com";
 
 	if (mail($to_email, $subject, $body, $headers)) {
-		header("Location: index.html");
+		header("Location: sendMessage.html");
 	} else {
 		echo "Email sending failed...";
 	}
