@@ -55,7 +55,9 @@ body {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 0 rgba(0, 0, 0, 0.1);
+
     transition: 0.5s;
+
     overflow: hidden;   
 }
 
@@ -66,53 +68,81 @@ body {
     width: 100%;
     padding-left: 0;    
 }
+.menuNavigation ul [menu] {
+    margin-left: 20px;
+}
 .menuNavigation .navbar-brand {    
     display: block;
-    margin: 30px 0;    
-    pointer-events: none;
+    margin: 30px 0;  
     font-size: 33px;
 }
+.menuNavigation .navbar-brand img {
+    width: 62px;
+    margin-right: 17px;
+    cursor: pointer;
+}
+.menuNavigation + ul li:nth-child(1) {   
+    margin-bottom: 60px;    
+    font-size: 33px;
+}
+.menuNavigation ul li a {
+    position: relative;
+    padding: 14px 0;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+    align-items: center;
+}
+
 #pages .sidebar-link {
     padding-left: 80px;
 }
 #pages .sidebar-item {
     font-size: 20px !important;
 }
+.menuNavigation .sidebar-nav [menu]:hover li a,
+.menuNavigation .sidebar-nav [menu].hovered li a {
+    background: var(--white);
+    color: var(--black1);    
+}
+.menuNavigation .sidebar-nav [menu]:hover,
+.menuNavigation .sidebar-nav [menu].hovered {
+    background: var(--white);
+    color: var(--black1);
+    border: 0.3px solid #767676;
+}
 .menuNavigation #pages [submenu]:hover li a,
-.menuNavigation #pages [submenu].hovered li a{
+.menuNavigation #pages [submenu].hovered li a {
     background: var(--white);
     color: var(--black1);
     border: 0.3px solid #767676; 
 }
 
-.menuNavigation ul li [menu],
+
+.menuNavigation .sidebar-nav [menu] li,
 .menuNavigation #pages [submenu] li a{    
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;    
-    margin-left: 16px;
+    margin-left: 20px;
+    padding-left: 10px;
     border: 0.3px solid transparent; 
 }
 
+.menuNavigation .sidebar-nav [menu] {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px; 
+    border: 0.3px solid transparent; 
+}
 
-.menuNavigation ul li [menu]:hover,
-.menuNavigation ul li [menu].hovered  {
-    background: var(--white);
-    color: var(--black1);
-    border: 0.3px solid #767676;   
+.nav-link {
+    transition: none;    
 }
-.menuNavigation + ul li:nth-child(1) {
-    pointer-events: none;
-    margin-bottom: 60px;    
-    font-size: 33px;
+.bg-transparent {
+    background: transparent;
 }
-.menuNavigation ul li a {
-    position: relative;
-    padding: 15px 0;
-    display: flex;
-    text-decoration: none;
-    color: var(--white);
-}
+
+
 .menuNavigation ul li a .icon {
     position: relative;
     display: block;
@@ -120,17 +150,12 @@ body {
     height: 60px;
     line-height: 55px;
     text-align: center;
-}
-.menuNavigation ul li a .title {
-    position: relative;
-    display: block;
-    padding: 0 10px;
-    height: 60px;
-    line-height: 60px;
-    text-align: start;
-    white-space: nowrap;
     font-size: 24px;
 }
+.menuNavigation ul li a .icon svg {
+    margin-right: 5px;
+}
+
 .dropdown-menu.show {
     transition: 1s easy !important;
 }
@@ -151,13 +176,13 @@ body {
 .angleForSidebar {
     position: absolute;
     right: 0px;
-    top: 14px;
+    top: 18px;
     margin: 20px;
     transition: 0.3s ease;
 }
 /*=====================curve outside----------------------*/
-.menuNavigation ul li [menu]:hover a::before,
-.menuNavigation ul li [menu].hovered a::before,
+.menuNavigation ul [menu]:hover li a::before,
+.menuNavigation ul [menu].hovered li a::before,
 .menuNavigation #pages [submenu]:hover li a::before,
 .menuNavigation #pages [submenu].hovered li a::before {
     content: '';
@@ -171,8 +196,8 @@ body {
     pointer-events: none;
     box-shadow: 35px 35px 0 10px var(--white);
 }
-.menuNavigation ul li [menu]:hover a::after,
-.menuNavigation ul li [menu].hovered a::after,
+.menuNavigation ul [menu]:hover li a::after,
+.menuNavigation ul [menu].hovered li a::after,
 .menuNavigation #pages [submenu]:hover li a::after,
 .menuNavigation #pages [submenu].hovered li a::after  {
     content: '';
@@ -225,6 +250,7 @@ body {
     margin-top: 10px;
     font-size: 20px;
     line-height: 26px;
+    
 }
 #hero .icon-box h3 a {
     color: #fff;
@@ -244,6 +270,7 @@ body {
     text-align: center;
     transition: all ease-in-out 0.3s;
     width: 250px;
+    cursor: pointer;
 }
 
 
@@ -268,7 +295,7 @@ body {
 
 
 /*-------------------------------------------------------------Get in touch-----------------------------------------*/
-.cta {
+ .cta {
     background: linear-gradient(rgba(2,2,2,0.5), rgba(2,2,2,0.8)), url(https://images.pexels.com/photos/19215458/pexels-photo-19215458/free-photo-of-back-lit-photograph-of-birch-trees.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) fixed center center;
     background-size: cover;
     padding: 50px 0;
@@ -334,7 +361,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 0 30px 30px;
-    color: #ffc451;
+    color: #05060c;
     transition: transform 0.4s, top 0.4s; 
 }
 .openPopup {
@@ -370,7 +397,7 @@ body {
 .sendMessageContainer {
     width: 100%;
     height: 100vh;
-    background: #f6f5f7;
+    background: #ffc451;
 }
 /*------------------------------------Reviews-------------------------------------*/
 .reviews {
@@ -624,36 +651,13 @@ hr {
 
 
 /* -------------------------About - LinkPage--------------------------------------*/
-.line-1 {
-    width: 15px;
-    height: 15px;
-    display: inline-block;
-    background: #ffc451;
-    border: 0.1px solid #767676;
-}
-.line-2 {
-    width: 80px;
-    height: 1px;
-    display: inline-block;
-    background: #ffc451;
-}
-.line-3 {
-    width: 60px;
-    height: 1px;
-    display: inline-block;
-    background: #ffc451;
-}
-.line {
-    line-height: 8px;
-    top: 0;
-    left: 0;  
-}
-#homePage {      
-  
+
+#homePage {     
     background: url(background1.jpg);
     background-size: cover;
     position: relative;
-    padding: 50px 0;   
+    padding: 50px 0; 
+    min-height: 100vh;  
 }
 #homePage::before {
     content: '';
@@ -666,6 +670,7 @@ hr {
 }
 #homePage .container {
     position: relative;
+    
 }
 .aboutBlank {
     border: 1px solid #fff;
@@ -683,6 +688,7 @@ hr {
 
 .backgroundCalculators {
     background: #f6f5f7;
+    min-height: 100vh;
 }
 
 .profileReviewCalculator {
@@ -1049,9 +1055,7 @@ hr {
 
 /*-------------------------------------------- Borrowing Calculator--------------------*/
 
-#borrowingCalculator{
-   height: 700px;   
-}
+
 
 #borrowingCalculatorLink {   
     padding: 18px 26px;   
@@ -1147,87 +1151,210 @@ hr {
     text-align: start;  
     margin: 55px 0;
 }
-/*---------------------------Contact Us-----------------------------------------*/
-.contactCell {    
-    padding: 40px 120px;
-    
-    background: rgb(40, 41,123);
-    color: #f5f6fa;
-    width: 100%;    
-}
-.contacts {
-    display: flex;  
-    width: 60%;  
-}
+/*---------------------------Contact Us Page-----------------------------------------*/
 
-.contactCell h3 {
+.contactSection {
+    min-height: 100vh;
+    background: var(--black2);
+}
+.contactSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width:calc(50% - 150px);
+    height: 100%;
+    background: #ffc451;
+}
+.contactSection .container {
+    position: relative;
+    min-width: 1100px;
+    min-height: 640px;
+    z-index: 1000;  
+}
+.contactSection .container .contactInfo {
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: var(--black2);
+    z-index: 1;
+    padding: 40px;    
+    flex-direction: column;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+.contactSection .container .contactForm {
+    position: absolute;
+    padding: 0 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+}
+.contactSection .contactInfo h2 {
+    display: flex;
+    justify-content: center;
     font-weight: 600;
-    margin-bottom: 20px;
+    font-size: 24px; 
+    color: white;  
+    margin-bottom: 65px; 
 }
-.infoContacts tr td:first-child {
-    padding-right: 20px;
+.contactSection ul.contactInfoPage {   
+    position: relative;
+    margin: 40px 0;
+    padding: 0;
 }
-.infoContacts tr td {
+.contactSection ul.contactInfoPage li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    color: white;
+}
+.contactSection ul.contactInfoPage li span {
+    padding-bottom: 15px;
+}
+.contactSection .contactInfo  .contactPageIcons {
+    margin-top: 120px;
+    position: relative;
+    display: flex;
+}
+.contactSection .contactInfo  .contactPageIcons a {
+    margin-right: 25px;
+}
+.contactSection .contactForm h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+.contactSection .contactForm .formBox {
     padding-top: 30px;
 }
-.iconContact {
-    margin-right: 10px;
+.contactSection .contactForm .formBox .inputBox {
+    position: relative;
+    margin-bottom: 35px;
 }
-.contactCell h3 {
-    text-align: start !important;
-}
-.textForContacts {
-    margin: 55px 0 130px;
+.contactSection .contactForm .formBox .inputBox input,
+.contactSection .contactForm .formBox .inputBox textarea {
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #767676;
 }
 
-.fa-envelope {
-    font-weight: 600 !important;
+.contactSection .contactForm .formBox .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+    pointer-events: none;
 }
-
-.infoContacts tr {
-    font-size: 24px;
+.contactSection .contactForm .formBox .inputBox input:focus ~ span,
+.contactSection .contactForm .formBox .inputBox input:valid ~ span,
+.contactSection .contactForm .formBox .inputBox textarea:focus ~ span,
+.contactSection .contactForm .formBox .inputBox textarea:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400px;
+    letter-spacing: 1px;
+    color: var(--black2);
+    font-weight: 500;
 }
-/*---------------------------------------------------------------------------facebook---------------------------------------------*/
-.iconSocial a {
-    width: 50px;
-    height: 50px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 40px;     
-    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-    background-image: linear-gradient(rgb(40, 41,123) 50%, rgb(40, 41,123) 50%);
-    background-size: 100% 200%;    
-    background-position: 0% 5%;
-    transition: 0.5s;
-    color: #f5f6fa;
-    border-radius: 5px;
-    border: 2px solid #f5f6fa;
-}
-.iconSocial a:hover {
-    background-image: linear-gradient(rgb(40, 41,123), rgb(40, 41,123));
-    color: #f5f6fa;
-    background-position: 0% 100%; 
+.contactSection .contactForm .formBox button {
+    position: relative;
     cursor: pointer;
-    border: 3px solid #f5f6fa;
-    border-radius: 5px;
+    background: var(--black2);
+    color: var(--white);
+    border: none;
+    max-width: 150px;
+    padding: 12px;
 }
-.iconSocial {   
-    animation: moveleft 2s linear;
-    animation-delay: 1s;
-    visibility: hidden;
-    animation-fill-mode: forwards;
-    margin-top: 30px;
+.contactSection .contactForm .formBox button:hover {
+    background: #ffc451;
+    color: #333;
 }
 
-  @keyframes moveleft {
-    0% {
-        transform: translateX(calc(var(--window-width) * 0.37));
-        visibility: visible;
+
+/*responsive contact us page*/
+
+@media (max-width: 1800px) {
+    .contactSection .container {
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
     }
-    100% {
-        transform: translateX(0);
-        visibility: visible;
+}
+@media (max-width: 1400px) {
+    .contactSection .container {
+        --bs-gutter-x: 0;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
     }
+    .contactSection .container .contactInfo {
+        top: 0;
+        height: 670px;
+        position: relative;
+        box-shadow: none;
+    }
+    .contactSection .container .contactForm {
+        position: relative;
+        width: calc(100% - 350px);
+        padding-left: 0;
+        margin-left: 0; 
+        padding: 40px;
+        height: 670px; 
+        box-shadow: none;      
+    }
+    .contactSection .container .contactForm form {
+        margin-top: 0;
+    }
+    .contactSection::before {
+        left: 300px;
+    }
+    .contactSection .contactInfo h2 {
+        margin-bottom: 65px;
+    }
+    .contactSection .contactInfo .contactPageIcons {
+        margin-top: 200px;
+    }
+    .contactSection ul.contactInfoPage li span {
+        padding-bottom: 35px;
+    }
+   
+}
+
+@media (max-width: 1200px) {
+    .marginLeft {
+        margin: 0;
+    }
+    .contactSection {
+        background: #ffc451;
+    }
+    .contactSection::before {
+        display: none;
+    }
+    .contactSection .container {
+        display: flex;
+        flex-direction: column-reverse;
+       
+    }
+    .contactSection .container .contactInfo {
+        width: 100%;
+        height: auto;
+    }
+    .contactSection .container .contactForm {
+        width: 100%;
+        height: auto;
+    }
+    .contactSection .contactInfo .contactPageIcons {
+        margin-top: 10px;
+    }
+    
 }

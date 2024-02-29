@@ -1,11 +1,53 @@
 document.addEventListener("DOMContentLoaded", onDocumentLoad); //страница полностью загружена
+//sideMenu
+let switchHome = document.getElementById('switchHome');
+let switchCalculators = document.getElementById('switchCalculators');
+let switchReviews = document.getElementById('switchReviews');
+let switchPartners = document.getElementById('switchPartners');
+let switchContactUs = document.getElementById('switchContactUs');
+let switchLoanCalculator = document.getElementById('switchLoanCalculator');
+let switchStampdutyCalculator = document.getElementById('switchStampdutyCalculator');
+let switchBorrowingCalculator = document.getElementById('switchBorrowingCalculator');
+//startPage
+let switchStartPage = document.getElementById('switchStartPage');
+let switchLoanCalcOnStartPage = document.getElementById('switchLoanCalcOnStartPage');
+let switchDutyCalcOnStartPage = document.getElementById('switchDutyCalcOnStartPage');
+let switchBorrowingCalcOnStartPage = document.getElementById('switchBorrowingCalcOnStartPage');
+let switchConnectStartPage = document.getElementById('switchConnectStartPage');
+let switchTestimonialsStartPage = document.getElementById('switchTestimonialsStartPage');
+
+let mainContent = document.getElementById('mainContent');
+let homePage = document.getElementById('homePage');
+let contentLoanRepayments = document.getElementById('contentLoanRepayments');
+let contentStampDuty= document.getElementById('contentStampDuty');
+let contentBorrowingCalculator= document.getElementById('contentBorrowingCalculator');
+let testimonials= document.getElementById('testimonials');
+let contentPartners= document.getElementById('contentPartners');
+let contentContacts = document.getElementById('contentContacts');
 
 //add dark sidebar to side-menu list when on white page
 let navbar = document.querySelector('#navContent');
 window.addEventListener('scroll', darkSidebar);
+switchHome.addEventListener('click', transparentSidebarOnClick);
+switchCalculators.addEventListener('click', darkSidebarOnClick);
+switchLoanCalculator.addEventListener('click', darkSidebarOnClick);
+switchStampdutyCalculator.addEventListener('click', darkSidebarOnClick);
+switchBorrowingCalculator.addEventListener('click', darkSidebarOnClick);
+switchReviews.addEventListener('click', darkSidebarOnClick);
+switchPartners.addEventListener('click', darkSidebarOnClick);
+switchContactUs.addEventListener('click', darkSidebarOnClick);
+
+
+function darkSidebarOnClick() {
+    navbar.classList.remove('bg-transparent');
+    navbar.classList.add('bg-dark');
+}
+function transparentSidebarOnClick() {
+    navbar.classList.remove('bg-dark');
+    navbar.classList.add('bg-transparent');
+}
 
 function darkSidebar() {
-    
     if (window.pageYOffset > 600) {
         navbar.classList.add('bg-dark');
     } else {
@@ -18,37 +60,20 @@ let angleForSidebar = document.querySelector('.angleForSidebar');
 let rotateAngle = document.getElementById('rotateAngle');
 rotateAngle.addEventListener('click', function() {
     angleForSidebar.classList.toggle('rotate');
-}
-)
-
+});
 
 let list = document.querySelectorAll('.menuNavigation a');
 function activeLink() {
-    list.forEach(item=> {
-        item.classList.remove('hovered');
+    list.forEach(item => {
+        item.classList.remove('hovered');     
+        
     })
-    this.classList.add('hovered');
+    this.classList.add('hovered'); 
 }
 list.forEach(item => item.addEventListener('mouseover', activeLink));
 
+
 //Switch Menu items
-let switchHome = document.getElementById('switchHome');
-let switchCalculators = document.getElementById('switchCalculators');
-let switchReviews = document.getElementById('switchReviews');
-let switchPartners = document.getElementById('switchPartners');
-let switchContactUs = document.getElementById('switchContactUs');
-let switchLoanCalculator = document.getElementById('switchLoanCalculator');
-let switchStampdutyCalculator = document.getElementById('switchStampdutyCalculator');
-let switchBorrowingCalculator = document.getElementById('switchBorrowingCalculator');
-
-let mainContent = document.getElementById('mainContent');
-let homePage = document.getElementById('homePage');
-let contentLoanRepayments = document.getElementById('contentLoanRepayments');
-let contentStampDuty= document.getElementById('contentStampDuty');
-let borrowingCalculator= document.getElementById('borrowingCalculator');
-let testimonials= document.getElementById('testimonials');
-let contentPartners= document.getElementById('contentPartners');
-
 
  function onDocumentLoad() {
     switchHome.addEventListener('click', switchContent);
@@ -59,7 +84,12 @@ let contentPartners= document.getElementById('contentPartners');
     switchLoanCalculator.addEventListener('click', switchContent);
     switchStampdutyCalculator.addEventListener('click', switchContent);
     switchBorrowingCalculator.addEventListener('click', switchContent);
-    
+    switchStartPage.addEventListener('click', switchContent);
+    switchLoanCalcOnStartPage.addEventListener('click', switchContent);
+    switchDutyCalcOnStartPage.addEventListener('click', switchContent);
+    switchBorrowingCalcOnStartPage.addEventListener('click', switchContent);
+    switchConnectStartPage.addEventListener('click', switchContent);
+    switchTestimonialsStartPage.addEventListener('click', switchContent);
  }
 
 
@@ -81,14 +111,13 @@ function switchContent(event) {
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
 
-        navbar.classList.add('bg-dark');
-        
-        
+        navbar.classList.add('bg-dark');        
         
         homePage.removeAttribute('hide');
+        contentContacts.setAttribute('hide', '');
         contentLoanRepayments.setAttribute('hide', '');
         contentStampDuty.setAttribute('hide', '');
-        borrowingCalculator.setAttribute('hide', '');
+        contentBorrowingCalculator.setAttribute('hide', '');
         testimonials.setAttribute('hide', '');
         contentPartners.setAttribute('hide', '');
         mainContent.setAttribute('hide', '');
@@ -102,8 +131,6 @@ function switchContent(event) {
         switchLoanCalculator.classList.remove('hovered');
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
-
-      
        
     } else if (menuitem.id == 'switchReviews') {
         menuitem.classList.add('hovered');
@@ -115,13 +142,15 @@ function switchContent(event) {
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
 
-        testimonials.removeAttribute('hide');            
+        testimonials.removeAttribute('hide'); 
+        contentContacts.setAttribute('hide', '');           
         homePage.setAttribute('hide', '');
         contentLoanRepayments.setAttribute('hide', '');
-        borrowingCalculator.setAttribute('hide', '');
+        contentBorrowingCalculator.setAttribute('hide', '');
         contentPartners.setAttribute('hide', '');
         contentStampDuty.setAttribute('hide', '');
         mainContent.setAttribute('hide', '');
+
     } else if (menuitem.id == 'switchPartners') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
@@ -132,10 +161,11 @@ function switchContent(event) {
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
 
-        contentPartners.removeAttribute('hide');      
+        contentPartners.removeAttribute('hide');
+        contentContacts.setAttribute('hide', '');      
         homePage.setAttribute('hide', '');
         contentLoanRepayments.setAttribute('hide', '');
-        borrowingCalculator.setAttribute('hide', '');
+        contentBorrowingCalculator.setAttribute('hide', '');
         testimonials.setAttribute('hide', '');
         contentStampDuty.setAttribute('hide', '');
         mainContent.setAttribute('hide', '');
@@ -149,9 +179,15 @@ function switchContent(event) {
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
 
-      
-    }
-    else if (menuitem.id == 'switchLoanCalculator') {
+        contentContacts.removeAttribute('hide');
+        contentLoanRepayments.setAttribute('hide', '');
+        homePage.setAttribute('hide', '');
+        contentStampDuty.setAttribute('hide', '');
+        contentBorrowingCalculator.setAttribute('hide', '');
+        testimonials.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');
+        mainContent.setAttribute('hide', '');  
+    }  else if (menuitem.id == 'switchLoanCalculator') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
         switchCalculators.classList.remove('hovered');
@@ -164,12 +200,12 @@ function switchContent(event) {
         contentLoanRepayments.removeAttribute('hide');
         homePage.setAttribute('hide', '');
         contentStampDuty.setAttribute('hide', '');
-        borrowingCalculator.setAttribute('hide', '');
+        contentBorrowingCalculator.setAttribute('hide', '');
         testimonials.setAttribute('hide', '');
         contentPartners.setAttribute('hide', '');
         mainContent.setAttribute('hide', '');
-    }
-    else if (menuitem.id == 'switchStampdutyCalculator') {
+        contentContacts.setAttribute('hide', '');  
+    } else if (menuitem.id == 'switchStampdutyCalculator') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
         switchCalculators.classList.remove('hovered');
@@ -182,10 +218,11 @@ function switchContent(event) {
         contentStampDuty.removeAttribute('hide');        
         homePage.setAttribute('hide', '');
         contentLoanRepayments.setAttribute('hide', '');
-        borrowingCalculator.setAttribute('hide', '');
+        contentBorrowingCalculator.setAttribute('hide', '');
         testimonials.setAttribute('hide', '');
         contentPartners.setAttribute('hide', '');
         mainContent.setAttribute('hide', '');
+        contentContacts.setAttribute('hide', '');  
     }
     else if (menuitem.id == 'switchBorrowingCalculator') {
         menuitem.classList.add('hovered');
@@ -197,14 +234,94 @@ function switchContent(event) {
         switchLoanCalculator.classList.remove('hovered');       
         switchStampdutyCalculator.classList.remove('hovered'); 
         
-        borrowingCalculator.removeAttribute('hide');              
+        contentBorrowingCalculator.removeAttribute('hide');              
         homePage.setAttribute('hide', '');
         contentLoanRepayments.setAttribute('hide', '');
         contentStampDuty.setAttribute('hide', '');
         testimonials.setAttribute('hide', '');
         contentPartners.setAttribute('hide', '');
         mainContent.setAttribute('hide', '');
-    }
+        contentContacts.setAttribute('hide', ''); 
+
+    } else if (menuitem.id == 'switchStartPage') {
+        switchHome.classList.remove('hovered');
+        switchCalculators.classList.remove('hovered');
+        switchReviews.classList.remove('hovered');
+        switchPartners.classList.remove('hovered');
+        switchContactUs.classList.remove('hovered');  
+        switchLoanCalculator.classList.remove('hovered');       
+        switchStampdutyCalculator.classList.remove('hovered'); 
+        switchBorrowingCalculator.classList.remove('hovered');
+
+        mainContent.removeAttribute('hide');
+        homePage.setAttribute('hide', '');
+        contentLoanRepayments.setAttribute('hide', '');
+        contentStampDuty.setAttribute('hide', '');
+        testimonials.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');        
+        contentContacts.setAttribute('hide', '');
+        contentBorrowingCalculator.setAttribute('hide', '');
+
+    } else if (menuitem.id == 'switchLoanCalcOnStartPage') {
+              
+        navbar.classList.add('bg-dark');  
+
+        contentLoanRepayments.removeAttribute('hide'); 
+        homePage.setAttribute('hide', '');
+        contentStampDuty.setAttribute('hide', '');
+        testimonials.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');        
+        contentContacts.setAttribute('hide', '');
+        contentBorrowingCalculator.setAttribute('hide', '');       
+        mainContent.setAttribute('hide', '');       
+    } else if (menuitem.id == 'switchDutyCalcOnStartPage') {
+        navbar.classList.add('bg-dark');  
+
+        contentStampDuty.removeAttribute('hide'); 
+        homePage.setAttribute('hide', '');
+        contentLoanRepayments.setAttribute('hide', '');
+        testimonials.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');        
+        contentContacts.setAttribute('hide', '');
+        contentBorrowingCalculator.setAttribute('hide', '');       
+        mainContent.setAttribute('hide', '');       
+    } else if (menuitem.id == 'switchBorrowingCalcOnStartPage') {
+        navbar.classList.add('bg-dark');  
+
+        contentBorrowingCalculator.removeAttribute('hide'); 
+        homePage.setAttribute('hide', '');
+        contentLoanRepayments.setAttribute('hide', '');
+        testimonials.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');        
+        contentContacts.setAttribute('hide', '');
+        contentStampDuty.setAttribute('hide', '');       
+        mainContent.setAttribute('hide', '');       
+    }  else if (menuitem.id == 'switchConnectStartPage') {
+        navbar.classList.add('bg-dark');  
+
+        menuitem.classList.add('hovered');
+
+
+        contentContacts.removeAttribute('hide');
+        contentLoanRepayments.setAttribute('hide', '');
+        homePage.setAttribute('hide', '');
+        contentStampDuty.setAttribute('hide', '');
+        contentBorrowingCalculator.setAttribute('hide', '');
+        testimonials.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');
+        mainContent.setAttribute('hide', '');  
+    } else if (menuitem.id == 'switchTestimonialsStartPage') {
+        navbar.classList.add('bg-dark');  
+
+        testimonials.removeAttribute('hide');
+        contentLoanRepayments.setAttribute('hide', '');
+        homePage.setAttribute('hide', '');
+        contentStampDuty.setAttribute('hide', '');
+        contentBorrowingCalculator.setAttribute('hide', '');
+        contentContacts.setAttribute('hide', '');
+        contentPartners.setAttribute('hide', '');
+        mainContent.setAttribute('hide', '');  
+    } 
     
 }
 
@@ -293,11 +410,6 @@ function calculateWindowWidth() {
 }
 
 //----------------Message send----------------------
-/*
-let popup = document.getElementById('popup');
-let openNewTab = document.getElementById('openNewTab').addEventListener('click', function() {
-    popup.classList.add('openPopup');
-})
-*/
+
 
 

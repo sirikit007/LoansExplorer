@@ -1,5 +1,5 @@
 <?php
-	echo "weeeeee";
+	
 
 	$to_email = "alex.moroz.aus@gmail.com";
 	$subject = "Simple Email Test via PHP";
