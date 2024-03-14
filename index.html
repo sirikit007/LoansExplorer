@@ -19,23 +19,23 @@
 <body>
     
     <header id="header">
-        <nav class="navContainer navbar navbar-expand-lg navbar-dark" style="background-color: rgb(22, 22, 54);">
-            <div class="container" >
-                <a  href="#"  class="navbar-brand d-lg-none">My Logo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" 
+        <nav class="navContainer navbar navbar-expand-xl fixed-top">
+            <div class="container-fluid" >
+                <a  href="#"  class="navbar-brand nav-link d-xl-none fw-bolder fs-4"><img class="mobileLogo" src="logo_.png"> Loans Explorer</a>
+                <button class="navbar-toggler button-close" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" 
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div  id="navContent" class="menuNavigation fixed-top collapse navbar-collapse">
                     <ul class="sidebar-nav">
-                        <li  class="navbar-brand iconBrand">
+                        <li  class="navbar-brand">
                             <a id="switchStartPage" menuitem href="#" class="nav-link justify-content-center">                                
-                                    <img src="logo_.png" alt="">                        
-                                <div class="fw-bold">Loans Explorer</div>
+                                    <img src="logo_.png">                        
+                                <div class="fw-bolder fs-5">Loans Explorer</div>
                             </a>
                         </li>
-                        <hr class="text-white">
-                        <div menu menuitem id="switchHome">
+                        <hr class="text-center">
+                        <div menu menuitem id="switchHome" class="mt-3">
                             <li class="sidebar-item">                                
                                 <a  href="#" class="nav-link"  >
                                     <span class="icon">
@@ -66,7 +66,7 @@
                             </li>
                         </div>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse"  data-bs-parent="#sidebar">
-                            <div id="switchLoanCalculator" submenu menuitem>
+                            <div id="switchLoanCalculator" submenu menuitem class="mt-3">
                                 <li class="sidebar-item ms-5">
                                     <a class="sidebar-link" href="#"><span>Loan Calculatop</span></a>
                                 </li>
@@ -116,23 +116,21 @@
                     </ul>
                 </div>
             </div>
-            
         </nav>
     </header>
-    <div id="mainContent">
+    <div id="mainContent" >
         <section id="hero">
             <div class="justify-content-center marginLeft d-flex row">
                 <div class="container">
                     <div class="row justify-content-center text-center">
-                        <div class="col-md-6 col-lg-8 col-xl-8 mb-5">
-                            
+                        <div class="col-xl-12 mb-5">
                             <h1 class="animate__animated animate__bounceInRight" style="animation-delay: 0.5s;">Loans Explorer</h1>
                             <h2 class="animate__animated animate__bounceInLeft" style="animation-delay: 1s;">Find the best home loans and pay it off faster!</h2>
                         </div>
                     </div>
                     <div class="container">
                         <div class="row mt-5" >
-                            <div class="col-xl-3 col-md-4 col-6  animate__animated animate__fadeIn me-5" style="animation-delay: 1.5s;">
+                            <div class="col-lg-4 d-flex justify-content-center animate__animated animate__fadeIn" style="animation-delay: 1.5s;">
                                 <div id="switchLoanCalcOnStartPage" menuitem class="icon-box">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="#ffc451" class="bi bi-calculator" viewBox="0 0 16 16">
                                         <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
@@ -142,7 +140,7 @@
                                 </div>
                             </div>
                         
-                            <div class="col-xl-3 col-md-4 col-6 animate__animated animate__zoomIn ms-5 me-5" style="animation-delay: 2s;">
+                            <div class="col-lg-4 d-flex justify-content-center animate__animated animate__zoomIn" style="animation-delay: 2s;">
                                 <div id="switchDutyCalcOnStartPage" menuitem class="icon-box">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="#ffc451"  class="bi bi-calculator" viewBox="0 0 16 16">
                                         <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
@@ -151,7 +149,7 @@
                                     <h3><a href="#">Stamp Duty Calculator</a></h3>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-4 col-6 animate__animated animate__zoomIn ms-5" style="animation-delay: 2.5s;">
+                            <div class="col-lg-4 d-flex justify-content-center animate__animated animate__zoomIn" style="animation-delay: 2.5s;">
                                 <div id="switchBorrowingCalcOnStartPage" menuitem class="icon-box">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="#ffc451" class="bi bi-calculator" viewBox="0 0 16 16">
                                         <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
@@ -170,7 +168,7 @@
         <!-------------------------AboutMain--------------------------->
        
         <section class="hidden d-flex align-items-center justify-content-center marginLeft" id="about">        
-            <div class="container containerAbout ">
+            <div class="container containerAbout paddingForContainer">
                 <div class="row  justify-content-center mt-5 pt-5">
                     <div class="col-xxl-4 col-xl-6 col-lg-6  order-lg-2" >
                         <img  src="https://images.pexels.com/photos/19342827/pexels-photo-19342827/free-photo-of-ice-on-sea-water.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="img-fluid">
@@ -223,7 +221,7 @@
             <!----------------------------ContactUs--------------------->
             
         <section class="cta mb-5 hidden marginLeft">
-            <div class="container text-center">
+            <div class="container text-center paddingForContainer">
                 <h3 class="mb-5 scrollLeft">Get in touch</h3>
                 <p class="lh-lg">We are mortgage brokers located in Sydney, NSW Australia. Our brokers are fully accredited by the Mortgage and Finance Association of Australia (MFAA) and have a wealth of experience in helping clients. If you have any queries regarding home loans or purchasing property advertised on this web site please email or call us with your questions and contact information and our consultants will contact you.</p>
                 <div><a id="switchConnectStartPage" menuitem href="#contentContacts" class="cta-btn mt-4">Connect with us</a></div>
@@ -232,7 +230,7 @@
         <!----------------------------ContactUs   Main--------------------->
         
         <section class="contact hidden marginLeft" id="contactUsMain">
-            <div class="container container-xl">
+            <div class="container container-xl paddingForContainer">
                 <h3 class="scrollUp fw-bold mb-3">Contact Us</h3>
                 <p class="lh-lg mb-5">We are mortgage brokers located in Sydney, NSW Australia. Our brokers are fully accredited by the Mortgage and Finance Association of Australia 
                     (MFAA) and have a wealth of experience in helping clients.
@@ -439,8 +437,7 @@
                                     One of the standout qualities of Tatiana is her reliability and responsibility. She is a true professional who takes her clients'
                                     interests to heart. I now wholeheartedly recommend her to everyone seeking mortgage services. In fact, Tatiana has also helped many
                                     of our friends, and they have all reported smooth and hassle-free experiences. The paperwork was prepared meticulously and on time, 
-                                    demonstrating Tatiana's attention to detail. Moreover, the offer she suggested exceeded our expectations, surpassing what our 
-                                    current bank could provide in terms of rates.  
+                                    demonstrating Tatiana's attention to detail.   
                                 </p>
                                 <span class="fw-semibold">Linda</span><br>
                                 <span class="fw-semibold" style="font-size: 15px;">12 February 2023</span>
@@ -495,7 +492,7 @@
         </section>
     
         <section class="partners d-flex hidden marginLeft" id="partnersMain" >
-            <div class="container text-center">
+            <div class="container text-center paddingForContainer">
                 <div class="row mb-3 justify-content-center">
                     <h3 class="head welcome scrollUp my-5 fw-bold">Our Partners</h3>
                     <p>We partner with 100+ brands across 20+ categories including 
@@ -504,7 +501,7 @@
                 </div>                
                 <div class="container mb-5">                        
                     <div class="row justify-content-center">
-                        <div class="partnersColumn col-8 align-items-center d-grid">
+                        <div class="partnersColumn align-items-center d-grid ">
                             
                             <div class="iconbox m-3 p-3 animate__animated animate__bounceInLeft" style="animation-delay: 0.5s;">
                                 <img src="logos/westpack2.png" alt="">
@@ -570,11 +567,11 @@
                         <div class="col col-lg-3 col-md-6 footer-links text-center">
                             <h3>Useful Links <div class="underlineH3"><span></span></div></h3>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Calculators</a></li>
-                                <li><a href="#">Reviews</a></li>
-                                <li><a href="#">Partners</a></li>
-                                <li><a href="#">Contacts</a></li>
+                                <li id="switchFooterHome" menuitem><a href="">Home</a></li>
+                                <li id="switchFooterCalculators" menuitem><a href="#">Calculators</a></li>
+                                <li id="switchFooterReviews" menuitem><a href="#">Reviews</a></li>
+                                <li id="switchFooterPartners" menuitem><a href="#">Partners</a></li>
+                                <li id="switchFooterContacts" menuitem><a href="#">Contacts</a></li>
                             </ul>
                         </div>
                         <div class="col col-lg-3 col-md-6 footer-newsletter">
@@ -593,8 +590,6 @@
                                 </svg>
                                 </a>                           
                             </div>
-                            
-                            
                         </div>
                     </div>           
                 </div>
@@ -604,47 +599,42 @@
         </footer>   
     </div>
     <!---------------------------------------------Home Link Page----------------------------------------------->
-    <section id="homePage" class=" d-flex justify-content-center" hide>      
-       <div class="marginLeft">
+    <section id="homePage" class="d-flex justify-content-center backgroundCalculators" hide>      
+       <div class="marginLeft ">
         <div class="container">
             <div class="row m-5 d-flex justify-content-center">
                 <div class="aboutBlank ">
-                    <div id="contentHome"  class="p-5 m-3">                    
-                        <div class="topHead">                             
-                            <div class="line head">
-                                <span class="line-1"></span><br>
-                                <span class="line-2"></span><br>
-                                <span class="line-3"></span>
-                            </div>                                                                    
+                    <div id="contentHome"  class="p-5 m-3 lh-lg">                    
+                        <div>                                                                                              
                             <div class="welcome head">
                                 <h1 class="text-center mb-5 fs-2 fw-bold">Welcome to Loans Explorer</h1>
                             </div>                                          
                         </div>                          
-                        <h3>Who we are?</h3>                 
+                        <h4>Who we are?</h4>                 
                         <p>We are mortgage brokers located in Sydney, NSW Australia (Australian Credit Licence Number 387346). Our brokers are fully accredited by the Finance Brokers Association of Australia Limited (FBAA) and have a wealth of experience in helping clients.
                         </p>                      
-                        <h3>What do we do?</h3>                  
+                        <h4>What do we do?</h4>                  
                         <p>Choosing the best home loan deal on your own can be a very difficult task considering the large number of products on the current market . We aim to save you time and money, allowing you to source the best mortgage for your circumstances without having to contact dozens of mortgage lenders and search endless lists of products and rates.
 
                             We use BrokerFirst loan comparison software which compares hundreds of home loan rates and deals from Australia’s leading lenders including the big four banks.
                             
                             Our Mortgage Brokers look at the whole package, and not just the interest rate to provide a better indication of the true cost of a loan, which could save you a load of hassle, hours of research as well as thousands of dollars.
                         </p>                                            
-                        <h3>What is our main area of expertise?</h3>                 
+                        <h4>What is our main area of expertise?</h4>                 
                         <p>We specialize in assisting with negotiating the lowest cost home loan finance. We provide simple professional advice about product selection, loan structuring, borrowing capacity maximisation and many other important issues. Save hours of relentless searching for accurate and professional information about mortgages. We can find the best deal for you by searching our extensive database of lenders. It will only take 5 minutes of your time today to complete an enquiry, but could save you thousands of dollars in interest payments.
                             How to get in touch with us?
                             Email us at: info@loansexplorer.com
                             
                             Ask us a question or just leave your contact numbers and we promise to get back to you with help.
                         </p>                      
-                        <h3>Have problems obtaning a loan?</h3>                                 
+                        <h4>Have problems obtaning a loan?</h4>                                 
                         <p>Contact us and we'll help you. Keep coming to our website and you'll find details of the borrowing process explained in layman's terms as well as a lot of useful references and resources</p>
-                        <h3>Our dispute resolution policy</h3>                 
+                        <h4>Our dispute resolution policy</h4>                 
                         <p>We believe that it is essential for our customers to be able to identify and deal with a broker who has the ability, authority and proper training to hear and respond appropriately to any complaints or disputes. We are committed to the effective handling of complaints and timely resolution of disputes.
-                            Our dispute resolution policy is outlined here.
+                            Our dispute resolution policy is outlined <span id="switchDisputeResolutionPolicy" menuitem><a href="#">here</a></span>.
                         </p>                    
-                        <h3>Worried about privacy?</h3>                  
-                        <p>As a licenced mortgage broker we adhere to a privacy policy which is fully compliant with The Privacy Amendment (Enhancing Privacy Protection) Act 2012 with the accompanying regulations (Privacy Regulations 2013) which were released in December 2013 and came into effect on 12 March 2014. You can read our Privacy Policy here.</p>
+                        <h4>Worried about privacy?</h4>                  
+                        <p>As a licenced mortgage broker we adhere to a privacy policy which is fully compliant with The Privacy Amendment (Enhancing Privacy Protection) Act 2012 with the accompanying regulations (Privacy Regulations 2013) which were released in December 2013 and came into effect on 12 March 2014. You can read our Privacy Policy <span id="switchPrivacyPolicy" menuitem><a href="#"  >here</a></span>.</p>
                     </div> 
                     </svg>
                 </div>
@@ -658,13 +648,13 @@
 
 
     <!------------------------------------------------------------------Loan Repayments------------------------------------------------------------>
-    <section class="marginLeft d-flex justify-content-center  backgroundCalculators" id="contentLoanRepayments" hide>
+    <section class="marginLeft d-flex justify-content-center backgroundCalculators" id="contentLoanRepayments" hide>
         <div class="container d-flex justify-content-center m-5 p-5">
-            <div class="row justify-content-center">
-                <div class="topHead">
-                    <h1 class="head welcome text-center fw-bold">Loan Repayments Calculator</h1>                         
-                </div>  
-                <div class="profileReviewCalculator col-xl-3">  
+            <div class="row d-block justify-content-center">
+                
+                <h1 class="head welcome text-center fw-bold">Loan Repayments Calculator</h1>
+                
+                <div class="profileReviewLoanCalculator col-xl-3">  
                     <div class="allInputGroups">
                         <div class="inputGroup">
                             <input type="text" id="loanAmount" required> 
@@ -707,22 +697,21 @@
                                 </svg>
                                 <h4 id="weeklyPayments"></h4>
                             </div>   
-                            <h4>Weekly</h4>  
-
+                            <h4>Weekly</h4> 
                         </div>
                     </div>                            
                 </div>  
             </div>
         </div>
     </section>
+    <!------------------------------------------------------------------Stamp Duty------------------------------------------------------------>
     <section class="marginLeft d-flex justify-content-center backgroundCalculators" id="contentStampDuty" hide>
         <div class="container d-flex justify-content-center m-5 p-5">
-            <div class="row">
-                <div class="topHead">                                            
-                    <h1 class="head welcome text-center fw-bold">Stamp Duty Calculator</h1>                         
-                </div>
-                
-                <div class="profileReviewCalculator">
+            <div class="row justify-content-center">
+                                                          
+                <h1 class="head welcome text-center fw-bold">Stamp Duty Calculator</h1>                         
+               
+                <div class="profileReviewStampDutyCalculator col-xl-3">
                     <form action="" class="allInputGroups">
                         <div class="inputGroup inputGroupStamDuty margBot">
                             <input type="text" id="propertyValue" required> 
@@ -1103,9 +1092,9 @@
 
 <!-------------------------------------------------------------Borrowing Calculator------------------------->
     <section class="marginLeft d-flex justify-content-center backgroundCalculators" id="contentBorrowingCalculator" hide>
-        <div  class="container  mt-5 pt-5">         
+        <div  class="container  mt-5 pt-5 px-5">         
             <div class="row">
-                <div class="topHead">                     
+                <div>                     
                     <h1 class="head welcome text-center fw-bold">Borrowing Calculator</h1>                         
                 </div>
                 <div id="borrowingCalculator" class="profileReviewCalculator d-flex flex-wrap justify-content-center align-content-center">
@@ -1119,14 +1108,14 @@
 
     <!----------------------------------------------------------REVIEWS Page------------------------------------------------------------------------------------------------------->
 
-    <section class="marginLeft py-5" id="testimonials" hide>
-        <div class="container">
-            <div class="topHead">                
+    <section class="marginLeft py-5 backgroundCalculators" id="testimonials" hide>
+        <div class="container px-5">
+            <div class="pt-5">                
                 <h1 class="text-center fs-2 fw-bold">Testimonials</h1>                         
             </div>
             <h4 class="text-center mt-5">What Our Clients Say</h4>
             <div class="row mt-5">                    
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 col-xxl-4 col-xl-6 text-center">
                     <div class="profileReviewPage">
                         <div class="stars ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -1155,7 +1144,7 @@
                         <h3>Linda <span>23 March 2023</span></h3>
                     </div>                
                 </div>                
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 col-xxl-4 col-xl-6 text-center">
                     <div class="profileReviewPage">
                         <div class="stars ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -1185,7 +1174,7 @@
                         <h3>Linda <span>23 March 2023</span></h3>       
                     </div>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 col-xxl-4 col-xl-6 text-center">
                     <div class="profileReviewPage">
                         <div class="stars ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -1213,9 +1202,8 @@
                         </blockquote>
                         <h3>Linda <span>23 March 2023</span></h3>                                                     
                     </div>
-                </div>                    
-            
-                <div class="col-md-4 text-center">
+                </div>                                                
+                <div class="col-md-4 col-xxl-4 col-xl-6 text-center">
                     <div class="profileReviewPage">
                         <blockquote>
                             <div class="stars ">
@@ -1246,8 +1234,7 @@
                         <h3>Linda <span>23 March 2023</span></h3>                        
                     </div>
                 </div>
-                
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 col-xxl-4 col-xl-6 text-center">
                     <div class="profileReviewPage">
                         <div class="stars ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -1285,12 +1272,12 @@
 
     <section class="marginLeft" id="contentPartners" hide>
         <div class="pt-5 backgroundCalculators">
-            <div class="container">
-                <div class="topHead pt-5">                   
+            <div class="container px-5">
+                <div class="pt-5">                   
                     <h1 class="fw-bold fs-2 text-center">Our Partners</h1>
                 </div>
                 <div class="row">
-                    <div class="textMiddle">
+                    <div class="textMiddle fs-5">
                         <p>We partner with 100+ brands across 20+ categories including 
                             the big 4 banks, the big 3 telcos, the big 3 health insurers and other leading Australian brands, including:
                         </p>
@@ -1355,11 +1342,17 @@
     </section>
 
     <!----------------------------------------------------------CONTACTS page------------------------------------------------------------------------------------------------------->
-    <section class="marginLeft" id="contentContacts" hide>
-        <div class="contactSection align-items-center d-flex justify-content-center">
+    <section class="marginLeft backgroundCalculators" id="contentContacts" hide>
+        <div class="contactSection d-flex justify-content-center pt-5 container px-5">
+            <div class="contactHead d-flex justify-content-center">
+                <h2 class="pt-5 fw-bold text-center">Get in touch</h2>
+                <p class="fs-5">We are mortgage brokers located in Sydney, NSW Australia. Our brokers are fully accredited by the Mortgage and Finance Association of Australia (MFAA) and and have a wealth of experience in helping clients.
+                    <br>If you have any queries regarding home loans or purchasing property advertised on this web site please email or call us with your questions and contact information and our consultants will contact you.
+                </p>
+            </div>
+            
             <div class="container d-flex">
-                <div class="contactInfo">
-                    <div>
+                <div class="contactInfo pt-5">
                         <h2>Contact Info</h2>
                         <ul class="contactInfoPage">
                             <li>
@@ -1396,7 +1389,7 @@
                                 </span>
                             </li>
                         </ul>
-                    </div>
+                   
                     <div class="contactPageIcons justify-content-center" style="animation-delay: 1s;">
                         <a  href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#ffc451" class="bi bi-facebook" viewBox="0 0 16 16">
                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
@@ -1412,7 +1405,7 @@
                         </a>                           
                     </div>
                 </div>
-                <div class="contactForm">
+                <div class="contactForm pt-5">
                     <form id="contact-form" action="contact-form.php" method="post">
                         <h2 class=" d-flex justify-content-center">Send a Message</h2>
                         <div class="formBox">
@@ -1438,6 +1431,161 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="privacyPolicy" class="backgroundCalculators marginLeft" hide>
+        <div class="privacyPolicySection d-flex justify-content-center">
+            <div class="container d-flex justify-content-center lh-lg">
+                <div class="row m-5 p-5">
+                    <h2  class="text-center py-3  my-3 fw-bold">Privacy Policy</h2>
+                    <p>This privacy policy refers to LoansExplorer (ABN: 67 586 979 926, Australian Credit Licence 387346) and its related businesses. We want you to be confident that the personal information you provide to us is treated with the highest degree of integrity and privacy. However, it is equally important to us that we provide the best possible service across our wide range of products and services. To achieve this aim we need to make the most efficient use of your personal information.
+                        <br>We recognise that any personal information we collect about you will only be used for the purposes we have collected it or as allowed under the law. It is important to us that you are confident that any personal information we hold about you will be treated in a way which ensures protection of your personal information.
+                        <br>In handling your personal information, we are committed to complying with the Privacy Act and Australian Privacy Principles.
+                    </p>
+                    <h4>What is personal information</h4>
+                    <p><span class="fw-semibold">Personal information</span> is any information or opinion about you in which you are identified, or in which your identity can reasonably be ascertained from the information or opinion.It does not matter whether the information or opinion is true or not, or whether it is recorded in a material form or not. The personal information we hold about you may include credit information.
+                        <br><span class="fw-semibold">Credit information</span> is information which is used to assess your eligibility to be provided with finance and may include any finance that you have outstanding, your repayment history in respect of those loans, and any defaults. Usually, credit information is exchanged between credit and finance providers and credit reporting bodies.
+                        <br>The kinds of personal information we may collect about you include your name, date of birth, address, account details, occupation, and any other information we made need to identify you.
+                        <br>If you are applying for finance we may also collect the ages and number of your dependants and cohabitants, the length of time at your current address, your employment details and proof of earnings, expenses and other financial information. If you apply for any insurance product through us we may also collect your health information. We will only collect health information from you with your consent.
+                    </p>
+                    <h4>Collection of information</h4>
+                    <p>We collect personal information for the purposes of assessing your application for finance and managing that finance. We may also collect your personal information for the purposes of direct marketing and managing our relationship with you. From time to time we may offer you other products and services.
+                        <br>Collecting your personal information also allows us to identify and protect your personal information, including account information and services, from unauthorised access. We will only collect such personal information if it is necessary to provide our products and services.
+                        <br>Where possible we collect your personal information directly from you. You provide this information to us when request products and services or make an enquiry. We may also collect your personal information from credit reporting bodies, finance brokers and other people such as accountants and lawyers.
+                        <br>In most cases we will request your consent to any collection and take reasonable steps to ensure that you are made aware of who we are, the purpose of the collection, how you can access your information and who we may disclose your information to.
+                        <br>It will typically be necessary for us to identify you in order to successfully do business with you. However, where it is lawful and practicable to do so, we will offer you the opportunity of doing business with us without providing us with personal information. For example, if you make general inquiries about interest rates or current promotional offers.
+                    </p>
+                    <h4>Use and disclosure of personal information</h4>
+                    <p>We may use or disclose personal information for the primary purpose for which it was collected. We may also use the information for a related purpose and where it would reasonably be expected by you that we use the information in such a way. This information is only disclosed to third parties in the circumstances covered in this policy or as otherwise notified to you at the time of collection of the information.
+                        <br>We may need to disclose aspects of your personal information to:
+                    </p>
+                    <ul>
+                        <li>to prospective funders or other intermediaries in relation to your finance requirements;</li>
+                        <li>to other organisations that are involved in managing or administering your finance such as third party suppliers, printing and postal services, call centres;</li>
+                        <li>to associated businesses that may want to market products to you;</li>
+                        <li>to companies that provide information and infrastructure systems to us;</li>
+                        <li>to anybody who represents you, such as finance brokers, lawyers and accountants;</li>
+                        <li>to anyone, where you have provided us consent;</li>
+                        <li>where we are required to do so by law, such as under the Anti-Money or Laundering and Courter Terrorism Financing Act 2006 (Cth);</li>
+                        <li>to investors, agents or advisers, or any entity that has an interest in our business; or</li>
+                        <li>to your employer, referees or identity verification services.</li>
+                    </ul>
+                    <p>Prior to disclosing any of your personal information to another person or organisation, we will take all reasonable steps to satisfy ourselves that:
+
+                    </p>
+                    <ol>
+                        <li>the person or organisation has a commitment to protecting your personal information at least equal to our commitment; or</li>
+                        <li>you have consented to us making the disclosure.</li>
+                    </ol>
+                    <p>We may use cloud storage to store the personal information we hold about you. The cloud storage and the IT servers may be located outside Australia.
+                        <br>We may disclose your personal information to overseas entities that provide support functions to us. You may obtain more information about these entities by contacting us.
+                    </p>
+                    <h4>Direct marketing</h4>
+                    <p>From time to time we may use your personal information to provide you with current information about finance, offers you may find of interest, changes to our organisation, or new products or services being offered by us or any company with whom we are associated.
+                        <br>If you do not wish to receive marketing information, you may at any time decline to receive such information by telephoning us on (02) 8005-6142. If the direct marketing is by email you may also use the unsubscribe function.
+                        <br>We will not charge you for giving effect to your request and will take all reasonable steps to meet your request at the earliest possible opportunity.
+                    </p>
+                    <h4>Ensuring your personal information is up-to-date</h4>
+                    <p>We rely on the personal information we hold about you to efficiently conduct our business of providing or arranging products and services. For this reason, it is very important that the personal information we collect from you is accurate, complete and up-to-date.
+                        <br>During the course of our relationship with you we may ask you to tell us of any changes to your personal information. We also invite you to contact us at any time to update or correct your personal information.
+                    </p>
+                    <h4>Security and storage</h4>
+                    <p>We will take reasonable steps to protect your personal information by storing it in a secure environment. We may store your personal information in paper and electronic form. We will also take reasonable steps to protect any personal information from misuse, loss and unauthorised access, modification or disclosure.
+                    </p>
+                    <h4>Access and correction to your personal information</h4>
+                    <p>You may request access to any of the personal information we hold about you. In most cases, details of the personal information we hold about you is available by contacting us.
+                        <br>If the information you seek is not readily available, for example, archived data, then we will endeavour to provide this to you within 30 days of your request. We reserve the right to charge you a fee for this retrieval.
+                        <br>We may be required by law or by good business practice to retain your personal information for a period of time after you have ceased your relationship with us. After the required time has passed we attend to the secure destruction or deletion of your personal information.
+                        <br>We are not always required to provide you with access to your personal information upon your request.
+                        <br>We may refuse you access to personal information in a number of circumstances, such as where the information may relate to existing or anticipated legal proceedings with you, where denying access is required or authorised by law, or where the request for access is regarded as frivolous or vexatious.
+                        <br>If we deny your request for access to, or refuse your request to correct your personal information, we will explain why and will keep a record of your request on our file.
+                        <br>If any of the personal information we hold about you is incorrect, inaccurate or out of date you may request that we correct the information. If appropriate we will correct the personal information. At the time of the request, otherwise, we will provide an initial response to you within seven days of receiving your request. Where reasonable, and after our investigation, we will provide you with details about whether we have corrected the personal information within 30 days.
+                        <br>If we refuse to correct personal information we will provide you with our reasons for not correcting the information.
+                    </p>
+                    <h4>Using government identifiers</h4>
+                    <p>If we collect government identifiers, such as your tax file number, we do not use or disclose this information other than required by law. We will never use a government identifier in order to identify you.
+                    </p>
+                    <h4>Collection of sensitive information</h4>
+                    <p>Personal information concerning particular topics is regarded as sensitive information. Sensitive information includes information about your:
+                    </p>
+                    <ul>
+                        <li>racial or ethnic origin;</li>
+                        <li>political opinions;</li>
+                        <li>membership of a political association;</li>
+                        <li>philosophical beliefs;</li>
+                        <li>membership of a professional or trade association;</li>
+                        <li>membership of a trade union;</li>
+                        <li>sexual preferences or practices;</li>
+                        <li>criminal record; and</li>
+                        <li>health.</li>
+                    </ul>
+                    <p>We generally have very limited need to obtain such information, however if such information is needed then it will only be obtained and/or used with your consent. If, in the course of arranging your application or facilities, such information does come into our possession from a third party, we will seek your consent to collect, store and use this should we consider such use necessary in your application.
+                    </p>
+                    <h4>Our Privacy Policy may change from time to time</h4>
+                    <p>We constantly review all our policies and procedures to keep up to date with changes in the law, technology and market practice. As a result we may change this Privacy Policy from time to time.
+                    <br>This Privacy Policy was last amended on 25 March 2014.</p>
+                    <h4>Complaints</h4>
+                    <p>If you are dissatisfied with how we have dealt with your personal information, or you have a complaint about our compliance with the Privacy Act, you may contact our complaints officer on (02) 8005-6142 or <span class="text-danger">info@loansexplorer.com</span> .
+                        <br>We will acknowledge your complaint within seven days. We will provide you with a decision on your complaint within 30 days
+                        <br>If you are dissatisfied with the response of our complaints officer you may make a complaint to the Privacy Commissioner which can be contacted on either <a href="https://www.oaic.gov.au/">www.oaic.gov.au</a>  1300 363 992.
+                    </p>
+                    <h4>Contacting us</h4>
+                    <p>If you require further information regarding our Privacy Policy, please contact us at the following email address: <span class="text-danger">info@loansexplorer.com.</span>
+                        <br>Should you wish find out more about the privacy legislation or the Australian Privacy Principles, we recommend that you visit the Federal Privacy Commissioner’s website at <a href="https://www.privacy.gov.au">www.privacy.gov.au</a> .
+                    </p>
+
+                </div>
+               
+
+            </div>
+        </div>
+    </section>
+    <section id="disputeResolutionPolicy" class="backgroundCalculators marginLeft" hide>
+        <div class="disputeResolutionPolicy d-flex justify-content-center">
+            <div class="container d-flex justify-content-center lh-lg">
+                <div class="row m-5 p-5">
+                    <h2 class="text-center py-3  my-3 fw-bold">Our dispute resolution policy</h2>
+                    <p>We believe that it is essential for our customers to be able to identify and deal with a broker who has the ability, authority and proper training to hear and respond appropriately to any complaints or disputes. We are committed to the effective handling of complaints and timely resolution of disputes.
+                    <br>If you have a complaint or a dispute, you have the option of either contacting us or lodging the complaint directly with our External Dispute Resolutions Scheme indicated below. You should explain the details of your complaint as clearly as you can. You may do this verbally or in writing. When we receive a complaint, we will attempt to resolve it promptly. We hope that in this way we will stop any unnecessary and inappropriate escalation of minor complaints. We will observe the following principles in handling your complaint:
+                    </p>
+                    <ul>
+                        <li>there is no requirement for face-to-face contact between you and us, although it may be useful for us to come to a satisfactory resolution;</li>
+                        <li>we expect that both parties will make a genuine attempt to resolve a complaint promptly;</li>
+                        <li>we expect that both parties will provide all essential and relevant information, documents, written statements and any other materials that may properly and reasonably be believed to assist in resolving the complaint;</li>
+                        <li>we expect that both parties will comply with all reasonable requests from the other party to provide information within a reasonable time frame.</li>
+                    </ul>
+                    <p>Our external dispute resolution scheme number: 43445.
+                      <br>If we do not reach agreement on your complaint, you may refer the complaint to an ASIC Approved External Dispute Resolution (EDR) Scheme. Our external dispute resolution provider is AFCA (Australian Financial Complaints Authority).
+                    </p>
+                    <div class="addressForDispute">
+                        <table>
+                            <tr>
+                                <td>Free call:</td>
+                                <td>1800 931 768</td>
+                            </tr>
+                            <tr>
+                                <td>Fax:	</td>
+                                <td>(03)9613 6399</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td class="text-danger">info@afca.org.au</td>
+                            </tr>
+                            <tr>
+                                <td>Website:</td>
+                                <td><a href="https://www.afca.org.au">https://www.afca.org.au</a></td>
+                            </tr>
+                            <tr>
+                                <td>Mail:</td>
+                                <td>Australian Financial Complaints Authority Limited <br>GPO Box 3 <br>Melbourne, VIC 3001</td>
+                            </tr>
+    
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+           
         </div>
     </section>
 

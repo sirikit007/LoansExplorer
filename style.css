@@ -10,8 +10,10 @@
     --white: #fff;
     --gray: #f5f5f5;
     --black1: #222;
-    --black2: #999;    
+    --black2: #999; 
+    --background: #f6f5f7;   
 }
+
 body {
     min-height: 100vh;
     overflow-x: hidden;
@@ -35,7 +37,9 @@ body {
 */
 .marginLeft {
     margin-left: 400px;
-    
+}
+.paddingForContainer {
+    padding: 0 40px;
 }
 
 .hide {
@@ -54,10 +58,7 @@ body {
     height: 100%;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    box-shadow: -10px 0 0 rgba(0, 0, 0, 0.1);
-
     transition: 0.5s;
-
     overflow: hidden;   
 }
 
@@ -76,6 +77,7 @@ body {
     margin: 30px 0;  
     font-size: 33px;
 }
+
 .menuNavigation .navbar-brand img {
     width: 62px;
     margin-right: 17px;
@@ -94,26 +96,24 @@ body {
     align-items: center;
 }
 
-#pages .sidebar-link {
-    padding-left: 80px;
-}
+
 #pages .sidebar-item {
-    font-size: 20px !important;
+    font-size: 20px;
 }
 .menuNavigation .sidebar-nav [menu]:hover li a,
 .menuNavigation .sidebar-nav [menu].hovered li a {
-    background: var(--white);
+    background: var(--background);
     color: var(--black1);    
 }
 .menuNavigation .sidebar-nav [menu]:hover,
 .menuNavigation .sidebar-nav [menu].hovered {
-    background: var(--white);
+    background: var(--background);
     color: var(--black1);
     border: 0.3px solid #767676;
 }
 .menuNavigation #pages [submenu]:hover li a,
 .menuNavigation #pages [submenu].hovered li a {
-    background: var(--white);
+    background: var(--background);
     color: var(--black1);
     border: 0.3px solid #767676; 
 }
@@ -124,9 +124,16 @@ body {
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;    
-    margin-left: 20px;
-    padding-left: 10px;
-    border: 0.3px solid transparent; 
+    margin-left: 23px;  
+  
+    border: 0.1px solid transparent; 
+  
+}
+.menuNavigation #pages [submenu] li a {
+    padding-left: 20px;
+}
+.menuNavigation .sidebar-nav [menu] li {
+    padding-left: 20px;
 }
 
 .menuNavigation .sidebar-nav [menu] {
@@ -139,7 +146,8 @@ body {
     transition: none;    
 }
 .bg-transparent {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 
@@ -187,14 +195,14 @@ body {
 .menuNavigation #pages [submenu].hovered li a::before {
     content: '';
     position: absolute;
-    right: 0;
+    right: -1.6px;
     top: -50px;
     width: 50px;
     height: 50px;
     background-color: transparent;
     border-radius: 50%;
     pointer-events: none;
-    box-shadow: 35px 35px 0 10px var(--white);
+    box-shadow: 35px 35px 0 10px var(--background);
 }
 .menuNavigation ul [menu]:hover li a::after,
 .menuNavigation ul [menu].hovered li a::after,
@@ -202,14 +210,14 @@ body {
 .menuNavigation #pages [submenu].hovered li a::after  {
     content: '';
     position: absolute;
-    right: 0;
+    right: -1.6px;
     bottom: -50px;
     width: 50px;
     height: 50px;
     background-color: transparent;
     border-radius: 50%;
     pointer-events: none;
-    box-shadow: 35px -35px 0 10px var(--white);
+    box-shadow: 35px -35px 0 10px var(--background);
 }
  
 /*---------------------main Picture----------------------*/
@@ -441,7 +449,7 @@ body {
 }
 
 .stars {    
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 .buttonForMoreReviews {
     text-align: center;
@@ -483,6 +491,7 @@ footer .col:nth-child(3), footer .col:nth-child(4) {
 
 .footerFacebookIcon {
     transition: all ease-in-out 1s;   
+    display: flex;
 }
 .footerFacebookIcon a:hover {
     border-color: #ffc451;    
@@ -557,7 +566,6 @@ footer .col:nth-child(3), footer .col:nth-child(4) {
     color: #ffc451;
 }
 form {
-    margin-top: 30px;
     padding: 6px 10px;
     border-radius: 4px;
 }
@@ -608,94 +616,64 @@ hr {
 }
 
 
-/*--------------------------Media---------------------*/
-@media only screen and (max-width: 1400px) {
-    .menuNavigation {
-        width: 300px;
-    }
-    .menuNavigation ul li {
-        font-size: 20px;
-    }
-    .marginLeft{
-        margin-left: 300px;
-    }
-    .menuNavigation ul li a .icon svg{
-        width: 20px !important;
-        height: 20px !important;
-    }
-    .menuNavigation ul li a {        
-        padding: 10px 0;
-    }
-  
-    
-}
-@media only screen and (max-width: 1200px) {
-    .containerAbout .row {
-        justify-content: space-around !important;
-    }
-}
-@media only screen and (max-width: 992px) {
-    #about {
-        margin-left: 0;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    footer {
-        bottom: unset;
-    }
-    footer .col:nth-child(3), footer .col:nth-child(4) {
-        flex-basis: 15%;
-    }
-}
-
 
 /* -------------------------About - LinkPage--------------------------------------*/
 
-#homePage {     
-    background: url(background1.jpg);
+#homePage {      
     background-size: cover;
     position: relative;
     padding: 50px 0; 
     min-height: 100vh;  
 }
+/*
 #homePage::before {
-    content: '';
-    background: rgba(0, 0, 0, 0.6);
+    content: '';   
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     width: 100%;
 }
+*/
 #homePage .container {
     position: relative;
     
 }
 .aboutBlank {
-    border: 1px solid #fff;
-    box-shadow: 0 0 25px 0 rgba(231, 231, 231, 0.5);
+    border: 1px solid transparent;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     background: #fff;
-    border-radius: 2%;
+    border-radius: 1rem;
 }
 .contentHome h3 {
     font-size: 15px;
 }
+.aboutBlank p {
+    font-size: 18px;
+    text-align: justify;
+}
+.aboutBlank h4 {
+    font-weight: 600;
+}
+
 
 
 
 /*-------------------------------------------Loan amount calculator-------------------------------*/
 
 .backgroundCalculators {
-    background: #f6f5f7;
+    background: var(--background);
     min-height: 100vh;
 }
-
-.profileReviewCalculator {
+#contentLoanRepayments .row,
+#contentStampDuty .row {
+    width: 1172px;
+}
+.profileReviewLoanCalculator {
     margin: 85px auto;
     padding: 70px 50px;
     background-color: #fff;    
-    width: 55%;    
+    width: 78%;    
     position: relative;   
     border-radius: 10px;
     color: #05060c;  
@@ -703,12 +681,9 @@ hr {
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     
 }
-
 .inputGroup {
     margin-bottom: 60px;
-    position: relative;  
-
-   
+    position: relative;    
 }
 .fas, .far  {
     margin-right: 5px;
@@ -810,6 +785,18 @@ hr {
     border: 2px solid transparent;    
 }
 */
+.profileReviewStampDutyCalculator {
+    margin: 85px auto;
+    padding: 70px 50px;
+    background-color: #fff;    
+    width: 78%;    
+    position: relative;   
+    border-radius: 10px;
+    color: #05060c;  
+    border: 1px solid transparent; 
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    
+}
 .radioContainer p {
     font-size: 22px;   
     text-align: left;
@@ -888,14 +875,11 @@ hr {
     justify-content: space-between;
     padding: 0 25px;
     align-items: center; 
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);   
-}
-/*
-.selectFieldStates {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);  
     border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer; 
 }
-*/
+
 .borderRadiusBottom {
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);     
@@ -936,8 +920,6 @@ hr {
 .rotate {
     transform: rotate(90deg);
 }
-
-
 
 .margBot {
     margin-bottom: 40px;
@@ -1057,7 +1039,8 @@ hr {
 
 
 
-#borrowingCalculatorLink {   
+#borrowingCalculatorLink { 
+    margin: 85px auto;  
     padding: 18px 26px;   
     text-align: center;  
     text-decoration: none;
@@ -1070,8 +1053,10 @@ hr {
 
 .profileReviewPage {
     padding: 40px 30px 30px;
-    background: #efefef;
+    background: #fff;
     border-radius: 8px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
 .profileReviewPage:hover {
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
@@ -1153,10 +1138,19 @@ hr {
 }
 /*---------------------------Contact Us Page-----------------------------------------*/
 
-.contactSection {
-    min-height: 100vh;
-    background: var(--black2);
+.contactSection {   
+    flex-direction: column;
+    
 }
+.contactHead {
+    flex-direction: column;
+    margin-bottom: 150px;
+    margin: 0 auto;
+}
+.contactHead p {
+    margin: 55px 0;
+}
+/*
 .contactSection::before {
     content: '';
     position: absolute;
@@ -1166,6 +1160,7 @@ hr {
     height: 100%;
     background: #ffc451;
 }
+*/
 .contactSection .container {
     position: relative;
     min-width: 1100px;
@@ -1191,7 +1186,8 @@ hr {
     width: calc(100% - 150px);
     height: 100%;
     background: #fff;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
 }
 .contactSection .contactInfo h2 {
     display: flex;
@@ -1283,7 +1279,74 @@ hr {
 }
 
 
-/*responsive contact us page*/
+/*------------Privacy Policy Section-----------------*/
+
+.privacyPolicySection .row {
+    border: 1px solid transparent;
+    flex-direction: column;
+    font-size: 18px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    border-radius: 1rem;
+}
+.privacyPolicySection .row p {    
+    text-align: justify;
+    padding: 0 2rem;
+}
+.privacyPolicySection .row h4 {
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: 600;
+}
+.privacyPolicySection .row ul,
+.privacyPolicySection .row ol {
+    padding-left: 5rem;
+    color: #2a2185;
+}
+
+/*----------------Dispute Resolution Policy---------------------*/
+.disputeResolutionPolicy .row {
+    border: 1px solid transparent;
+    flex-direction: column;
+    font-size: 18px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    border-radius: 1rem;
+}
+.disputeResolutionPolicy .row p {
+    text-align: justify;
+    padding: 0 2rem;
+}
+.disputeResolutionPolicy .row ul {
+    padding-left: 5rem;
+    color: #2a2185;
+}
+.disputeResolutionPolicy .row .addressForDispute table {
+    margin: 0 auto;
+    border-spacing: 20px;
+    border-collapse: separate;
+}
+
+.disputeResolutionPolicy .row .addressForDispute td:first-child {
+    font-weight: bold;
+}
+.disputeResolutionPolicy .row .addressForDispute td:last-child {
+    padding-left: 20px;
+}
+.disputeResolutionPolicy .row .addressForDispute table tr:last-child td:first-child {
+    vertical-align: baseline;
+}
+
+/*-------------------------------MEDIA------------------------------------------*/
+
+/*--------------------------Media---------------------*/
+
+
+
+
+
+
+
 
 @media (max-width: 1800px) {
     .contactSection .container {
@@ -1291,8 +1354,75 @@ hr {
         min-width: auto;
         margin: 20px;
     }
+    .profileReview {
+        padding: 0 5%;
+    }
+   
+    
+   
 }
+@media (max-width: 1500px) {
+    .partnersColumn {
+        height: 400px;
+        width: 1200px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #testimonials .col-xl-6 {
+        width: 50%;
+    }
+}
+
+
 @media (max-width: 1400px) {
+    #hero {
+        padding-top: 200px;
+    }
+    #hero h1 {
+        font-size: 46px;
+    }
+    #hero h2 {
+        font-size: 21px;
+    }
+    #hero .icon-box h3 {
+        font-size: 18px;
+    }
+    .menuNavigation {
+        width: 300px;
+    }
+    .menuNavigation ul li {
+        font-size: 20px;
+    }
+    .marginLeft{
+        margin-left: 300px;
+    }
+    .menuNavigation ul li a .icon svg{
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .menuNavigation ul li a {        
+        padding: 10px 0;
+    }
+    #pages .sidebar-item {
+        font-size: 17px;
+    }
+
+
+    .menuNavigation .navbar-brand {
+        font-size: 25px;
+    }
+    .menuNavigation .navbar-brand img {
+        width: 48px;
+        margin-right: 8px;
+    }
+    .menuNavigation .sidebar-nav [menu] li {
+        padding-left: 0px;
+    }
+    .menuNavigation ul li a .icon {
+        font-size: 20px;
+    }
+    .angleForSidebar {
+        top: 12px;
+    }
     .contactSection .container {
         --bs-gutter-x: 0;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
@@ -1331,6 +1461,76 @@ hr {
 }
 
 @media (max-width: 1200px) {
+
+    .containerAbout .row {
+        justify-content: space-around !important;
+    }
+    
+    .navbar>.container-fluid {
+        height: 80px;
+        background: #f6f5f7;;
+        margin: 20px;
+        border-radius: 16px;
+        padding: 0.5rem 3rem;
+        border-bottom: 1px solid transparent;
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    }
+    .navbar .container-fluid a {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .navbar-toggler-icon {
+        width: 1.8em;
+        height: 1.8em;
+    }
+    .menuNavigation {
+        width: 50%;
+        height: 750px;
+        top: 100px;
+        right: 35px !important;
+        left: unset;
+        background: #f6f5f7;
+        border-radius: 0 0 16px 16px;
+        border-top: 1px solid transparent;
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    }
+    .menuNavigation ul li a {
+        color: var(--black1);
+    }
+    .menuNavigation .sidebar-nav [menu]:hover,
+    .menuNavigation .sidebar-nav [menu].hovered,
+    .menuNavigation #pages [submenu]:hover li a, 
+    .menuNavigation #pages [submenu].hovered li a  {
+        border: 1px solid transparent;
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    }
+   
+    .menuNavigation .navbar-brand {
+        margin: 0;        
+    }
+    .navContainer hr {
+        margin: 0;
+        width: 100%;
+    }
+    
+    
+    
+    /*
+    .navContainer {
+        background: rgba(255, 255, 255, 0.2) !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    */
+   
+    .navContainer .navbar-toggler {
+        border: none;
+        font-size: 1.25rem;
+    }
+    .navContainer .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    
     .marginLeft {
         margin: 0;
     }
@@ -1356,5 +1556,24 @@ hr {
     .contactSection .contactInfo .contactPageIcons {
         margin-top: 10px;
     }
+    .navContainer .container-fluid img.mobileLogo {
+        width: 48px;
+    }
     
+}
+@media only screen and (max-width: 992px) {
+    #about {
+        margin-left: 0;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 700px) {
+    footer {
+        bottom: unset;
+    }
+    footer .col:nth-child(3), footer .col:nth-child(4) {
+        flex-basis: 15%;
+    }
 }
