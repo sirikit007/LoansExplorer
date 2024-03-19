@@ -45,6 +45,9 @@ body {
 .hide {
     display: none !important;
 }
+.showMenu {
+    display: block !important;
+}
 /*=======================Left Navigation - Sidebar==================*/
 .navContainer {    
     width: 100%;    
@@ -77,7 +80,9 @@ body {
     margin: 30px 0;  
     font-size: 33px;
 }
-
+.nav-link:focus, .nav-link:hover {
+    color: var(--white  );
+}
 .menuNavigation .navbar-brand img {
     width: 62px;
     margin-right: 17px;
@@ -481,7 +486,7 @@ footer {
     background: linear-gradient(to right, #00093c, #2D0b00);
     color: #fff;
     border-bottom: 1px solid #222222;
-    padding: 60px 0 30px 0;
+    padding-top: 60px;
     border-top-right-radius: 125px;
 }
 footer .col:nth-child(3), footer .col:nth-child(4) {
@@ -643,7 +648,7 @@ hr {
     border: 1px solid transparent;
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     background: #fff;
-    border-radius: 1rem;
+    border-radius: 1rem;    
 }
 .contentHome h3 {
     font-size: 15px;
@@ -937,7 +942,7 @@ hr {
     height: 170px;
     background: #f5f6fa;
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-    margin-top: 25px;
+    margin-top: 55px;
     border-radius: 10px;
     color: #05060c;
     padding: 20px;
@@ -1267,15 +1272,15 @@ hr {
 .contactSection .contactForm .formBox button {
     position: relative;
     cursor: pointer;
-    background: var(--black2);
-    color: var(--white);
+    background: #ffc451;
+    color: #333;
     border: none;
     max-width: 150px;
     padding: 12px;
 }
 .contactSection .contactForm .formBox button:hover {
-    background: #ffc451;
-    color: #333;
+    background: var(--black2);
+    color: var(--white);
 }
 
 
@@ -1461,11 +1466,12 @@ hr {
 }
 
 @media (max-width: 1200px) {
-
+    #hero .container {
+        margin-top: 100px;
+    }
     .containerAbout .row {
         justify-content: space-around !important;
     }
-    
     .navbar>.container-fluid {
         height: 80px;
         background: #f6f5f7;;
@@ -1482,6 +1488,9 @@ hr {
     .navbar-toggler-icon {
         width: 1.8em;
         height: 1.8em;
+    }
+    .nav-link:focus, .nav-link:hover {
+        color: var(--black1);
     }
     .menuNavigation {
         width: 50%;
@@ -1512,16 +1521,17 @@ hr {
         margin: 0;
         width: 100%;
     }
-    
-    
-    
-    /*
-    .navContainer {
-        background: rgba(255, 255, 255, 0.2) !important;
-        backdrop-filter: blur(10px) !important;
+    .aboutBlank {
+        margin-top: 20px;
     }
-    */
-   
+    .disputeResolutionPolicy .row,
+    .privacyPolicySection .row {
+        margin-top: 118px !important;
+    }
+    #contentLoanRepayments .row,
+    #contentStampDuty .row  {
+        margin-top: 100px;
+    }
     .navContainer .navbar-toggler {
         border: none;
         font-size: 1.25rem;
@@ -1534,9 +1544,7 @@ hr {
     .marginLeft {
         margin: 0;
     }
-    .contactSection {
-        background: #ffc451;
-    }
+   
     .contactSection::before {
         display: none;
     }
@@ -1559,21 +1567,124 @@ hr {
     .navContainer .container-fluid img.mobileLogo {
         width: 48px;
     }
-    
+    #contentBorrowingCalculator .row {
+        margin-top: 100px;
+    }
+    .profileReviewLoanCalculator {
+        width: 58%;
+    }
+    .profileReviewStampDutyCalculator {
+        padding: 50px;
+    }
+    .margBot {
+        margin-bottom: 20px;
+    }
+    #selectFieldStates,
+    .inputGroup input,
+    .radioToggle,
+    .radioToggleForTypeProperty {
+        height: 55px;
+
+    }
+    .inputGroup label,
+    .radioToggle label,
+    .radioToggleForTypeProperty label,
+    #selectFieldStates p {
+        font-size: 18px;
+    }
+    .radioContainer p {
+        font-size: 20px;
+    }
+    .propertyLocationDropListContainer {
+        margin-bottom: 40px;
+    }
+    .answerSquareStampDuty {
+        margin-top: 40px;
+    }
+    .buttonCalculate {
+        height: 70px;
+        font-size: 20px;
+    }
+    .answerSquareStampDuty h4 {
+        font-size: 44px;
+    }
+    .answerSquareStampDuty div {
+        position: absolute;
+        top: 35%;
+        left: 22%;
+    }         
+    #contentPartners,
+    .contactSection,
+    #testimonials  {
+        padding-top: 100px !important;
+    }
+    .logos {
+        margin: 50px auto;
+    }
+    #contentPartners .textMiddle,
+    .contactSection .contactHead p{
+        font-size: 18px !important;
+    }
 }
 @media only screen and (max-width: 992px) {
     #about {
         margin-left: 0;
     }
-    
+    #hero .container {
+        margin-top: 0;
+    }
+    #hero .icon-box {
+        height: 200px;
+        width: 330px;
+        margin-bottom: 20px;
+    }
+    .paddingForContainer {
+        padding: 0;
+    }
+    footer .footer-top .container {
+        max-width: 900px;
+    }
+    footer .col:nth-child(1) p {
+        font-size: 14px;
+    }
+    footer .col:nth-child(3),
+    footer .col:nth-child(4) {
+        flex-basis: 15%;
+    }
+   
+    .footer-top h3 {
+        font-size: 16px;
+    }
+    .footer-links li {
+        font-size: 15px;
+    }
+    .footerFacebookIcon {
+        display: grid;
+    }
+    .footer-top .social-links a {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    footer .row {
+        --bs-gutter-x: 0;
+    }
     
 }
 
-@media only screen and (max-width: 700px) {
-    footer {
-        bottom: unset;
+@media only screen and (max-width: 788px) {
+    .footer-top h3 {
+        font-size: 15px;
     }
+    .copyright {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    
+    /*
     footer .col:nth-child(3), footer .col:nth-child(4) {
         flex-basis: 15%;
     }
+    */
 }

@@ -37,8 +37,9 @@ let disputeResolutionPolicy = document.getElementById('disputeResolutionPolicy')
 
 //add dark sidebar to side-menu list when on white page
 let navbar = document.querySelector('#navContent');
-let navbarColor = document.querySelectorAll('.menuNavigation ul li a');
-//window.addEventListener('scroll', darkSidebar);
+let navbarSections = document.querySelectorAll('.menuNavigation ul li a');
+window.addEventListener('scroll', darkSidebar);
+window.addEventListener('resize', checkWindowSize);
 
 
 switchLoanCalculator.addEventListener('click', darkSidebarOnClick);
@@ -60,28 +61,41 @@ function transparentSidebarOnClick() {
 }
 
 function darkSidebar() {
-    if (window.innerWidth > 1200) {
-        if (window.pageYOffset > 600) {
-            navbar.classList.add('bg-dark');
-        } else {
-            navbar.classList.remove('bg-dark');   
-        }
+    if (window.pageYOffset > 600) {
+        navbar.classList.add('bg-dark');
     } else {
-        navbar.classList.remove('bg-dark');  
-    }
-    
+        navbar.classList.remove('bg-dark');   
+    }  
 };
-/*
+
+
 function checkWindowSize() {
     if (window.innerWidth < 1200) {
         window.removeEventListener('scroll', darkSidebar);
+         
+        switchLoanCalculator.removeEventListener('click', darkSidebarOnClick);
+        switchStampdutyCalculator.removeEventListener('click', darkSidebarOnClick);
+        switchBorrowingCalculator.removeEventListener('click', darkSidebarOnClick);
+        switchReviews.removeEventListener('click', darkSidebarOnClick);
+        switchPartners.removeEventListener('click', darkSidebarOnClick);
+        switchContactUs.removeEventListener('click', darkSidebarOnClick);
+        switchHome.removeEventListener('click', darkSidebarOnClick);
+      
     } else {
         window.addEventListener('scroll', darkSidebar);
+      
+        switchLoanCalculator.addEventListener('click', darkSidebarOnClick);
+        switchStampdutyCalculator.addEventListener('click', darkSidebarOnClick);
+        switchBorrowingCalculator.addEventListener('click', darkSidebarOnClick);
+        switchReviews.addEventListener('click', darkSidebarOnClick);
+        switchPartners.addEventListener('click', darkSidebarOnClick);
+        switchContactUs.addEventListener('click', darkSidebarOnClick);
+        switchHome.addEventListener('click', darkSidebarOnClick);
     }
 }
 checkWindowSize();
-window.addEventListener('resize', checkWindowSize);
-*/
+
+
 
 //rotate angle on side-bar menu
 let angleForSidebar = document.querySelector('.angleForSidebar');
@@ -96,8 +110,11 @@ function activeLink() {
         item.classList.remove('hovered'); 
     })
     this.classList.add('hovered');
+    
 }
 list.forEach(item => item.addEventListener('mouseover', activeLink));
+
+
 
 
 //Switch Menu items
@@ -131,10 +148,17 @@ list.forEach(item => item.addEventListener('mouseover', activeLink));
 
 //sidebar
 
+
+
+
+
+
+
 function switchContent(event) {
     console.log(event.target);
     let menuitem = event.target.closest('[menuitem]');
     window.removeEventListener('scroll', darkSidebar);
+    window.addEventListener('resize', checkWindowSize);
    if (menuitem.id == 'switchHome') {        
         menuitem.classList.add('hovered');
         switchCalculators.classList.remove('hovered');
@@ -145,8 +169,6 @@ function switchContent(event) {
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
 
-        navbar.classList.add('bg-dark');        
-        
         homePage.removeAttribute('hide');
         contentContacts.setAttribute('hide', '');
         contentLoanRepayments.setAttribute('hide', '');
@@ -177,7 +199,7 @@ function switchContent(event) {
         switchLoanCalculator.classList.remove('hovered');
         switchStampdutyCalculator.classList.remove('hovered');
         switchBorrowingCalculator.classList.remove('hovered');
-
+ 
         testimonials.removeAttribute('hide'); 
         contentContacts.setAttribute('hide', '');           
         homePage.setAttribute('hide', '');
@@ -188,6 +210,7 @@ function switchContent(event) {
         mainContent.setAttribute('hide', '');
         privacyPolicy.setAttribute('hide', '');
         disputeResolutionPolicy.setAttribute('hide', ''); 
+       
     } else if (menuitem.id == 'switchPartners') {
         menuitem.classList.add('hovered');
         switchHome.classList.remove('hovered');
@@ -453,6 +476,7 @@ function switchContent(event) {
         homePage.setAttribute('hide', '');
         privacyPolicy.setAttribute('hide', ''); 
     } 
+    
     
 }
 
