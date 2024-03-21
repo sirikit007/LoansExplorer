@@ -21,7 +21,7 @@
     <header id="header">
         <nav class="navContainer navbar navbar-expand-xl fixed-top">
             <div class="container-fluid" >
-                <a  href="#"  class="navbar-brand nav-link d-xl-none fw-bolder fs-4"><img class="mobileLogo" src="logo_.png"> Loans Explorer</a>
+                <a  href="#" id="switchStartPageFromMobile" menuitem class="navbar-brand nav-link d-xl-none fw-bolder fs-4"><img class="mobileLogo" src="logo_.png"> Loans Explorer</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" 
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
                 <div  id="navContent" class="menuNavigation fixed-top collapse navbar-collapse">
                     <ul class="sidebar-nav">
                         <li  class="navbar-brand ">
-                            <a id="switchStartPage" menuitem href="#" class="nav-link justify-content-center">                                
+                            <a id="switchStartPage" menuitem href="#" class=" nav-link justify-content-center" data-bs-toggle="collapse" data-bs-target="#navContent">                                
                                     <img src="logo_.png">                        
                                 <div class="fw-bolder">Loans Explorer</div>
                             </a>
@@ -544,15 +544,15 @@
         <!--Footer-->
         <footer class="marginLeft" id="footerMain">
             <div class="footer-top d-flex justify-content-center">
-                <div class="container mx-5 mx-md-3 justify-content-center d-flex">
-                    <div class="row flex-wrap justify-content-between">
-                        <div class="col col-md-3 lh-lg">
+                <div class="container mx-xl-3 justify-content-center d-flex">
+                    <div class="row flex-wrap justify-content-around">
+                        <div class="col col-sm-3 lh-lg">
                             <h3 >Loans Explorer</h3>
                             <p>
                                 To own your home sooner, rather than helping fund shareholders, talk with our Home Loan experts and gain your greater advantage.
                             </p>
                         </div>
-                        <div class="col col-md-3 ">                      
+                        <div class="col col-sm-3 ">                      
                             <div class="footer-info">
                                 <h3>Book an appointment <div class="underlineH3"><span></span></div></h3>
                                 <p>365 Kent street <br>
@@ -564,7 +564,7 @@
                             </div>
                         
                         </div>
-                        <div class="col col-md-3  footer-links text-center">
+                        <div class="col col-sm-3  footer-links text-center">
                             <h3>Useful Links <div class="underlineH3"><span></span></div></h3>
                             <ul>
                                 <li id="switchFooterHome" menuitem><a href="">Home</a></li>
@@ -574,7 +574,7 @@
                                 <li id="switchFooterContacts" menuitem><a href="#">Contacts</a></li>
                             </ul>
                         </div>
-                        <div class="col col-md-3 footer-newsletter">
+                        <div class="col col-sm-3 footer-newsletter">
                             <h3>Social Links <div class="underlineH3"><span></span></div></h3>
                             <div class="social-links pt-3 footerFacebookIcon" style="animation-delay: 1s;">
                                 <a  href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -604,7 +604,7 @@
         <div class="container">
             <div class="row m-xl-5  my-5 d-flex justify-content-center">
                 <div class="aboutBlank ">
-                    <div id="contentHome"  class="p-5 m-3 lh-lg">                    
+                    <div id="contentHome"  class="p-5 p-md-3 m-3 lh-lg">                    
                         <div>                                                                                              
                             <div class="welcome head">
                                 <h1 class="text-center mb-5 fs-2 fw-bold">Welcome to Loans Explorer</h1>
@@ -649,8 +649,8 @@
 
     <!------------------------------------------------------------------Loan Repayments------------------------------------------------------------>
     <section class="marginLeft d-flex justify-content-center backgroundCalculators" id="contentLoanRepayments" hide>
-        <div class="container d-flex justify-content-center m-5 p-5">
-            <div class="row d-block">
+        <div class="container d-flex justify-content-center m-5 p-xl-5 p-0">
+            <div class="row justify-content-center d-block">
                 
                 <h1 class="head welcome text-center fw-bold">Loan Repayments Calculator</h1>
                 
@@ -706,7 +706,7 @@
     </section>
     <!------------------------------------------------------------------Stamp Duty------------------------------------------------------------>
     <section class="marginLeft d-flex justify-content-center backgroundCalculators" id="contentStampDuty" hide>
-        <div class="container d-flex justify-content-center m-5 p-5">
+        <div class="container d-flex justify-content-center m-5 p-xl-5 p-0">
             <div class="row justify-content-center">
                                                           
                 <h1 class="head welcome text-center fw-bold">Stamp Duty Calculator</h1>                         
@@ -1436,7 +1436,7 @@
     <section id="privacyPolicy" class="backgroundCalculators marginLeft" hide>
         <div class="privacyPolicySection d-flex justify-content-center">
             <div class="container d-flex justify-content-center lh-lg">
-                <div class="row m-xl-5  my-5 p-5">
+                <div class="row m-xl-5  my-5 p-5 p-md-3">
                     <h2  class="text-center py-3  my-3 fw-bold">Privacy Policy</h2>
                     <p>This privacy policy refers to LoansExplorer (ABN: 67 586 979 926, Australian Credit Licence 387346) and its related businesses. We want you to be confident that the personal information you provide to us is treated with the highest degree of integrity and privacy. However, it is equally important to us that we provide the best possible service across our wide range of products and services. To achieve this aim we need to make the most efficient use of your personal information.
                         <br>We recognise that any personal information we collect about you will only be used for the purposes we have collected it or as allowed under the law. It is important to us that you are confident that any personal information we hold about you will be treated in a way which ensures protection of your personal information.
@@ -1543,7 +1543,7 @@
     <section id="disputeResolutionPolicy" class="backgroundCalculators marginLeft" hide>
         <div class="disputeResolutionPolicy d-flex justify-content-center">
             <div class="container d-flex justify-content-center lh-lg">
-                <div class="row m-xl-5 my-5 p-5">
+                <div class="row m-xl-5 my-5 p-5 p-md-3">
                     <h2 class="text-center py-3  my-3 fw-bold">Our dispute resolution policy</h2>
                     <p>We believe that it is essential for our customers to be able to identify and deal with a broker who has the ability, authority and proper training to hear and respond appropriately to any complaints or disputes. We are committed to the effective handling of complaints and timely resolution of disputes.
                     <br>If you have a complaint or a dispute, you have the option of either contacting us or lodging the complaint directly with our External Dispute Resolutions Scheme indicated below. You should explain the details of your complaint as clearly as you can. You may do this verbally or in writing. When we receive a complaint, we will attempt to resolve it promptly. We hope that in this way we will stop any unnecessary and inappropriate escalation of minor complaints. We will observe the following principles in handling your complaint:

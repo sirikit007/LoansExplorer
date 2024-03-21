@@ -23,6 +23,7 @@ let switchFooterCalculators = document.getElementById('switchFooterCalculators')
 let switchFooterReviews = document.getElementById('switchFooterReviews');
 let switchFooterPartners = document.getElementById('switchFooterPartners');
 let switchFooterContacts = document.getElementById('switchFooterContacts');
+let switchStartPageFromMobile = document.getElementById('switchStartPageFromMobile');
 
 let mainContent = document.getElementById('mainContent');
 let homePage = document.getElementById('homePage');
@@ -141,6 +142,7 @@ list.forEach(item => item.addEventListener('mouseover', activeLink));
     switchFooterContacts.addEventListener('click', switchContent);   
     switchPrivacyPolicy.addEventListener('click', switchContent);
     switchDisputeResolutionPolicy.addEventListener('click', switchContent);
+    switchStartPageFromMobile.addEventListener('click', switchContent);
  }
 
 
@@ -311,11 +313,10 @@ function switchContent(event) {
         contentContacts.setAttribute('hide', '');
         privacyPolicy.setAttribute('hide', '');
         disputeResolutionPolicy.setAttribute('hide', ''); 
-    } else if (menuitem.id == 'switchStartPage') {
+    } else if (menuitem.id == 'switchStartPage' || menuitem.id == 'switchStartPageFromMobile') {
         transparentSidebarOnClick();
         navbar.classList.remove('bg-transparent');
         window.addEventListener('scroll', darkSidebar);
-        
         switchHome.classList.remove('hovered');
         switchCalculators.classList.remove('hovered');
         switchReviews.classList.remove('hovered');
