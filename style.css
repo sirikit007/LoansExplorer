@@ -672,10 +672,8 @@ hr {
     background: var(--background);
     min-height: 100vh;
 }
-#contentLoanRepayments .row,
-#contentStampDuty .row {
-    width: 1000px;
-}
+
+
 .profileReviewLoanCalculator,
 .profileReviewStampDutyCalculator {
     margin: 85px auto;
@@ -795,6 +793,9 @@ hr {
     border: 2px solid transparent;    
 }
 */
+#selectFieldStates .rotate {
+    transform: rotate(-90deg);
+}
 
 .radioContainer p {
     font-size: 22px;   
@@ -1366,9 +1367,7 @@ hr {
         width: 1200px;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    #testimonials .col-xl-6 {
-        width: 50%;
-    }
+ 
 }
 
 
@@ -1463,6 +1462,10 @@ hr {
     #hero .container {
         margin-top: 100px;
     }
+    .inputGroup input:focus~label,
+    .inputGroup input:valid~label {
+        font-size: 16px;
+    }
     .containerAbout .row {
         justify-content: space-around !important;
     }
@@ -1475,10 +1478,7 @@ hr {
         border-bottom: 1px solid transparent;
         box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     }
-    .navbar .container-fluid a {
-        font-size: 18px;
-        font-weight: 500;
-    }
+   
     .navbar-toggler-icon {
         width: 1.8em;
         height: 1.8em;
@@ -1487,11 +1487,11 @@ hr {
         color: var(--black1);
     }
     .menuNavigation {
-        width: 50%;
-        height: 750px;
-        top: 100px;
-        right: 35px !important;
-        left: unset;
+        width:100%;
+        top:0;
+        right: 0;
+        left: unset; 
+           
         background: #f6f5f7;
         border-radius: 0 0 16px 16px;
         border-top: 1px solid transparent;
@@ -1522,9 +1522,9 @@ hr {
     .privacyPolicySection .row {
         margin-top: 118px !important;
     }
-    #contentLoanRepayments .row,
-    #contentStampDuty .row  {
-        margin-top: 100px;
+    #contentLoanRepayments h1,
+    #contentStampDuty h1  {
+        padding-top: 100px;
     }
     #contentLoanRepayments h1,
     #contentStampDuty h1 {
@@ -1549,7 +1549,6 @@ hr {
     .contactSection .container {
         display: flex;
         flex-direction: column-reverse;
-       
     }
     .contactSection .container .contactInfo {
         width: 100%;
@@ -1571,8 +1570,8 @@ hr {
    
     .profileReviewStampDutyCalculator,
     .profileReviewLoanCalculator {
-        padding: 50px;
-        width: 600px;
+        padding: 50px 40px;
+        width: 550px;
     }
     .margBot {
         margin-bottom: 20px;
@@ -1588,10 +1587,10 @@ hr {
     .radioToggle label,
     .radioToggleForTypeProperty label,
     #selectFieldStates p {
-        font-size: 18px;
+        font-size: 17px;
     }
     .radioContainer p {
-        font-size: 20px;
+        font-size: 19px;
     }
     .propertyLocationDropListContainer {
         margin-bottom: 40px;
@@ -1622,6 +1621,11 @@ hr {
     #contentPartners .textMiddle,
     .contactSection .contactHead p{
         font-size: 18px !important;
+    }
+  
+    .navbar-nav-scroll {
+        max-height: var(--bs-scroll-height, 36vh);
+        overflow-y: auto !important;
     }
 }
 @media only screen and (max-width: 992px) {
@@ -1701,14 +1705,6 @@ hr {
     .privacyPolicySection ul li {
         font-size: 16px;
     }
-    #contentStampDuty .container {
-       max-width: 960px; 
-    }
-
-    #testimonials .container {
-        display: contents;
-        
-    }
     #testimonials .row {
         margin: 3rem;
     }
@@ -1722,9 +1718,6 @@ hr {
     .reviews .carousel-inner span {
         font-size: 14px;
     }
-
-
-    
 }
 
 @media only screen and (max-width: 788px) {
@@ -1737,9 +1730,51 @@ hr {
 }
 
 @media only screen and (max-width: 768px) {
+    .inputGroup label, .radioToggle label, 
+    .radioToggleForTypeProperty label, 
+    #selectFieldStates p,
+    .propertyLocationDropListContainer ul li {
+        font-size: 16px;
+    }
+    .inputGroup input:focus~label,
+    .inputGroup input:valid~label {
+        font-size: 15px;
+    }
+    .profileReviewStampDutyCalculator 
+    {
+        padding: 50px 25px;
+    }
     
-    .profileReviewLoanCalculator {
-        width: 50%;
+    .radioContainer p {
+        font-size: 17px;
+    }
+    .buttonCalculate {
+        font-size: 18px;
+    }
+    .answerSquareStampDuty {
+        font-size: 18px;
+    }
+    .inputGroup input[type=text] {
+        font-size: 22px;       
+        font-weight: 700;
+    }
+    .inputGroup input:valid~label {
+        font-size: 15px;
+    }
+    .answerSquareLoanRepayments>h4 {
+        font-size: 17px;
+    }
+   
+    .answerSquareLoanRepayments svg {
+        height: 25px;
+        width: 25px;
+    }
+    .answerSquareLoanRepayments div h4 {
+        font-weight: 700;
+        margin-bottom: 0 !important;
+    }
+    .answerSquareLoanRepayments {
+        height: 140px;
     }
     .reviews .carousel-inner p,
     .reviews .carousel-inner .profileReview .fw-semibold {
@@ -1750,16 +1785,94 @@ hr {
         width: 1200px;
         grid-template-columns: 1fr 1fr;
     }
-    
-}
-@media only screen and (max-width: 700px) {
-    
-    .profileReviewLoanCalculator {
-        width: 40%;
+    footer .col:nth-child(2) h3,
+    footer .col:nth-child(3) h3,
+    footer .col:nth-child(4) h3{
+        font-size: 11.5px;
     }
+    .containerAbout .row .img-fluid {
+        max-width: 90%;
+            
+    }
+    .containerAbout .row {
+        text-align: center;
+    }
+    #contentHome,
+    .disputeResolutionPolicy .row,
+    .privacyPolicySection .row {
+        padding: 3rem 0 !important;
+    }
+    #contentLoanRepayments h1,
+    #contentStampDuty h1  {
+        font-size: 26px;
+    }
+    #testimonials .container {
+        padding: 0 !important;
+    }
+    .profileReviewPage blockquote {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    #contentPartners .textMiddle, .contactSection .contactHead p {
+        font-size: 16px !important;
+    }
+    #contentPartners .textMiddle, .contactSection .contactHead p {
+        font-size: 16px !important;
+    }
+    
+    .menuNavigation {
+        width: 90%;
+              
+        left: 5%;
+    }
+   
+   
+    
 }
+@media only screen and (max-width: 640px) {
+    .profileReviewStampDutyCalculator, 
+    .profileReviewLoanCalculator {
+        width: 500px; 
+    }
+    .profileReviewLoanCalculator, 
+    .profileReviewStampDutyCalculator {
+        margin: 65px auto;
+    }
+    .logos {
+        margin: 0 !important;
+    }
+   
+}
+
+
 @media only screen and (max-width: 576px) {
     footer .row {
        -bs-gutter-x: 1.5rem; 
+    }
+    .profileReviewStampDutyCalculator, 
+    .profileReviewLoanCalculator {
+        width: 450px; 
+    }
+    .inputGroup label, 
+    .radioToggle label, 
+    .radioToggleForTypeProperty label, 
+    #selectFieldStates p, 
+    .propertyLocationDropListContainer ul li {
+        font-size: 14px;
+    }
+    .inputGroup input:focus~label,
+    .inputGroup input:valid~label {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    #testimonials .row {
+        margin: 3rem 1rem;
+    }
+    .menuNavigation ul li a .icon {
+        font-size: 18px;
+    }
+    .navbar .container-fluid a {
+        font-size: 16px;
     }
 }

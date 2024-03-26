@@ -38,7 +38,6 @@ let disputeResolutionPolicy = document.getElementById('disputeResolutionPolicy')
 
 //add dark sidebar to side-menu list when on white page
 let navbar = document.querySelector('#navContent');
-let navbarSections = document.querySelectorAll('.menuNavigation ul li a');
 window.addEventListener('scroll', darkSidebar);
 window.addEventListener('resize', checkWindowSize);
 
@@ -49,6 +48,7 @@ switchBorrowingCalculator.addEventListener('click', darkSidebarOnClick);
 switchReviews.addEventListener('click', darkSidebarOnClick);
 switchPartners.addEventListener('click', darkSidebarOnClick);
 switchContactUs.addEventListener('click', darkSidebarOnClick);
+
 
 
 
@@ -68,6 +68,7 @@ function darkSidebar() {
         navbar.classList.remove('bg-dark');   
     }  
 };
+
 
 
 function checkWindowSize() {
@@ -95,7 +96,6 @@ function checkWindowSize() {
     }
 }
 checkWindowSize();
-
 
 
 //rotate angle on side-bar menu
@@ -557,6 +557,28 @@ expandButton.addEventListener('click', function(e) {
         textTable.style.maxHeight = textTable.scrollHeight + 'px';
     }    
 });
+/*
+let expandButtonMenu = document.getElementById('expandButtonMenu');
+expandButtonMenu.addEventListener('click', function(e) {
+    e.preventDefault();
+    if(navbar.style.maxHeight) {
+        navbar.style.maxHeight = null;
+    } else {
+        navbar.style.maxHeight = navbar.scrollHeight + 'px';
+    }
+});
+let calculatorsMenu = document.getElementById('pages');
+let switchCalculatorsForMenu =document.querySelector('#switchCalculators li a');
+switchCalculatorsForMenu.addEventListener('click', function(e) {
+    e.preventDefault();
+    if(calculatorsMenu.style.maxHeight) {
+        calculatorsMenu.style.maxHeight = null;
+    } else {
+        calculatorsMenu.style.maxHeight = calculatorsMenu.scrollHeight + 'px';
+    }
+})
+
+*/
 
 // Facebook's moving button
 function calculateWindowWidth() {     

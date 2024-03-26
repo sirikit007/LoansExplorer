@@ -22,21 +22,22 @@
         <nav class="navContainer navbar navbar-expand-xl fixed-top">
             <div class="container-fluid" >
                 <a  href="#" id="switchStartPageFromMobile" menuitem class="navbar-brand nav-link d-xl-none fw-bolder fs-4"><img class="mobileLogo" src="logo_.png"> Loans Explorer</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" 
+                <button class="navbar-toggler" id="expandButtonMenu" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" 
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div  id="navContent" class="menuNavigation fixed-top collapse navbar-collapse">
-                    <ul class="sidebar-nav">
+                <div  id="navContent" class="menuNavigation fixed-top collapse navbar-collapse ">
+                    <ul class="sidebar-nav  " >
                         <li  class="navbar-brand ">
                             <a id="switchStartPage" menuitem href="#" class=" nav-link justify-content-center" data-bs-toggle="collapse" data-bs-target="#navContent">                                
                                     <img src="logo_.png">                        
                                 <div class="fw-bolder">Loans Explorer</div>
                             </a>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
                         </li>
                         <hr class="text-center">
                         <div menu menuitem id="switchHome" class="mt-3">
-                            <li class="sidebar-item"  >                                
+                            <li class="sidebar-item">                                
                                 <a  href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >
                                     <span class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
@@ -65,7 +66,7 @@
                                 </a>
                             </li>
                         </div>
-                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse"  data-bs-parent="#sidebar">
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <div id="switchLoanCalculator" submenu menuitem class="mt-3">
                                 <li class="sidebar-item ms-5">
                                     <a class="sidebar-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><span>Loan Calculatop</span></a>
@@ -649,10 +650,11 @@
 
     <!------------------------------------------------------------------Loan Repayments------------------------------------------------------------>
     <section class="marginLeft d-flex justify-content-center backgroundCalculators" id="contentLoanRepayments" hide>
-        <div class="container d-flex justify-content-center m-5 p-xl-5 p-0">
-            <div class="row justify-content-center d-block">
+        <div class="container d-block justify-content-center m-5 p-xl-5 p-0">
+            <h1 class="head welcome text-center fw-bold">Loan Repayments Calculator</h1>
+            <div class="row justify-content-center">
                 
-                <h1 class="head welcome text-center fw-bold">Loan Repayments Calculator</h1>
+                
                 
                 <div class="profileReviewLoanCalculator col-xl-3">  
                     <div class="allInputGroups">
@@ -706,10 +708,11 @@
     </section>
     <!------------------------------------------------------------------Stamp Duty------------------------------------------------------------>
     <section class="marginLeft d-flex justify-content-center backgroundCalculators" id="contentStampDuty" hide>
-        <div class="container d-flex justify-content-center m-5 p-xl-5 p-0">
+        <div class="container d-block justify-content-center m-5 p-xl-5 p-0">
+            <h1 class="head welcome text-center fw-bold">Stamp Duty Calculator</h1>  
             <div class="row justify-content-center">
                                                           
-                <h1 class="head welcome text-center fw-bold">Stamp Duty Calculator</h1>                         
+                                       
                
                 <div class="profileReviewStampDutyCalculator col-xl-3">
                     <form action="" class="allInputGroups">
@@ -1108,14 +1111,14 @@
 
     <!----------------------------------------------------------REVIEWS Page------------------------------------------------------------------------------------------------------->
 
-    <section class="marginLeft py-5 backgroundCalculators" id="testimonials" hide>
-        <div class="container px-5">
+    <section class="marginLeft py-5 backgroundCalculators " id="testimonials" hide>
+        <div class="container px-5 d-flex justify-content-center flex-column">
             <div class="pt-5">                
                 <h1 class="text-center fs-2 fw-bold">Testimonials</h1>                         
             </div>
             <h4 class="text-center mt-5">What Our Clients Say</h4>
-            <div class="row mt-5">                    
-                <div class="col-md-4 col-xxl-4 col-xl-6 text-center">
+            <div class="row mt-5 text-center">                    
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-sm-12 mb-4 text-center">
                     <div class="profileReviewPage">
                         <div class="stars ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -1144,7 +1147,7 @@
                         <h3>Linda <span>23 March 2023</span></h3>
                     </div>                
                 </div>                
-                <div class="col-md-4 col-xxl-4 col-xl-6 text-center">
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-sm-12 mb-4 text-center">
                     <div class="profileReviewPage">
                         <div class="stars ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -1174,7 +1177,7 @@
                         <h3>Linda <span>23 March 2023</span></h3>       
                     </div>
                 </div>
-                <div class="col-md-4 col-xxl-4 col-xl-6 text-center">
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-sm-12 mb-4 text-center">
                     <div class="profileReviewPage">
                         <div class="stars ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -1203,7 +1206,7 @@
                         <h3>Linda <span>23 March 2023</span></h3>                                                     
                     </div>
                 </div>                                                
-                <div class="col-md-4 col-xxl-4 col-xl-6 text-center">
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-sm-12 mb-4 text-center">
                     <div class="profileReviewPage">
                         <blockquote>
                             <div class="stars ">
@@ -1234,7 +1237,7 @@
                         <h3>Linda <span>23 March 2023</span></h3>                        
                     </div>
                 </div>
-                <div class="col-md-4 col-xxl-4 col-xl-6 text-center">
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-sm-12 mb-4 text-center">
                     <div class="profileReviewPage">
                         <div class="stars ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc451" class="bi bi-star-fill" viewBox="0 0 16 16">
