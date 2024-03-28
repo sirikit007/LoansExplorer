@@ -11,6 +11,8 @@ let switchBorrowingCalculator = document.getElementById('switchBorrowingCalculat
 
 let switchPrivacyPolicy = document.getElementById('switchPrivacyPolicy');
 let switchDisputeResolutionPolicy = document.getElementById('switchDisputeResolutionPolicy');
+
+let expandButtonMenu = document.getElementById('expandButtonMenu');
 //startPage
 let switchStartPage = document.getElementById('switchStartPage');
 let switchLoanCalcOnStartPage = document.getElementById('switchLoanCalcOnStartPage');
@@ -98,6 +100,18 @@ function checkWindowSize() {
 checkWindowSize();
 
 
+//Close menu button
+let menuNavigation = document.querySelector('.menuNavigation');
+let closeMenu = document.getElementById('closeMenu');
+
+closeMenu.addEventListener('click', function(e) {
+    e.preventDefault();
+    if (menuNavigation.classList.contains('show')) {
+        menuNavigation.classList.remove('show');
+    }
+});
+
+
 //rotate angle on side-bar menu
 let angleForSidebar = document.querySelector('.angleForSidebar');
 let rotateAngle = document.getElementById('rotateAngle');
@@ -149,11 +163,6 @@ list.forEach(item => item.addEventListener('mouseover', activeLink));
 
 
 //sidebar
-
-
-
-
-
 
 
 function switchContent(event) {
@@ -477,8 +486,6 @@ function switchContent(event) {
         homePage.setAttribute('hide', '');
         privacyPolicy.setAttribute('hide', ''); 
     } 
-    
-    
 }
 
 
@@ -514,7 +521,7 @@ ScrollReveal().reveal('.scrollUp',  {delay: 500, origin: 'up'});
 
 
 //--------------------------------------------------------------------Stamp Duty Calculator-------*/
-//dropDown States Menu for Stamp Duty
+//dropDown AusStates Menu for Stamp Duty
 let selectedState = document.getElementById('selectedState');
 let selectFieldStates = document.getElementById('selectFieldStates');
 let listFieldState = document.getElementById('listFieldState');
@@ -557,35 +564,31 @@ expandButton.addEventListener('click', function(e) {
         textTable.style.maxHeight = textTable.scrollHeight + 'px';
     }    
 });
-/*
-let expandButtonMenu = document.getElementById('expandButtonMenu');
+
 expandButtonMenu.addEventListener('click', function(e) {
     e.preventDefault();
-    if(navbar.style.maxHeight) {
-        navbar.style.maxHeight = null;
+    console.log(`menu-nav: ${menuNavigation.style.maxHeight}`);
+    menuNavigation.style.maxHeight = null;
+    if(menuNavigation.style.maxHeight) {
+        menuNavigation.style.maxHeight = null;
     } else {
-        navbar.style.maxHeight = navbar.scrollHeight + 'px';
+        menuNavigation.style.maxHeight = menuNavigation.scrollHeight + 'px';
     }
 });
-let calculatorsMenu = document.getElementById('pages');
-let switchCalculatorsForMenu =document.querySelector('#switchCalculators li a');
-switchCalculatorsForMenu.addEventListener('click', function(e) {
+
+let pages = document.getElementById('pages');
+switchCalculators.addEventListener('click', function(e) {
     e.preventDefault();
-    if(calculatorsMenu.style.maxHeight) {
-        calculatorsMenu.style.maxHeight = null;
+    menuNavigation.style.maxHeight = '714px';
+    
+    if(menuNavigation.style.maxHeight) {
+        menuNavigation.style.maxHeight = pages.style.maxHeight + 'px';
     } else {
-        calculatorsMenu.style.maxHeight = calculatorsMenu.scrollHeight + 'px';
+        menuNavigation.style.maxHeight;
     }
-})
+  
+});
 
-*/
-
-// Facebook's moving button
-function calculateWindowWidth() {     
-    const windowWidth = document.documentElement.clientWidth;
-    document.documentElement.style.setProperty("--window-width", windowWidth + "px");
-    console.log(windowWidth);   
-}
 
 // ------------------------------------------------------------------------Calculator
 

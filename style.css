@@ -35,6 +35,7 @@ body {
     opacity: 1;
 }
 */
+
 .marginLeft {
     margin-left: 400px;
 }
@@ -64,7 +65,9 @@ body {
     transition: 0.5s;
     overflow: hidden;   
 }
-
+#closeMenu {
+    display: none;
+}
 .menuNavigation ul {
     position: absolute;
     top: 0;
@@ -104,6 +107,7 @@ body {
 
 #pages .sidebar-item {
     font-size: 20px;
+
 }
 .menuNavigation .sidebar-nav [menu]:hover li a,
 .menuNavigation .sidebar-nav [menu].hovered li a {
@@ -146,10 +150,15 @@ body {
     border-bottom-left-radius: 30px; 
     border: 0.3px solid transparent; 
 }
-
+.menuNavigation #pages {
+    position: relative;
+    width: 100%;
+}
+/*
 .nav-link {
     transition: none;    
 }
+*/
 .bg-transparent {
     background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(10px) !important;
@@ -1627,6 +1636,13 @@ hr {
         max-height: var(--bs-scroll-height, 36vh);
         overflow-y: auto !important;
     }
+    #closeMenu {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+    }
+
 }
 @media only screen and (max-width: 992px) {
     #about {

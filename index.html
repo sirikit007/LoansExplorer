@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loans Explorer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -26,18 +26,18 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div  id="navContent" class="menuNavigation fixed-top collapse navbar-collapse ">
-                    <ul class="sidebar-nav  " >
+                <div  id="navContent" class="menuNavigation fixed-top collapse navbar-collapse">
+                    <ul class="sidebar-nav  py-4" >
                         <li  class="navbar-brand ">
                             <a id="switchStartPage" menuitem href="#" class=" nav-link justify-content-center" data-bs-toggle="collapse" data-bs-target="#navContent">                                
                                     <img src="logo_.png">                        
                                 <div class="fw-bolder">Loans Explorer</div>
                             </a>
-                            <button type="button" class="btn-close" aria-label="Close"></button>
+                            <button type="button" id="closeMenu" class="btn-close" aria-label="Close"></button>
                         </li>
                         <hr class="text-center">
                         <div menu menuitem id="switchHome" class="mt-3">
-                            <li class="sidebar-item">                                
+                            <li class="nav-item">                                
                                 <a  href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >
                                     <span class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
@@ -50,7 +50,7 @@
                             </li>
                         </div>
                         <div id="switchCalculators" menu menuitem>
-                            <li class="sidebar-item" id="rotateAngle">
+                            <li class="nav-item" id="rotateAngle">
                                 <a href="#" class="nav-link collapsed"   data-bs-toggle="collapse" data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
                                     <span class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-calculator" viewBox="0 0 16 16">
@@ -68,19 +68,19 @@
                         </div>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <div id="switchLoanCalculator" submenu menuitem class="mt-3">
-                                <li class="sidebar-item ms-5">
-                                    <a class="sidebar-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><span>Loan Calculatop</span></a>
+                                <li class="nav-item ms-5">
+                                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><span>Loan Calculatop</span></a>
                                 </li>
                             </div>
                             <div id="switchStampdutyCalculator" submenu menuitem>
-                                <li class="sidebar-item ms-5"><a class="sidebar-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><span>Stamp Duty Calculator</span></a></li>
+                                <li class="sidebar-item ms-5"><a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><span>Stamp Duty Calculator</span></a></li>
                             </div>
                             <div id="switchBorrowingCalculator" submenu menuitem>
-                                <li class="sidebar-item ms-5"><a class="sidebar-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"> <span>Borrowing Calculator</span></a></li>                            
+                                <li class="sidebar-item ms-5"><a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"> <span>Borrowing Calculator</span></a></li>                            
                             </div>
                         </ul>
                         <div  id="switchReviews" menu menuitem>
-                            <li class="sidebar-item" >
+                            <li class="nav-item" >
                                 <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-wechat" viewBox="0 0 16 16">
                                         <path d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.324.324 0 0 0-.12.366l.218.81a.616.616 0 0 1 .029.117.166.166 0 0 1-.162.162.177.177 0 0 1-.092-.03l-1.057-.61a.519.519 0 0 0-.256-.074.509.509 0 0 0-.142.021 5.668 5.668 0 0 1-1.576.22ZM9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.615.615 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.627.627 0 0 0 .098.356"/>
@@ -92,7 +92,7 @@
                             </li>
                         </div>
                         <div  id="switchPartners" menu menuitem>
-                            <li class="sidebar-item">
+                            <li class="nav-item">
                                 <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                                         <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
@@ -103,7 +103,7 @@
                             </li>
                         </div>
                         <div  id="switchContactUs" menu menuitem>
-                            <li class="sidebar-item">
+                            <li class="nav-item">
                                 <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-globe-asia-australia" viewBox="0 0 16 16">
                                         <path d="m10.495 6.92 1.278-.619a.483.483 0 0 0 .126-.782c-.252-.244-.682-.139-.932.107-.23.226-.513.373-.816.53l-.102.054c-.338.178-.264.626.1.736a.476.476 0 0 0 .346-.027ZM7.741 9.808V9.78a.413.413 0 1 1 .783.183l-.22.443a.602.602 0 0 1-.12.167l-.193.185a.36.36 0 1 1-.5-.516l.112-.108a.453.453 0 0 0 .138-.326ZM5.672 12.5l.482.233A.386.386 0 1 0 6.32 12h-.416a.702.702 0 0 1-.419-.139l-.277-.206a.302.302 0 1 0-.298.52l.761.325Z"/>
