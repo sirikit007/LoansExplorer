@@ -1478,6 +1478,25 @@ hr {
     .containerAbout .row {
         justify-content: space-around !important;
     }
+
+
+    .menuNavigation ul {      
+        position: relative;
+        width: 100%;
+        padding-left: 0;
+        height: auto;
+    }
+    .menuNavigation {
+        height: auto;
+        width:100%;
+        background: #f6f5f7;
+        border-radius: 0 0 16px 16px;
+        border-top: 1px solid transparent;
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    }
+    .menuNavigation ul li a {
+        color: var(--black1);
+    }
     .navbar>.container-fluid {
         height: 80px;
         background: #f6f5f7;;
@@ -1487,27 +1506,16 @@ hr {
         border-bottom: 1px solid transparent;
         box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     }
-   
+    
     .navbar-toggler-icon {
         width: 1.8em;
         height: 1.8em;
     }
-    .nav-link:focus, .nav-link:hover {
-        color: var(--black1);
-    }
-    .menuNavigation {
-        width:100%;
-        top:0;
-        right: 0;
-        left: unset; 
-           
-        background: #f6f5f7;
-        border-radius: 0 0 16px 16px;
-        border-top: 1px solid transparent;
-        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-    }
-    .menuNavigation ul li a {
-        color: var(--black1);
+    #closeMenu {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 30px;
     }
     .menuNavigation .sidebar-nav [menu]:hover,
     .menuNavigation .sidebar-nav [menu].hovered,
@@ -1516,7 +1524,12 @@ hr {
         border: 1px solid transparent;
         box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     }
-   
+    .nav-link:focus, .nav-link:hover {
+        color: var(--black1);
+    }
+    .aboutBlank {
+        margin-top: 20px;
+    }
     .menuNavigation .navbar-brand {
         margin: 0;        
     }
@@ -1524,9 +1537,25 @@ hr {
         margin: 0;
         width: 100%;
     }
-    .aboutBlank {
-        margin-top: 20px;
+    .navContainer .navbar-toggler {
+        font-size: 1.25rem;
     }
+    .navContainer .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    /*Navbar Menu*/
+    
+    /*
+   
+      .navbar-nav-scroll {
+        max-height: var(--bs-scroll-height, 36vh);
+        overflow-y: auto !important;
+    }
+    
+
+    */
     .disputeResolutionPolicy .row,
     .privacyPolicySection .row {
         margin-top: 118px !important;
@@ -1539,14 +1568,7 @@ hr {
     #contentStampDuty h1 {
         font-size: 30px;
     }
-    .navContainer .navbar-toggler {
-        border: none;
-        font-size: 1.25rem;
-    }
-    .navContainer .navbar-toggler:focus {
-        box-shadow: none;
-        outline: none;
-    }
+    
     
     .marginLeft {
         margin: 0;
@@ -1632,17 +1654,7 @@ hr {
         font-size: 18px !important;
     }
   
-    .navbar-nav-scroll {
-        max-height: var(--bs-scroll-height, 36vh);
-        overflow-y: auto !important;
-    }
-    #closeMenu {
-        display: block;
-        position: absolute;
-        top: 40px;
-        right: 30px;
-    }
-
+  
 }
 @media only screen and (max-width: 992px) {
     #about {

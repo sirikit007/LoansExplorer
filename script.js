@@ -119,6 +119,8 @@ rotateAngle.addEventListener('click', function() {
     angleForSidebar.classList.toggle('rotate');
 });
 
+
+
 let list = document.querySelectorAll('.menuNavigation a');
 function activeLink() {
     list.forEach(item => {
@@ -564,7 +566,7 @@ expandButton.addEventListener('click', function(e) {
         textTable.style.maxHeight = textTable.scrollHeight + 'px';
     }    
 });
-
+/*
 expandButtonMenu.addEventListener('click', function(e) {
     e.preventDefault();
     console.log(`menu-nav: ${menuNavigation.style.maxHeight}`);
@@ -575,6 +577,7 @@ expandButtonMenu.addEventListener('click', function(e) {
         menuNavigation.style.maxHeight = menuNavigation.scrollHeight + 'px';
     }
 });
+
 
 let pages = document.getElementById('pages');
 switchCalculators.addEventListener('click', function(e) {
@@ -588,7 +591,7 @@ switchCalculators.addEventListener('click', function(e) {
     }
   
 });
-
+*/
 
 // ------------------------------------------------------------------------Calculator
 
