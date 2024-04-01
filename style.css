@@ -191,9 +191,7 @@ body {
     transition: all .2s easy-out;
 }
 
-#pages {
-    position: relative;
-}
+
 
 .angleForSidebar {
     position: absolute;
@@ -327,22 +325,6 @@ body {
     font-weight: 700;
     font-style: 28px;
 }
-.cta-btn {
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 28px;
-    border: 2px solid #fff;
-    border-radius: 4px;
-    color: #fff; 
-    text-decoration: none;  
-}
-.cta-btn:hover {
-    background: #ffc451;
-    border-color: #ffc451;
-    color: #151515;
-}
 
 .contact .info .info-icon {
     background: #ffc451;
@@ -364,11 +346,13 @@ body {
     padding-left: 60px;
     font-size: 14px;
 }
+/*
 .buttonForContactForm .cta-btn {  
     border: 2px solid #151515;
     color: #151515;
     width: 224.34px;   
 }
+*/
 .contact-form form {
     transition: all 4s ease-in-out;
 }
@@ -1273,17 +1257,35 @@ hr {
     color: var(--black2);
     font-weight: 500;
 }
-.contactSection .contactForm .formBox button {
+.contactSection .contactForm .formBox button,
+.buttonForContactForm .cta-btn,
+#switchConnectStartPage,
+.buttonForMoreReviews .cta-btn {
     position: relative;
     cursor: pointer;
     background: #ffc451;
-    color: #333;
-    border: none;
-    max-width: 150px;
+    color: #333;    
+    max-width: 170px;
     padding: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 100%;
+    appearance: none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+
 }
-.contactSection .contactForm .formBox button:hover {
-    background: var(--black2);
+.contactSection .contactForm .formBox button:hover,
+.buttonForContactForm .cta-btn:hover,
+#switchConnectStartPage:hover,
+.buttonForMoreReviews .cta-btn:hover {
+    background: var(--black2) ;
     color: var(--white);
 }
 
@@ -1524,6 +1526,10 @@ hr {
         border: 1px solid transparent;
         box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     }
+    .menuNavigation #pages {
+        background: rgb(211 213 216 / 25%);
+        padding: 10px 0 20px;
+    }
     .nav-link:focus, .nav-link:hover {
         color: var(--black1);
     }
@@ -1543,6 +1549,9 @@ hr {
     .navContainer .navbar-toggler:focus {
         box-shadow: none;
         outline: none;
+    }
+    #pages .sidebar-item {
+        font-weight: 600;
     }
 
     /*Navbar Menu*/
@@ -1568,27 +1577,21 @@ hr {
     #contentStampDuty h1 {
         font-size: 30px;
     }
-    
-    
     .marginLeft {
         margin: 0;
     }
-   
     .contactSection::before {
         display: none;
     }
-    .contactSection .container {
-        display: flex;
+    .contactSection .container {       
         flex-direction: column-reverse;
     }
-    .contactSection .container .contactInfo {
+    .contactSection .container .contactInfo,
+    .contactSection .container .contactForm  {
         width: 100%;
         height: auto;
     }
-    .contactSection .container .contactForm {
-        width: 100%;
-        height: auto;
-    }
+   
     .contactSection .contactInfo .contactPageIcons {
         margin-top: 10px;
     }
@@ -1653,8 +1656,6 @@ hr {
     .contactSection .contactHead p{
         font-size: 18px !important;
     }
-  
-  
 }
 @media only screen and (max-width: 992px) {
     #about {
@@ -1746,6 +1747,10 @@ hr {
     .reviews .carousel-inner span {
         font-size: 14px;
     }
+    .contact .info div:first-child {
+        margin-bottom: 40px;
+    }
+   
 }
 
 @media only screen and (max-width: 788px) {
@@ -1841,22 +1846,38 @@ hr {
         font-size: 14px;
         line-height: 25px;
     }
-    #contentPartners .textMiddle, .contactSection .contactHead p {
-        font-size: 16px !important;
+    #contentPartners .textMiddle, 
+    .contactSection .contactHead p {
+        font-size: 15px !important;
     }
     #contentPartners .textMiddle, .contactSection .contactHead p {
         font-size: 16px !important;
     }
-    
-    .menuNavigation {
-        width: 90%;
-              
-        left: 5%;
+    #homePage .container,
+    .disputeResolutionPolicy .container,
+    #privacyPolicy .container {
+        max-width: 640px !important;
+        padding: 0 25px;
     }
-   
-   
+    .contactSection .contactForm h2 {
+        font-size: 20px;
+    }
+    .contactSection .contactForm .formBox .inputBox span,
+    .contactSection .contactForm .formBox .inputBox input, .contactSection .contactForm .formBox .inputBox textarea {        
+        font-size: 16px;
+    }
+    .content {        
+        text-align: justify;
+    }
+    .content h3 {
+        text-align: center;
+    }
+    .paddingForContainer {
+        padding: 0 30px;
+    }
     
 }
+
 @media only screen and (max-width: 640px) {
     .profileReviewStampDutyCalculator, 
     .profileReviewLoanCalculator {
@@ -1869,8 +1890,11 @@ hr {
     .logos {
         margin: 0 !important;
     }
-   
+    
+    
+    
 }
+
 
 
 @media only screen and (max-width: 576px) {
@@ -1892,7 +1916,24 @@ hr {
     .inputGroup input:valid~label {
         font-size: 13px;
     }
+    .content {
+        padding: 0 30px;
+    }
+    .contact .info {
+        margin: 0 !important;
+    }
+    .contact .info h4 {
+        font-size: 20px;
+    }
+    .footer-top .footer-info p {
+        font-size: 10px;
+    }
+    
 }
+@media (max-width: 575.98px) {
+    
+}
+
 @media only screen and (max-width: 450px) {
     #testimonials .row {
         margin: 3rem 1rem;
