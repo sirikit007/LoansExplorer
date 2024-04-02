@@ -1368,15 +1368,25 @@ hr {
     .profileReview {
         padding: 0 5%;
     }
-   
-    
-   
+}
+@media (max-width: 1580px) {
+    .partnersColumn {        
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 @media (max-width: 1500px) {
     .partnersColumn {
         height: 400px;
         width: 1200px;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footerFacebookIcon {
+        display: grid;
+        padding-right: 30px;
+    }
+    .footer-top .social-links a {
+        margin-right: 0;
+        margin-bottom: 15px;
     }
  
 }
@@ -1480,8 +1490,6 @@ hr {
     .containerAbout .row {
         justify-content: space-around !important;
     }
-
-
     .menuNavigation ul {      
         position: relative;
         width: 100%;
@@ -1678,10 +1686,7 @@ hr {
     footer .col:nth-child(1) p {
         font-size: 13px;
     }
-    footer .col:nth-child(3),
-    footer .col:nth-child(4) {
-        flex-basis: 15%;
-    }
+    
     footer .col:nth-child(4) {
         display: flex;
         flex-wrap: wrap;
@@ -1694,24 +1699,26 @@ hr {
     .footerFacebookIcon {
         padding-top: 0 !important;
     }
-    .footer-top .footer-info p  {
-        font-size: 12px;
-    }
+    
     .footer-top h3 {
         font-size: 16px;
     }
     .footer-links li {
         font-size: 15px;
     }
-    .footerFacebookIcon {
-        display: grid;
-    }
+   
     .footer-top .social-links a {
         margin-right: 0;
         margin-bottom: 15px;
     }
     footer .row {
         --bs-gutter-x: 0;
+    }
+    .firstColumn  {
+        padding-right: 30px;
+    }
+    .firstColumn p {
+        font-size: 14px;
     }
     #homePage .welcome h1,
     .disputeResolutionPolicy h2,
@@ -1814,7 +1821,7 @@ hr {
         font-size: 12px !important;
     }
     .partnersColumn {
-        height: 400px;
+        height: 600px;
         width: 1200px;
         grid-template-columns: 1fr 1fr;
     }
@@ -1822,6 +1829,14 @@ hr {
     footer .col:nth-child(3) h3,
     footer .col:nth-child(4) h3{
         font-size: 11.5px;
+    }
+    #footerMain .container .row {
+        --bs-gutter-x: 4.5rem !important;
+        padding-left: 30px;
+    }
+    .footerFacebookIcon {        
+        justify-content: flex-start;
+        padding-left: 30px;
     }
     .containerAbout .row .img-fluid {
         max-width: 90%;
@@ -1890,7 +1905,9 @@ hr {
     .logos {
         margin: 0 !important;
     }
-    
+    .navbar>.container-fluid {       
+        padding: 0.5rem 1rem;
+    }
     
     
 }
@@ -1925,13 +1942,33 @@ hr {
     .contact .info h4 {
         font-size: 20px;
     }
-    .footer-top .footer-info p {
-        font-size: 10px;
+    .carousel-inner {
+        height: 400px;
     }
+    #footerMain .container .row {
+        --bs-gutter-x: .5rem !important;         
+    }
+   
     
 }
-@media (max-width: 575.98px) {
-    
+@media only screen and (max-width: 500px) {
+    #footerMain .container .row {
+        --bs-gutter-x: .5rem !important;
+         padding-left: 0 !important;
+    }
+}
+
+
+@media only screen and (max-width: 485px) {
+    .partnersColumn {
+        height: 1100px;
+        width: 1200px;
+        grid-template-columns: 1fr;
+        padding: 20px 0;
+    }
+    .partners .container {
+        height: 1500px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -1944,4 +1981,17 @@ hr {
     .navbar .container-fluid a {
         font-size: 16px;
     }
+    #hero h1 {
+        font-size: 38px;
+    }
+    #hero h2 {
+        font-size: 19px;
+    }
+    .carousel-inner {
+        height: 500px;
+    }
+    .firstColumn p {
+        font-size: 13px;
+    }
+    
 }
