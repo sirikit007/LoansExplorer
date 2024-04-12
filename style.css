@@ -154,11 +154,11 @@ body {
     position: relative;
     width: 100%;
 }
-/*
+
 .nav-link {
     transition: none;    
 }
-*/
+
 .bg-transparent {
     background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(10px) !important;
@@ -1979,8 +1979,9 @@ hr {
         font-size: 18px;
     }
     .navbar .container-fluid a {
-        font-size: 16px;
+        font-size: 18px !important;
     }
+   
     #hero h1 {
         font-size: 38px;
     }
@@ -1993,5 +1994,27 @@ hr {
     .firstColumn p {
         font-size: 13px;
     }
+    .navbar .container-fluid {
+        margin: 1px 7px;
+        padding: .5rem;
+       width: 100%;
+        
+    } 
+   #mainContent {
+    margin-right: -50px;
+
+   }
+   .navContainer {
+    max-width: 35% !important;
+}
     
+}
+@media only screen and (max-width: 326px) {
+   
+    .navContainer .container-fluid img.mobileLogo {
+        width: 38px;
+    }
+    .navbar .container-fluid a {
+        font-size: 16px !important;
+    }
 }

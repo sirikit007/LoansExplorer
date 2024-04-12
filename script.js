@@ -71,7 +71,10 @@ function darkSidebar() {
     }  
 };
 
-
+function removeNavbar(e) {   
+    e.preventDefault();
+    navbar.classList.add('collapse');
+}
 
 function checkWindowSize() {
     if (window.innerWidth < 1200) {
@@ -84,6 +87,8 @@ function checkWindowSize() {
         switchPartners.removeEventListener('click', darkSidebarOnClick);
         switchContactUs.removeEventListener('click', darkSidebarOnClick);
         switchHome.removeEventListener('click', darkSidebarOnClick);
+        switchStartPage.addEventListener('click', removeNavbar);
+        switchStartPage.setAttribute('data-bs-toggle', 'collapse');
       
     } else {
         window.addEventListener('scroll', darkSidebar);
@@ -95,9 +100,14 @@ function checkWindowSize() {
         switchPartners.addEventListener('click', darkSidebarOnClick);
         switchContactUs.addEventListener('click', darkSidebarOnClick);
         switchHome.addEventListener('click', darkSidebarOnClick);
+        switchStartPage.removeEventListener('click', removeNavbar);
+        switchStartPage.removeAttribute('data-bs-toggle', 'collapse');
+        
     }
 }
-checkWindowSize();
+
+
+
 
 
 //Close menu button
@@ -159,6 +169,7 @@ list.forEach(item => item.addEventListener('mouseover', activeLink));
     switchPrivacyPolicy.addEventListener('click', switchContent);
     switchDisputeResolutionPolicy.addEventListener('click', switchContent);
     switchStartPageFromMobile.addEventListener('click', switchContent);
+    checkWindowSize();  
  }
 
 
