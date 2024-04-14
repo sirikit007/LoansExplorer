@@ -14,10 +14,6 @@
     --background: #f6f5f7;   
 }
 
-body {
-    min-height: 100vh;
-    overflow-x: hidden;
-}
 
 
 [hide] {
@@ -35,7 +31,12 @@ body {
     opacity: 1;
 }
 */
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+  
 .marginLeft {
     margin-left: 400px;
 }
@@ -56,6 +57,7 @@ body {
 .navbar {   
     --bs-navbar-padding-y: 0;
 }
+
 .menuNavigation {
     position: fixed;
     width: 400px;
@@ -1138,8 +1140,11 @@ hr {
 .contactHead {
     flex-direction: column;
     margin-bottom: 150px;
-    margin: 0 auto;
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
 }
+
 .contactHead p {
     margin: 55px 0;
 }
@@ -1182,6 +1187,7 @@ hr {
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     border: 1px solid transparent;
 }
+
 .contactSection .contactInfo h2 {
     display: flex;
     justify-content: center;
@@ -1268,7 +1274,7 @@ hr {
     max-width: 170px;
     padding: 12px;
     font-weight: 600;
-    font-size: 13px;
+    /*font-size: 13px;*/
     letter-spacing: 1px;
     display: inline-block;
     border-radius: 4px;
@@ -1483,6 +1489,7 @@ hr {
     #hero .container {
         margin-top: 100px;
     }
+    
     .inputGroup input:focus~label,
     .inputGroup input:valid~label {
         font-size: 16px;
@@ -1490,6 +1497,7 @@ hr {
     .containerAbout .row {
         justify-content: space-around !important;
     }
+   
     .menuNavigation ul {      
         position: relative;
         width: 100%;
@@ -1672,6 +1680,10 @@ hr {
     #hero .container {
         margin-top: 0;
     }
+    #hero {
+        height: auto;
+        padding-bottom: 100px;
+    }
     #hero .icon-box {
         height: 200px;
         width: 330px;
@@ -1830,12 +1842,9 @@ hr {
     footer .col:nth-child(4) h3{
         font-size: 11.5px;
     }
-    #footerMain .container .row {
-        --bs-gutter-x: 4.5rem !important;
-        padding-left: 30px;
-    }
-    .footerFacebookIcon {        
-        justify-content: flex-start;
+  
+    .footerFacebookIcon {       
+       
         padding-left: 30px;
     }
     .containerAbout .row .img-fluid {
@@ -1890,13 +1899,18 @@ hr {
     .paddingForContainer {
         padding: 0 30px;
     }
+    .footer-top .container .row div:nth-child(3),
+    .footer-top .container .row div:nth-child(4) {
+        padding: 0;
+      
+    }
     
 }
 
 @media only screen and (max-width: 640px) {
     .profileReviewStampDutyCalculator, 
     .profileReviewLoanCalculator {
-        width: 500px; 
+        width: -web-webkit-fill-available; 
     }
     .profileReviewLoanCalculator, 
     .profileReviewStampDutyCalculator {
@@ -1922,6 +1936,7 @@ hr {
     .profileReviewLoanCalculator {
         width: 450px; 
     }
+    /*
     .inputGroup label, 
     .radioToggle label, 
     .radioToggleForTypeProperty label, 
@@ -1929,13 +1944,12 @@ hr {
     .propertyLocationDropListContainer ul li {
         font-size: 14px;
     }
+   
     .inputGroup input:focus~label,
     .inputGroup input:valid~label {
         font-size: 13px;
     }
-    .content {
-        padding: 0 30px;
-    }
+   */
     .contact .info {
         margin: 0 !important;
     }
@@ -1978,10 +1992,6 @@ hr {
     .menuNavigation ul li a .icon {
         font-size: 18px;
     }
-    .navbar .container-fluid a {
-        font-size: 18px !important;
-    }
-   
     #hero h1 {
         font-size: 38px;
     }
@@ -1997,18 +2007,81 @@ hr {
     .navbar .container-fluid {
         margin: 1px 7px;
         padding: .5rem;
-       width: 100%;
-        
+       width: 100%;        
     } 
-   #mainContent {
-    margin-right: -50px;
-
-   }
-   .navContainer {
-    max-width: 35% !important;
-}
+    #contentLoanRepayments h1, #contentStampDuty h1 {
+        font-size: 21px;
+    }
+    .content ul {
+        padding: 0;
+    }
+    .content h3 {
+        font-size: 21px;
+    }
+    .footerFacebookIcon {
+        padding-left: 0;
+        padding-right: 90px;
+    }   
+    .profileReviewStampDutyCalculator, 
+    .profileReviewLoanCalculator {
+        width: 400px;
+        display: ruby;
+    }
+    .groupAnswersLoanRepayments {
+        justify-content: center;
+    }
+    .radioToggleForTypeProperty {
+        display: table;
+    }
+    #testimonials .container .text-center {
+        margin-top: 2rem !important;
+        font-size: 18px;
+    }
+    #testimonials .container .pt-5,
+    #contentPartners .container .pt-5,
+    .contactHead h2 {
+        padding-top: 1rem !important;
+    }
+    #contentPartners .textMiddle p,
+    .contactHead p {        
+        margin: 2rem 0;
+    }
+    .contactSection .container .contactForm {       
+        padding: 40px 10px;
+    }
+    .groupAnswersLoanRepayments {
+        display: table;
+    }
+    .answerSquareLoanRepayments {
+        width: 250px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
     
 }
+
+@media only screen and (max-width: 375px) {
+    .contactSection .container
+     {
+        width: 100%;
+        margin: 0;
+    }
+    .contactHead {
+        margin: 0 10px;
+    }
+    #contentPartners .container {
+        padding: 0 18px !important;
+    }
+    .profileReviewStampDutyCalculator, 
+    .profileReviewLoanCalculator {
+        width: 360px;
+    }
+}
+
 @media only screen and (max-width: 326px) {
    
     .navContainer .container-fluid img.mobileLogo {

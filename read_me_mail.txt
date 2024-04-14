@@ -96,3 +96,10 @@ Form of mail for html:
                             </div>
                         </form>
 
+
+To open a mobile device:
+
+ipconfig - find out your IP address
+open Apache24 - bin - httpd.exe
+launch a website in localhost
+
