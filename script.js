@@ -141,6 +141,20 @@ function activeLink() {
 list.forEach(item => item.addEventListener('mouseover', activeLink));
 
 
+list.forEach(link => {
+    link.addEventListener('click', function(e) {
+        const hash = this.getAttribute('href');
+        const target = document.querySelector(hash);
+        if (target) {
+            e.preventDefault(); // Отменяем стандартное поведение
+            window.scrollTo({
+                top: target.offsetTop - 50, // Учитываем высоту navbar
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
 
 
 //Switch Menu items
