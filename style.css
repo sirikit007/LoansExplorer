@@ -2025,7 +2025,7 @@ hr {
     .profileReviewStampDutyCalculator, 
     .profileReviewLoanCalculator {
         width: 400px;
-        display: ruby;
+        
     }
     .groupAnswersLoanRepayments {
         justify-content: center;
@@ -2050,7 +2050,14 @@ hr {
         padding: 40px 10px;
     }
     .groupAnswersLoanRepayments {
-        display: table;
+        display: contents;
+    }
+    .answerSquareLoanRepayments:nth-child(2) {
+        margin: 30px auto;
+    }
+    .yesLabel,
+    .radioToggleForTypeProperty label  {
+        border-radius: 10px;
     }
     .answerSquareLoanRepayments {
         width: 250px;
@@ -2059,6 +2066,14 @@ hr {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+    .menuNavigation .navbar-brand {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+    #closeMenu {        
+        right: 20px;
     }
     
     
@@ -2079,15 +2094,49 @@ hr {
     .profileReviewStampDutyCalculator, 
     .profileReviewLoanCalculator {
         width: 360px;
+        padding: 50px 25px;
     }
+    
+        
 }
 
-@media only screen and (max-width: 326px) {
+@media only screen and (max-width: 325px) {
    
     .navContainer .container-fluid img.mobileLogo {
         width: 38px;
     }
-    .navbar .container-fluid a {
-        font-size: 16px !important;
+    .navbar .navbar-brand a {
+        font-size: 19px !important;
+    }
+    .profileReview blockquote {
+        margin: 5px
+    }
+    .contactSection .contactForm .formBox button, .buttonForContactForm .cta-btn, #switchConnectStartPage, .buttonForMoreReviews .cta-btn {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .firstColumn,
+    .secondColumn {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-top h3 {
+        margin-bottom: 20px;
+    }
+    .footer-top .footer-info {
+        margin-bottom: 0;
+    }
+    .footerFacebookIcon {       
+        margin-top: 35px;
+    }
+    .profileReviewStampDutyCalculator, 
+    .profileReviewLoanCalculator {
+        width: 310px;
+    }
+    .allInputGroups {
+        padding: 0;
+    }
+    .singleServiceWrapper {
+        padding: 0px;
     }
 }

@@ -53,7 +53,6 @@ switchContactUs.addEventListener('click', darkSidebarOnClick);
 
 
 
-
 function darkSidebarOnClick() {
     navbar.classList.remove('bg-transparent');
     navbar.classList.add('bg-dark');
