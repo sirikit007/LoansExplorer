@@ -305,6 +305,7 @@ html, body {
     transform: translateY(-10px);
 }
 
+
 /*-------------------------------------------------------------About-----------------------------------------*/
 
 
@@ -1301,8 +1302,7 @@ hr {
 
 .privacyPolicySection .row {
     border: 1px solid transparent;
-    flex-direction: column;
-    font-size: 18px;
+    flex-direction: column;    
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     background: #fff;
     border-radius: 1rem;
@@ -1318,8 +1318,7 @@ hr {
 }
 .privacyPolicySection .row ul,
 .privacyPolicySection .row ol {
-    padding-left: 5rem;
-    color: #2a2185;
+    padding-left: 5rem;     
 }
 
 /*----------------Dispute Resolution Policy---------------------*/
@@ -1336,8 +1335,7 @@ hr {
     padding: 0 2rem;
 }
 .disputeResolutionPolicy .row ul {
-    padding-left: 5rem;
-    color: #2a2185;
+    padding-left: 5rem;    
 }
 .disputeResolutionPolicy .row .addressForDispute table {
     margin: 0 auto;
