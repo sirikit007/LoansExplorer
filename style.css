@@ -1353,6 +1353,8 @@ hr {
     vertical-align: baseline;
 }
 
+
+
 /*-------------------------------MEDIA------------------------------------------*/
 
 /*--------------------------Media---------------------*/
@@ -1516,12 +1518,19 @@ hr {
     }
     .navbar>.container-fluid {
         height: 80px;
-        background: #f6f5f7;;
+        background: #999;
         margin: 20px;
         border-radius: 16px;
         padding: 0.5rem 3rem;
         border-bottom: 1px solid transparent;
         box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    }
+    #switchStartPageFromMobile {
+        color: #fff;
+    }
+    #expandButtonMenu {
+        background-color: #fff;
+        border-color: #000;
     }
     
     .navbar-toggler-icon {
@@ -1532,7 +1541,7 @@ hr {
         display: block;
         position: absolute;
         top: 40px;
-        right: 30px;
+        right: 75px;
     }
     .menuNavigation .sidebar-nav [menu]:hover,
     .menuNavigation .sidebar-nav [menu].hovered,
@@ -1567,19 +1576,7 @@ hr {
     }
     #pages .sidebar-item {
         font-weight: 600;
-    }
-
-    /*Navbar Menu*/
-    
-    /*
-   
-      .navbar-nav-scroll {
-        max-height: var(--bs-scroll-height, 36vh);
-        overflow-y: auto !important;
-    }
-    
-
-    */
+    } 
     .disputeResolutionPolicy .row,
     .privacyPolicySection .row {
         margin-top: 118px !important;
@@ -1796,6 +1793,9 @@ hr {
         padding: 50px 25px;
     }
     
+.navContainer .menuNavigation ul {
+    padding-top: 0 !important;
+} 
     .radioContainer p {
         font-size: 17px;
     }
@@ -1935,20 +1935,6 @@ hr {
     .profileReviewLoanCalculator {
         width: 450px; 
     }
-    /*
-    .inputGroup label, 
-    .radioToggle label, 
-    .radioToggleForTypeProperty label, 
-    #selectFieldStates p, 
-    .propertyLocationDropListContainer ul li {
-        font-size: 14px;
-    }
-   
-    .inputGroup input:focus~label,
-    .inputGroup input:valid~label {
-        font-size: 13px;
-    }
-   */
     .contact .info {
         margin: 0 !important;
     }
@@ -1973,6 +1959,12 @@ hr {
 
 
 @media only screen and (max-width: 485px) {
+    #hero {
+        padding-top: 150px;
+    }
+    #hero h1 {
+        display: none;        
+    }
     .partnersColumn {
         height: 1100px;
         width: 1200px;
@@ -2073,6 +2065,7 @@ hr {
     }
     #closeMenu {        
         right: 20px;
+        top: 20px;
     }
     
     
