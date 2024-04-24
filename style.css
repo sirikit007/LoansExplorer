@@ -1508,7 +1508,7 @@ hr {
     .menuNavigation {
         height: auto;
         width:100%;
-        background: #f6f5f7;
+        background: #f6f5f7 !important;
         border-radius: 0 0 16px 16px;
         border-top: 1px solid transparent;
         box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
