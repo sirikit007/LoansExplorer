@@ -105,10 +105,6 @@ function checkWindowSize() {
     }
 }
 
-
-
-
-
 //Close menu button
 let menuNavigation = document.querySelector('.menuNavigation');
 let closeMenu = document.getElementById('closeMenu');
@@ -120,15 +116,12 @@ closeMenu.addEventListener('click', function(e) {
     }
 });
 
-
 //rotate angle on side-bar menu
 let angleForSidebar = document.querySelector('.angleForSidebar');
 let rotateAngle = document.getElementById('rotateAngle');
 rotateAngle.addEventListener('click', function() {
     angleForSidebar.classList.toggle('rotate');
 });
-
-
 
 let list = document.querySelectorAll('.menuNavigation a');
 function activeLink() {
@@ -154,8 +147,6 @@ list.forEach(link => {
         }
     });
 });
-
-
 
 //Switch Menu items
 
@@ -185,11 +176,7 @@ list.forEach(link => {
     checkWindowSize();  
  }
 
-
-
-
 //sidebar
-
 
 function switchContent(event) {
     console.log(event.target);
@@ -415,8 +402,6 @@ function switchContent(event) {
         navbar.classList.add('bg-dark');  
         navbar.classList.remove('bg-transparent');
         menuitem.classList.add('hovered');
-
-
         contentContacts.removeAttribute('hide');
         contentLoanRepayments.setAttribute('hide', '');
         homePage.setAttribute('hide', '');
@@ -513,8 +498,6 @@ function switchContent(event) {
         privacyPolicy.setAttribute('hide', ''); 
     } 
 }
-
-
 //Scroll Animation - intersection observer
 
 let observer = new IntersectionObserver((entries) => {
@@ -527,7 +510,6 @@ let observer = new IntersectionObserver((entries) => {
         }
     })
 })
-
 let hiddenElem = document.querySelectorAll('.hidden');
 hiddenElem.forEach((el) => observer.observe(el));
 
@@ -542,9 +524,6 @@ ScrollReveal({
 ScrollReveal().reveal('.scrollLeft',  {delay: 500, origin: 'left'});
 ScrollReveal().reveal('.iconbox img',  {delay: 400, origin: 'bottom', interval: 200});
 ScrollReveal().reveal('.scrollUp',  {delay: 500, origin: 'up'});
-
-
-
 
 //--------------------------------------------------------------------Stamp Duty Calculator-------*/
 //dropDown AusStates Menu for Stamp Duty
@@ -590,32 +569,6 @@ expandButton.addEventListener('click', function(e) {
         textTable.style.maxHeight = textTable.scrollHeight + 'px';
     }    
 });
-/*
-expandButtonMenu.addEventListener('click', function(e) {
-    e.preventDefault();
-    console.log(`menu-nav: ${menuNavigation.style.maxHeight}`);
-    menuNavigation.style.maxHeight = null;
-    if(menuNavigation.style.maxHeight) {
-        menuNavigation.style.maxHeight = null;
-    } else {
-        menuNavigation.style.maxHeight = menuNavigation.scrollHeight + 'px';
-    }
-});
-
-
-let pages = document.getElementById('pages');
-switchCalculators.addEventListener('click', function(e) {
-    e.preventDefault();
-    menuNavigation.style.maxHeight = '714px';
-    
-    if(menuNavigation.style.maxHeight) {
-        menuNavigation.style.maxHeight = pages.style.maxHeight + 'px';
-    } else {
-        menuNavigation.style.maxHeight;
-    }
-  
-});
-*/
 
 // ------------------------------------------------------------------------Calculator
 
@@ -624,7 +577,6 @@ switchCalculators.addEventListener('click', function(e) {
 let buttonCalculate = document.getElementById('buttonCalculate');
 
 buttonCalculate.addEventListener('click', computeResult);
-
 
 function computeResult(e) {
     let loanAmountString = document.getElementById('loanAmount').value;
@@ -641,8 +593,6 @@ function computeResult(e) {
     let monthInterest = parseFloat(interestRate) / 100 / 12; 
     let monthsCount = parseFloat(term) * 12;
     console.log(`monthsCount ${monthsCount}`);
-
-
 
     //ours
     let yearInterestTrue = parseFloat(interestRate) / 100;
@@ -678,7 +628,6 @@ function computeResult(e) {
 
     let totalInterestTrue = totalPaymentTrue / principal * 100;
     console.log(`totalInterestTrue: ${totalInterestTrue}`);
-
 
     //show results
    

@@ -13,30 +13,15 @@
     --black2: #999; 
     --background: #f6f5f7;   
 }
-
-
-
 [hide] {
     display: none !important;
 }
-
-/*animation on scroll*/
-/*
-.hidden {
-    opacity: 0;
-    transition: all 2s;
-}
-
-.show {
-    opacity: 1;
-}
-*/
 html, body {
     max-width: 100%;
     overflow-x: hidden;
     min-height: 100vh;
     scroll-behavior: smooth;
-  }
+}
   
 .marginLeft {
     margin-left: 400px;
@@ -44,7 +29,6 @@ html, body {
 .paddingForContainer {
     padding: 0 40px;
 }
-
 .hide {
     display: none !important;
 }
@@ -58,7 +42,6 @@ html, body {
 .navbar {   
     --bs-navbar-padding-y: 0;
 }
-
 .menuNavigation {
     position: fixed;
     width: 400px;
@@ -106,11 +89,8 @@ html, body {
     color: var(--white);
     align-items: center;
 }
-
-
 #pages .sidebar-item {
     font-size: 20px;
-
 }
 .menuNavigation .sidebar-nav [menu]:hover li a,
 .menuNavigation .sidebar-nav [menu].hovered li a {
@@ -129,17 +109,13 @@ html, body {
     color: var(--black1);
     border: 0.3px solid #767676; 
 }
-
-
 .menuNavigation .sidebar-nav [menu] li,
 .menuNavigation #pages [submenu] li a{    
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;    
     margin-left: 23px;  
-  
     border: 0.1px solid transparent; 
-  
 }
 .menuNavigation #pages [submenu] li a {
     padding-left: 20px;
@@ -147,7 +123,6 @@ html, body {
 .menuNavigation .sidebar-nav [menu] li {
     padding-left: 20px;
 }
-
 .menuNavigation .sidebar-nav [menu] {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px; 
@@ -157,17 +132,13 @@ html, body {
     position: relative;
     width: 100%;
 }
-
 .nav-link {
     transition: none;    
 }
-
 .bg-transparent {
     background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(10px) !important;
 }
-
-
 .menuNavigation ul li a .icon {
     position: relative;
     display: block;
@@ -180,11 +151,9 @@ html, body {
 .menuNavigation ul li a .icon svg {
     margin-right: 5px;
 }
-
 .dropdown-menu.show {
     transition: 1s easy !important;
 }
-
 .sidebar-link[data-bs-toggle="collapse"]::after {    
     content: '';
     display: inline-block;
@@ -193,9 +162,6 @@ html, body {
     right: 1.5rem;
     transition: all .2s easy-out;
 }
-
-
-
 .angleForSidebar {
     position: absolute;
     right: 0px;
@@ -272,8 +238,7 @@ html, body {
     font-weight: 700;
     margin-top: 10px;
     font-size: 20px;
-    line-height: 26px;
-    
+    line-height: 26px;    
 }
 #hero .icon-box h3 a {
     color: #fff;
@@ -283,9 +248,6 @@ html, body {
     color: #ffc451;
     cursor: pointer;
 }
-
-
-
 #hero .icon-box  {
     padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -295,9 +257,6 @@ html, body {
     width: 250px;
     cursor: pointer;
 }
-
-
-
 #hero .icon-box:hover {
     border-color: #ffc451;
     
@@ -305,18 +264,13 @@ html, body {
     transform: translateY(-10px);
 }
 
-
 /*-------------------------------------------------------------About-----------------------------------------*/
-
-
 #about ul li {
     list-style-type: none;    
 }
 #about .row {
     margin-bottom: 6rem !important;
 }
-
-
 
 /*-------------------------------------------------------------Get in touch-----------------------------------------*/
  .cta {
@@ -329,7 +283,6 @@ html, body {
     font-weight: 700;
     font-style: 28px;
 }
-
 .contact .info .info-icon {
     background: #ffc451;
     width: 44px;
@@ -350,17 +303,9 @@ html, body {
     padding-left: 60px;
     font-size: 14px;
 }
-/*
-.buttonForContactForm .cta-btn {  
-    border: 2px solid #151515;
-    color: #151515;
-    width: 224.34px;   
-}
-*/
 .contact-form form {
     transition: all 4s ease-in-out;
 }
-
 .popup {
     width: 400px;
     background: #f6f5f7;
@@ -403,12 +348,12 @@ html, body {
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
-
 .sendMessageContainer {
     width: 100%;
     height: 100vh;
     background: #ffc451;
 }
+
 /*------------------------------------Reviews-------------------------------------*/
 .reviews {
     background: #f6f5f7;
@@ -420,7 +365,6 @@ html, body {
     padding: 0 13%;
     display: block;          
 }
-
 .carousel-inner {
     overflow: visible;  
     height: 350px; 
@@ -432,14 +376,12 @@ html, body {
     width: inherit;
 }
 .carousel-indicators {
-    position: unset;
-   
+    position: unset;   
     display: flex;
     justify-content: center;
     padding: 20px;
     margin: 20px;   
 }
-
 .profileReview blockquote {    
     margin: 20px;
     background: white;
@@ -449,7 +391,6 @@ html, body {
     display: inline-block;
     vertical-align: middle;       
 }
-
 .stars {    
     padding-bottom: 30px;
 }
@@ -460,15 +401,13 @@ html, body {
 .buttonForMoreReviews .cta-btn { 
     border: 2px solid #151515;
     color: #151515;   
-}
-   
+}  
 
 /*-----------------------------------------------------------------------partners-----------------------------------------------------------*/
 .iconbox img {
     width: 10rem;  
 }
-.iconbox {
-    
+.iconbox {    
     height: 5rem;
 }
 .partnersColumn {
@@ -490,8 +429,6 @@ footer .col:nth-child(3),
 footer .col:nth-child(4) {
     flex-basis: 15%;
 }
-
-
 .footerFacebookIcon {
     transition: all ease-in-out 1s;   
     display: flex;
@@ -516,8 +453,7 @@ footer .col:nth-child(4) {
 }
 .underlineFooter {
     width: fit-content;
-    border-bottom: 1px solid #ccc;
-    
+    border-bottom: 1px solid #ccc;    
 }
 .footer-top .footer-info p {
     font-size: 14px;
@@ -610,8 +546,6 @@ hr {
         left: 100%;
     }
 }
-
-
 /*for animation on scroll - don't duble*/
 @media (prefers-reduced-motion) {
     .hidden {
@@ -619,29 +553,15 @@ hr {
     }
 }
 
-
-
 /* -------------------------About - LinkPage--------------------------------------*/
-
 #homePage {      
     background-size: cover;
     position: relative;
     padding: 50px 0; 
     min-height: 100vh;  
 }
-/*
-#homePage::before {
-    content: '';   
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-*/
 #homePage .container {
-    position: relative;
-    
+    position: relative;    
 }
 .aboutBlank {
     border: 1px solid transparent;
@@ -659,18 +579,12 @@ hr {
 .aboutBlank h4 {
     font-weight: 600;
 }
-
-
-
-
 /*-------------------------------------------Loan amount calculator-------------------------------*/
 
 .backgroundCalculators {
     background: var(--background);
     min-height: 100vh;
 }
-
-
 .profileReviewLoanCalculator,
 .profileReviewStampDutyCalculator {
     margin: 85px auto;
@@ -681,11 +595,8 @@ hr {
     border-radius: 10px;
     color: #05060c;  
     border: 1px solid transparent; 
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-    
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);   
 }
-
-
 .inputGroup {
     margin-bottom: 60px;
     position: relative;    
@@ -709,7 +620,6 @@ hr {
     top: -45px;
     font-size: 18px;
 }
-
 .inputGroup input {
     width: 100%;
     height: 65px;
@@ -728,7 +638,6 @@ hr {
     display: block;
     text-align: center;
 }
-
 .buttonCalculate {
     width: 100%;
     height: 80px;
@@ -761,7 +670,6 @@ hr {
 .answerSquareLoanRepayments:nth-child(2) {
     margin: 0 10px;
 }
-
 .answerSquareLoanRepayments div {
     display: flex;
     align-items: center; 
@@ -778,28 +686,14 @@ hr {
 }
 
 /*-------------------------------------------- stamp duty --------------------*/
-/*
-.stampDutyCalculator {
-    margin: 150px auto;
-    padding: 50px 60px;
-    background-color: rgb(40, 41,123);    
-    width: 55%;    
-    position: relative;   
-    border-radius: 10px;
-    color: #f5f6fa;  
-    border: 2px solid transparent;    
-}
-*/
+
 #selectFieldStates .rotate {
     transform: rotate(-90deg);
 }
-
 .radioContainer p {
     font-size: 22px;   
     text-align: left;
 }
-
-
 .radioToggle, .radioToggleForTypeProperty {  
     display: flex; 
 }
@@ -807,7 +701,6 @@ hr {
 .radioToggleForTypeProperty input[type='radio'] {
     display: none;
 }
-
 .radioToggle label {   
     border: 1px solid #e2e3e8;    
     padding: 15px 20px;   
@@ -834,8 +727,7 @@ hr {
 }
 .radioToggle input[type='radio']:checked + label,
 .radioToggleForTypeProperty input[type='radio']:checked + label  {
-    background-color: #f5f6fa;
-    
+    background-color: #f5f6fa;    
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
 .propertyLocationDropListContainer ul li {
@@ -858,8 +750,6 @@ hr {
 .propertyLocationDropListContainer ul li:hover > ul {
     display: block;
 }
-
-
 #selectFieldStates {
     width: 100%;    
     height: 65px;
@@ -876,19 +766,16 @@ hr {
     border-radius: 10px;
     cursor: pointer; 
 }
-
 .borderRadiusBottom {
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);     
 }
-
 #selectFieldStates i {
     display: flex;
     align-items: center;
     color: rgb(40, 41,123);
     font-size: 17px;
 }
-
 #selectFieldStates p {
     line-height: 50px;
     font-size: 20px;
@@ -896,12 +783,10 @@ hr {
     color: #05060c;
     margin: 0;
 }
-
 .propertyLocationDropListContainer {
     margin-bottom: 60px;
     position: relative;    
 }
-
 #listFieldState {
     position: absolute;
     top: 100%;
@@ -909,11 +794,8 @@ hr {
     z-index: 1;
     cursor: pointer;
     width: 100%;
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-   
-    
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);    
 }
-
 .rotate {
     transform: rotate(90deg);
 }
@@ -921,14 +803,11 @@ hr {
 .margBot {
     margin-bottom: 40px;
 }
-
-
 .groupAnswersStampDuty {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
 .answerSquareStampDuty {
     width: 100%;
     height: 170px;
@@ -960,12 +839,10 @@ hr {
 #listStates #listFieldState {
     padding: 0;
 }
-
 .describeStatesConcessionals {
     color: #060c21;
     border: 1px solid #060c21;
 }
-
 .state h3 {
     margin: 0 0 10px;
 }
@@ -1004,8 +881,7 @@ hr {
 }
 #contentTable {
     display: flex;
-    flex-direction: column;
-       
+    flex-direction: column;       
 }
 .expandBTN {
     cursor: pointer;
@@ -1034,8 +910,6 @@ hr {
 
 /*-------------------------------------------- Borrowing Calculator--------------------*/
 
-
-
 #borrowingCalculatorLink { 
     margin: 85px auto;  
     padding: 18px 26px;   
@@ -1047,7 +921,6 @@ hr {
 #testimonials .col-md-4 {
     margin: 40px auto;
 }
-
 .profileReviewPage {
     padding: 40px 30px 30px;
     background: #fff;
@@ -1069,13 +942,10 @@ hr {
     font-size: 12px;
     color: #333;
 }
-
-
 .profileReviewPage blockquote {
     font-size: 16px;
     line-height: 30px;    
 }
-
 .fa-quote-left { 
     font-size: 30px;
     color: #ffc451;
@@ -1098,8 +968,6 @@ hr {
 #contentPartners {
    background: #f6f5f7; 
 }
-
-
 .sectionContent {
     display: flex;
     flex-wrap: wrap;
@@ -1136,8 +1004,7 @@ hr {
 /*---------------------------Contact Us Page-----------------------------------------*/
 
 .contactSection {   
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
 .contactHead {
     flex-direction: column;
@@ -1150,17 +1017,6 @@ hr {
 .contactHead p {
     margin: 55px 0;
 }
-/*
-.contactSection::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 400px;
-    width:calc(50% - 150px);
-    height: 100%;
-    background: #ffc451;
-}
-*/
 .contactSection .container {
     position: relative;
     min-width: 1100px;
@@ -1189,7 +1045,6 @@ hr {
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     border: 1px solid transparent;
 }
-
 .contactSection .contactInfo h2 {
     display: flex;
     justify-content: center;
@@ -1244,7 +1099,6 @@ hr {
     outline: none;
     border-bottom: 1px solid #767676;
 }
-
 .contactSection .contactForm .formBox .inputBox span {
     position: absolute;
     left: 0;
@@ -1287,7 +1141,6 @@ hr {
     line-height: 1.5;
     border: 1px solid transparent;
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-
 }
 .contactSection .contactForm .formBox button:hover,
 .buttonForContactForm .cta-btn:hover,
@@ -1296,7 +1149,6 @@ hr {
     background: var(--black2) ;
     color: var(--white);
 }
-
 
 /*------------Privacy Policy Section-----------------*/
 
@@ -1342,7 +1194,6 @@ hr {
     border-spacing: 20px;
     border-collapse: separate;
 }
-
 .disputeResolutionPolicy .row .addressForDispute td:first-child {
     font-weight: bold;
 }
@@ -1353,19 +1204,7 @@ hr {
     vertical-align: baseline;
 }
 
-
-
 /*-------------------------------MEDIA------------------------------------------*/
-
-/*--------------------------Media---------------------*/
-
-
-
-
-
-
-
-
 @media (max-width: 1800px) {
     .contactSection .container {
         width: 90%;
@@ -1394,11 +1233,8 @@ hr {
     .footer-top .social-links a {
         margin-right: 0;
         margin-bottom: 15px;
-    }
- 
+    } 
 }
-
-
 @media (max-width: 1400px) {
     #hero {
         padding-top: 200px;
@@ -1431,8 +1267,6 @@ hr {
     #pages .sidebar-item {
         font-size: 17px;
     }
-
-
     .menuNavigation .navbar-brand {
         font-size: 25px;
     }
@@ -1485,20 +1319,17 @@ hr {
     }
    
 }
-
 @media (max-width: 1200px) {
     #hero .container {
         margin-top: 100px;
-    }
-    
+    }    
     .inputGroup input:focus~label,
     .inputGroup input:valid~label {
         font-size: 16px;
     }
     .containerAbout .row {
         justify-content: space-around !important;
-    }
-   
+    }   
     .menuNavigation ul {      
         position: relative;
         width: 100%;
@@ -1531,8 +1362,7 @@ hr {
     #expandButtonMenu {
         background-color: #fff;
         border-color: #000;
-    }
-    
+    }    
     .navbar-toggler-icon {
         width: 1.8em;
         height: 1.8em;
@@ -1696,8 +1526,7 @@ hr {
     }
     footer .col:nth-child(1) p {
         font-size: 13px;
-    }
-    
+    }    
     footer .col:nth-child(4) {
         display: flex;
         flex-wrap: wrap;
@@ -1709,15 +1538,13 @@ hr {
     }
     .footerFacebookIcon {
         padding-top: 0 !important;
-    }
-    
+    }    
     .footer-top h3 {
         font-size: 16px;
     }
     .footer-links li {
         font-size: 15px;
-    }
-   
+    }   
     .footer-top .social-links a {
         margin-right: 0;
         margin-bottom: 15px;
@@ -1738,8 +1565,7 @@ hr {
     }
     #homePage h4,
     .privacyPolicySection h4 {
-        font-size: 18px;
-        
+        font-size: 18px;        
     }
     .privacyPolicySection h4  {
         margin: 0 16px !important;
@@ -1767,10 +1593,8 @@ hr {
     }
     .contact .info div:first-child {
         margin-bottom: 40px;
-    }
-   
+    }   
 }
-
 @media only screen and (max-width: 788px) {
     .footer-top h3 {
         font-size: 15px;
@@ -1779,7 +1603,6 @@ hr {
         font-size: 11px;
     }
 }
-
 @media only screen and (max-width: 768px) {
     .inputGroup label, .radioToggle label, 
     .radioToggleForTypeProperty label, 
@@ -1794,11 +1617,10 @@ hr {
     .profileReviewStampDutyCalculator 
     {
         padding: 50px 25px;
-    }
-    
-.navContainer .menuNavigation ul {
+    }    
+    .navContainer .menuNavigation ul {
     padding-top: 0 !important;
-} 
+    } 
     .radioContainer p {
         font-size: 17px;
     }
@@ -1817,8 +1639,7 @@ hr {
     }
     .answerSquareLoanRepayments>h4 {
         font-size: 17px;
-    }
-   
+    }   
     .answerSquareLoanRepayments svg {
         height: 25px;
         width: 25px;
@@ -1843,15 +1664,13 @@ hr {
     footer .col:nth-child(3) h3,
     footer .col:nth-child(4) h3{
         font-size: 11.5px;
-    }
-  
+    }  
     .footerFacebookIcon {       
        
         padding-left: 30px;
     }
     .containerAbout .row .img-fluid {
-        max-width: 90%;
-            
+        max-width: 90%;            
     }
     .containerAbout .row {
         text-align: center;
@@ -1907,8 +1726,7 @@ hr {
     }
     footer .footer-top .container {
         padding: 0 30px;
-    }
-    
+    }    
 }
 
 @media only screen and (max-width: 640px) {
@@ -1925,13 +1743,8 @@ hr {
     }
     .navbar>.container-fluid {       
         padding: 0.5rem 1rem;
-    }
-    
-    
+    }  
 }
-
-
-
 @media only screen and (max-width: 576px) {
     footer .row {
        -bs-gutter-x: 1.5rem; 
@@ -1951,9 +1764,7 @@ hr {
     }
     #footerMain .container .row {
         --bs-gutter-x: .5rem !important;         
-    }
-   
-    
+    }    
 }
 @media only screen and (max-width: 500px) {
     #footerMain .container .row {
@@ -1961,8 +1772,6 @@ hr {
          padding-left: 0 !important;
     }
 }
-
-
 @media only screen and (max-width: 485px) {
     #hero {
         padding-top: 150px;
@@ -2020,8 +1829,7 @@ hr {
     }   
     .profileReviewStampDutyCalculator, 
     .profileReviewLoanCalculator {
-        width: 400px;
-        
+        width: 400px;        
     }
     .groupAnswersLoanRepayments {
         justify-content: center;
@@ -2071,11 +1879,8 @@ hr {
     #closeMenu {        
         right: 20px;
         top: 20px;
-    }
-    
-    
+    }   
 }
-
 @media only screen and (max-width: 375px) {
     .contactSection .container
      {
@@ -2097,11 +1902,8 @@ hr {
     .secondColumn {
         width: 100%;
         margin-bottom: 20px;
-    }
-    
-        
+    }    
 }
-
 @media only screen and (max-width: 325px) {
    
     .navContainer .container-fluid img.mobileLogo {
