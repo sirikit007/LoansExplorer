@@ -227,7 +227,7 @@ html, body {
     font-weight: 700;
     line-height: 64px;
     color: #fff;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 #hero h2 {
     color: #fff;
@@ -248,13 +248,16 @@ html, body {
     color: #ffc451;
     cursor: pointer;
 }
+#hero .row .col-xl-12 {
+    margin-bottom: 6rem;
+}
 #hero .icon-box  {
     padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    height: 100%;
+    height: 200px;
     text-align: center;
     transition: all ease-in-out 0.3s;
-    width: 250px;
+    width: 330px;
     cursor: pointer;
 }
 #hero .icon-box:hover {
@@ -1349,7 +1352,7 @@ hr {
     }
     .navbar>.container-fluid {
         height: 80px;
-        background: #999;
+        background: #fff;
         margin: 20px;
         border-radius: 16px;
         padding: 0.5rem 3rem;
@@ -1357,7 +1360,11 @@ hr {
         box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     }
     #switchStartPageFromMobile {
-        color: #fff;
+        color: #000;
+        display: flex;       
+    }
+    #switchStartPageFromMobile div {
+        padding: 10px 0; 
     }
     #expandButtonMenu {
         background-color: #fff;
@@ -1370,8 +1377,8 @@ hr {
     #closeMenu {
         display: block;
         position: absolute;
-        top: 40px;
-        right: 75px;
+        top: 25px;
+        right: 60px;
     }
     .menuNavigation .sidebar-nav [menu]:hover,
     .menuNavigation .sidebar-nav [menu].hovered,
@@ -1435,13 +1442,15 @@ hr {
     .contactSection .container .contactForm  {
         width: 100%;
         height: auto;
-    }
-   
+    }   
     .contactSection .contactInfo .contactPageIcons {
         margin-top: 10px;
     }
     .navContainer .container-fluid img.mobileLogo {
         width: 48px;
+        margin: 2px 8px 0 0;
+        height: 49.34px;
+
     }
     #contentBorrowingCalculator .row {
         margin-top: 100px;
@@ -1618,9 +1627,7 @@ hr {
     {
         padding: 50px 25px;
     }    
-    .navContainer .menuNavigation ul {
-    padding-top: 0 !important;
-    } 
+    
     .radioContainer p {
         font-size: 17px;
     }
@@ -1665,8 +1672,7 @@ hr {
     footer .col:nth-child(4) h3{
         font-size: 11.5px;
     }  
-    .footerFacebookIcon {       
-       
+    .footerFacebookIcon {
         padding-left: 30px;
     }
     .containerAbout .row .img-fluid {
@@ -1726,8 +1732,18 @@ hr {
     }
     footer .footer-top .container {
         padding: 0 30px;
-    }    
+    }
+    .menuNavigation #pages {
+        padding: 20px 0;
+    } 
+    #switchLoanCalculator {
+        margin-top: 0 !important;
+    } 
+    .profileReviewLoanCalculator, .profileReviewStampDutyCalculator {
+        margin: 25px auto;
+    }
 }
+
 
 @media only screen and (max-width: 640px) {
     .profileReviewStampDutyCalculator, 
@@ -1810,12 +1826,17 @@ hr {
         font-size: 13px;
     }
     .navbar .container-fluid {
-        margin: 1px 7px;
-        padding: .5rem;
+        margin: 1px 12px;
+        padding: 8px;
        width: 100%;        
     } 
+    
     #contentLoanRepayments h1, #contentStampDuty h1 {
         font-size: 21px;
+        padding-top: 50px;
+    }
+    .inputGroup {
+        margin-bottom: 40px;
     }
     .content ul {
         padding: 0;
@@ -1829,7 +1850,8 @@ hr {
     }   
     .profileReviewStampDutyCalculator, 
     .profileReviewLoanCalculator {
-        width: 400px;        
+        width: 400px;
+        margin: 15px auto;        
     }
     .groupAnswersLoanRepayments {
         justify-content: center;
@@ -1882,6 +1904,10 @@ hr {
     }   
 }
 @media only screen and (max-width: 375px) {
+    #hero .icon-box {
+        height: 170px;
+        width: 250px;       
+    }
     .contactSection .container
      {
         width: 100%;
@@ -1902,12 +1928,26 @@ hr {
     .secondColumn {
         width: 100%;
         margin-bottom: 20px;
-    }    
+    }   
+    .menuNavigation ul div li a {
+        padding: 1px 0;
+    } 
+    #switchStartPageFromMobile div {
+        padding: 11px 0;
+    }
+    .menuNavigation #pages [submenu] li a {
+        padding: 8px;
+    }
+    .angleForSidebar {
+        top: 0;
+    }
+    .menuNavigation #pages {
+        padding: 10px 0;
+    }
 }
 @media only screen and (max-width: 325px) {
-   
-    .navContainer .container-fluid img.mobileLogo {
-        width: 38px;
+    .navbar .container-fluid {
+        margin: 1px 2px;
     }
     .navbar .navbar-brand a {
         font-size: 19px !important;
@@ -1938,5 +1978,8 @@ hr {
     }
     .singleServiceWrapper {
         padding: 0px;
+    }
+    .menuNavigation .navbar-brand {        
+        margin-left: 10px;
     }
 }
