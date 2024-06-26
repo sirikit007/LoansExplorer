@@ -9,6 +9,7 @@ let switchLoanCalculator = document.getElementById('switchLoanCalculator');
 let switchStampdutyCalculator = document.getElementById('switchStampdutyCalculator');
 let switchBorrowingCalculator = document.getElementById('switchBorrowingCalculator');
 
+
 let switchPrivacyPolicy = document.getElementById('switchPrivacyPolicy');
 let switchDisputeResolutionPolicy = document.getElementById('switchDisputeResolutionPolicy');
 
